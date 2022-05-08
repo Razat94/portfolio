@@ -1,0 +1,500 @@
+<style type="text/css">#ground{
+    width:320px;
+    height:320px;
+    margin:260px auto 0;
+    border:1px solid red;
+    -webkit-transform-style: preserve-3d;
+    /* Anim Rotate */
+	-webkit-animation-name: rotate;
+	-webkit-animation-property: all;
+	-webkit-animation-duration: 8s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+    -webkit-transform:rotateX(70deg) rotateZ(-25deg);
+}
+.orima{
+    position:relative;
+    width:240px;
+    height:320px;
+    margin:0 auto 0;
+    -webkit-transform-origin:bottom center;
+    -webkit-transform: rotateX(-90deg);
+    -webkit-transform-style: preserve-3d;
+}
+.layer{
+    position:absolute;
+    top:0;
+    left:0;
+    width:240px;
+    height:320px;
+    -webkit-transform-style: preserve-3d;
+}
+
+.layer:nth-child(1){-webkit-transform:translateZ(-160px);}
+.layer:nth-child(2){-webkit-transform:translateZ(-180px);}
+
+.layer i{
+    position:absolute;
+    display:block;
+    width:20px;
+    height:20px;
+    background:rgba(139,115,0,.7);
+    -webkit-transform-style: preserve-3d;
+}
+.layer i:before{
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:20px;
+    height:20px;
+    background:rgba(139,115,0,.7);
+    -webkit-transform-origin:top center;
+    -webkit-transform:rotateX(90deg);
+}
+/*
+.layer i:after{
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:20px;
+    height:20px;
+    background:rgba(255,255,255,0.5);
+    -webkit-transform-origin:bottom center;
+    -webkit-transform:rotateX(-90deg);
+}
+*/
+.layer i b{
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:20px;
+    height:20px;
+    background:rgba(139,115,0,.7);
+    -webkit-transform:translateZ(20px);
+    -webkit-transform-style: preserve-3d;
+}
+
+.layer i b:before{
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:20px;
+    height:20px;
+    background:rgba(139,115,0,.7);
+    -webkit-transform-origin:left top;
+    -webkit-transform:rotateY(90deg);
+}
+.layer i b:after{
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:20px;
+    height:20px;
+    background:rgba(139,115,0,.7);
+    -webkit-transform-origin:right top;
+    -webkit-transform:rotateY(-90deg);
+}
+
+
+
+/* 5 */
+.layer i:nth-child(1){top:0px;left:60px;}
+.layer i:nth-child(2){top:0px;left:80px;}
+.layer i:nth-child(3){top:0px;left:100px;}
+.layer i:nth-child(4){top:0px;left:120px;}
+.layer i:nth-child(5){top:0px;left:140px;}
+/* 9 */
+.layer i:nth-child(6){top:20px;left:40px;}
+.layer i:nth-child(7){top:20px;left:60px;}
+.layer i:nth-child(8){top:20px;left:80px;}
+.layer i:nth-child(9){top:20px;left:100px;}
+.layer i:nth-child(10){top:20px;left:120px;}
+.layer i:nth-child(11){top:20px;left:140px;}
+.layer i:nth-child(12){top:20px;left:160px;}
+.layer i:nth-child(13){top:20px;left:180px;}
+.layer i:nth-child(14){top:20px;left:200px;}
+/* 7 */
+.layer i:nth-child(15){top:40px;left:40px;}
+.layer i:nth-child(16){top:40px;left:60px;}
+.layer i:nth-child(17){top:40px;left:80px;}
+.layer i:nth-child(18){top:40px;left:100px;}
+.layer i:nth-child(19){top:40px;left:120px;}
+.layer i:nth-child(20){top:40px;left:140px;}
+.layer i:nth-child(21){top:40px;left:160px;}
+/*10*/
+.layer i:nth-child(22){top:60px;left:20px;}
+.layer i:nth-child(23){top:60px;left:40px;}
+.layer i:nth-child(24){top:60px;left:60px;}
+.layer i:nth-child(25){top:60px;left:80px;}
+.layer i:nth-child(26){top:60px;left:100px;}
+.layer i:nth-child(27){top:60px;left:120px;}
+.layer i:nth-child(28){top:60px;left:140px;}
+.layer i:nth-child(29){top:60px;left:160px;}
+.layer i:nth-child(30){top:60px;left:180px;}
+.layer i:nth-child(31){top:60px;left:200px;}
+/* 11 */
+.layer i:nth-child(31){top:80px;left:20px;}
+.layer i:nth-child(32){top:80px;left:40px;}
+.layer i:nth-child(33){top:80px;left:60px;}
+.layer i:nth-child(34){top:80px;left:80px;}
+.layer i:nth-child(35){top:80px;left:100px;}
+.layer i:nth-child(36){top:80px;left:120px;}
+.layer i:nth-child(37){top:80px;left:140px;}
+.layer i:nth-child(38){top:80px;left:160px;}
+.layer i:nth-child(39){top:80px;left:180px;}
+.layer i:nth-child(40){top:80px;left:200px;}
+.layer i:nth-child(41){top:80px;left:220px;}
+/* 10 */
+.layer i:nth-child(42){top:100px;left:20px;}
+.layer i:nth-child(43){top:100px;left:40px;}
+.layer i:nth-child(44){top:100px;left:60px;}
+.layer i:nth-child(45){top:100px;left:80px;}
+.layer i:nth-child(46){top:100px;left:100px;}
+.layer i:nth-child(47){top:100px;left:120px;}
+.layer i:nth-child(48){top:100px;left:140px;}
+.layer i:nth-child(49){top:100px;left:160px;}
+.layer i:nth-child(50){top:100px;left:180px;}
+.layer i:nth-child(51){top:100px;left:200px;}
+/* 7 */
+.layer i:nth-child(52){top:120px;left:60px;}
+.layer i:nth-child(53){top:120px;left:80px;}
+.layer i:nth-child(54){top:120px;left:100px;}
+.layer i:nth-child(55){top:120px;left:120px;}
+.layer i:nth-child(56){top:120px;left:140px;}
+.layer i:nth-child(57){top:120px;left:160px;}
+.layer i:nth-child(58){top:120px;left:180px;}
+/* 6 */
+.layer i:nth-child(59){top:140px;left:40px;}
+.layer i:nth-child(60){top:140px;left:60px;}
+.layer i:nth-child(61){top:140px;left:80px;}
+.layer i:nth-child(62){top:140px;left:100px;}
+.layer i:nth-child(63){top:140px;left:120px;}
+.layer i:nth-child(64){top:140px;left:140px;}
+/* 10 */
+.layer i:nth-child(65){top:160px;left:20px;}
+.layer i:nth-child(66){top:160px;left:40px;}
+.layer i:nth-child(67){top:160px;left:60px;}
+.layer i:nth-child(68){top:160px;left:80px;}
+.layer i:nth-child(69){top:160px;left:100px;}
+.layer i:nth-child(70){top:160px;left:120px;}
+.layer i:nth-child(71){top:160px;left:140px;}
+.layer i:nth-child(72){top:160px;left:160px;}
+.layer i:nth-child(73){top:160px;left:180px;}
+.layer i:nth-child(74){top:160px;left:200px;}
+/* 12 */
+.layer i:nth-child(75){top:180px;left:0px;}
+.layer i:nth-child(76){top:180px;left:20px;}
+.layer i:nth-child(77){top:180px;left:40px;}
+.layer i:nth-child(78){top:180px;left:60px;}
+.layer i:nth-child(79){top:180px;left:80px;}
+.layer i:nth-child(80){top:180px;left:100px;}
+.layer i:nth-child(81){top:180px;left:120px;}
+.layer i:nth-child(82){top:180px;left:140px;}
+.layer i:nth-child(83){top:180px;left:160px;}
+.layer i:nth-child(84){top:180px;left:180px;}
+.layer i:nth-child(85){top:180px;left:200px;}
+.layer i:nth-child(86){top:180px;left:220px;}
+/* 12 */
+.layer i:nth-child(87){top:200px;left:0px;}
+.layer i:nth-child(88){top:200px;left:20px;}
+.layer i:nth-child(89){top:200px;left:40px;}
+.layer i:nth-child(90){top:200px;left:60px;}
+.layer i:nth-child(91){top:200px;left:80px;}
+.layer i:nth-child(92){top:200px;left:100px;}
+.layer i:nth-child(93){top:200px;left:120px;}
+.layer i:nth-child(94){top:200px;left:140px;}
+.layer i:nth-child(95){top:200px;left:160px;}
+.layer i:nth-child(96){top:200px;left:180px;}
+.layer i:nth-child(97){top:200px;left:200px;}
+.layer i:nth-child(98){top:200px;left:220px;}
+/* 12 */
+.layer i:nth-child(99){top:220px;left:0px;}
+.layer i:nth-child(100){top:220px;left:20px;}
+.layer i:nth-child(101){top:220px;left:40px;}
+.layer i:nth-child(102){top:220px;left:60px;}
+.layer i:nth-child(103){top:220px;left:80px;}
+.layer i:nth-child(104){top:220px;left:100px;}
+.layer i:nth-child(105){top:220px;left:120px;}
+.layer i:nth-child(106){top:220px;left:140px;}
+.layer i:nth-child(107){top:220px;left:160px;}
+.layer i:nth-child(108){top:220px;left:180px;}
+.layer i:nth-child(109){top:220px;left:200px;}
+.layer i:nth-child(110){top:220px;left:220px;}
+/* 12 */
+.layer i:nth-child(111){top:240px;left:0px;}
+.layer i:nth-child(112){top:240px;left:20px;}
+.layer i:nth-child(113){top:240px;left:40px;}
+.layer i:nth-child(114){top:240px;left:60px;}
+.layer i:nth-child(115){top:240px;left:80px;}
+.layer i:nth-child(116){top:240px;left:100px;}
+.layer i:nth-child(117){top:240px;left:120px;}
+.layer i:nth-child(118){top:240px;left:140px;}
+.layer i:nth-child(119){top:240px;left:160px;}
+.layer i:nth-child(120){top:240px;left:180px;}
+.layer i:nth-child(121){top:240px;left:200px;}
+.layer i:nth-child(122){top:240px;left:220px;}
+/* 6 */
+.layer i:nth-child(123){top:260px;left:40px;}
+.layer i:nth-child(124){top:260px;left:60px;}
+.layer i:nth-child(125){top:260px;left:80px;}
+.layer i:nth-child(126){top:260px;left:140px;}
+.layer i:nth-child(127){top:260px;left:160px;}
+.layer i:nth-child(128){top:260px;left:180px;}
+/* 6 */
+.layer i:nth-child(129){top:280px;left:20px;}
+.layer i:nth-child(130){top:280px;left:40px;}
+.layer i:nth-child(131){top:280px;left:60px;}
+.layer i:nth-child(132){top:280px;left:160px;}
+.layer i:nth-child(133){top:280px;left:180px;}
+.layer i:nth-child(134){top:280px;left:200px;}
+/* 8 */
+.layer i:nth-child(135){top:300px;left:0px;}
+.layer i:nth-child(136){top:300px;left:20px;}
+.layer i:nth-child(137){top:300px;left:40px;}
+.layer i:nth-child(138){top:300px;left:60px;}
+.layer i:nth-child(139){top:300px;left:160px;}
+.layer i:nth-child(140){top:300px;left:180px;}
+.layer i:nth-child(141){top:300px;left:200px;}
+.layer i:nth-child(142){top:300px;left:220px;}
+
+.layer i:nth-child(143){top:60px;left:200px;}
+
+
+/*---------------------
+    Color 
+----------------------*/
+
+
+.layer i:nth-child(61),.layer i:nth-child(61):after,.layer i:nth-child(61):before,
+.layer i:nth-child(61) b,.layer i:nth-child(61) b:before,.layer i:nth-child(61) b:after,
+.layer i:nth-child(68),.layer i:nth-child(68):after,.layer i:nth-child(68):before,
+.layer i:nth-child(68) b,.layer i:nth-child(68) b:before,.layer i:nth-child(68) b:after,
+.layer i:nth-child(71),.layer i:nth-child(71):after,.layer i:nth-child(71):before,
+.layer i:nth-child(71) b,.layer i:nth-child(71) b:before,.layer i:nth-child(71) b:after,
+.layer i:nth-child(71),.layer i:nth-child(71):after,.layer i:nth-child(71):before,
+.layer i:nth-child(71) b,.layer i:nth-child(71) b:before,.layer i:nth-child(71) b:after,
+.layer i:nth-child(79),.layer i:nth-child(79):after,.layer i:nth-child(79):before,
+.layer i:nth-child(79) b,.layer i:nth-child(79) b:before,.layer i:nth-child(79) b:after,
+.layer i:nth-child(80),.layer i:nth-child(80):after,.layer i:nth-child(80):before,
+.layer i:nth-child(80) b,.layer i:nth-child(80) b:before,.layer i:nth-child(80) b:after,
+.layer i:nth-child(81),.layer i:nth-child(81):after,.layer i:nth-child(81):before,
+.layer i:nth-child(81) b,.layer i:nth-child(81) b:before,.layer i:nth-child(81) b:after,
+.layer i:nth-child(82),.layer i:nth-child(82):after,.layer i:nth-child(82):before,
+.layer i:nth-child(82) b,.layer i:nth-child(82) b:before,.layer i:nth-child(82) b:after,
+.layer i:nth-child(90),.layer i:nth-child(90):after,.layer i:nth-child(90):before,
+.layer i:nth-child(90) b,.layer i:nth-child(90) b:before,.layer i:nth-child(90) b:after,
+.layer i:nth-child(92),.layer i:nth-child(92):after,.layer i:nth-child(92):before,
+.layer i:nth-child(92) b,.layer i:nth-child(92) b:before,.layer i:nth-child(92) b:after,
+.layer i:nth-child(93),.layer i:nth-child(93):after,.layer i:nth-child(93):before,
+.layer i:nth-child(93) b,.layer i:nth-child(93) b:before,.layer i:nth-child(93) b:after,
+.layer i:nth-child(95),.layer i:nth-child(95):after,.layer i:nth-child(95):before,
+.layer i:nth-child(95) b,.layer i:nth-child(95) b:before,.layer i:nth-child(95) b:after,
+.layer i:nth-child(102),.layer i:nth-child(102):after,.layer i:nth-child(102):before,
+.layer i:nth-child(102) b,.layer i:nth-child(102) b:before,.layer i:nth-child(102) b:after,
+.layer i:nth-child(103),.layer i:nth-child(103):after,.layer i:nth-child(103):before,
+.layer i:nth-child(103) b,.layer i:nth-child(103) b:before,.layer i:nth-child(103) b:after,
+.layer i:nth-child(104),.layer i:nth-child(104):after,.layer i:nth-child(104):before,
+.layer i:nth-child(104) b,.layer i:nth-child(104) b:before,.layer i:nth-child(104) b:after,
+.layer i:nth-child(105),.layer i:nth-child(105):after,.layer i:nth-child(105):before,
+.layer i:nth-child(105) b,.layer i:nth-child(105) b:before,.layer i:nth-child(105) b:after,
+.layer i:nth-child(106),.layer i:nth-child(106):after,.layer i:nth-child(102):before,
+.layer i:nth-child(106) b,.layer i:nth-child(106) b:before,.layer i:nth-child(106) b:after,
+.layer i:nth-child(107),.layer i:nth-child(107):after,.layer i:nth-child(107):before,
+.layer i:nth-child(107) b,.layer i:nth-child(107) b:before,.layer i:nth-child(107) b:after,
+.layer i:nth-child(113),.layer i:nth-child(113):after,.layer i:nth-child(113):before,
+.layer i:nth-child(113) b,.layer i:nth-child(113) b:before,.layer i:nth-child(113) b:after,
+.layer i:nth-child(114),.layer i:nth-child(114):after,.layer i:nth-child(114):before,
+.layer i:nth-child(114) b,.layer i:nth-child(114) b:before,.layer i:nth-child(114) b:after,
+.layer i:nth-child(115),.layer i:nth-child(115):after,.layer i:nth-child(115):before,
+.layer i:nth-child(115) b,.layer i:nth-child(115) b:before,.layer i:nth-child(115) b:after,
+.layer i:nth-child(116),.layer i:nth-child(116):after,.layer i:nth-child(116):before,
+.layer i:nth-child(116) b,.layer i:nth-child(116) b:before,.layer i:nth-child(116) b:after,
+.layer i:nth-child(117),.layer i:nth-child(117):after,.layer i:nth-child(117):before,
+.layer i:nth-child(117) b,.layer i:nth-child(117) b:before,.layer i:nth-child(117) b:after,
+.layer i:nth-child(118),.layer i:nth-child(118):after,.layer i:nth-child(118):before,
+.layer i:nth-child(118) b,.layer i:nth-child(118) b:before,.layer i:nth-child(118) b:after,
+.layer i:nth-child(119),.layer i:nth-child(119):after,.layer i:nth-child(119):before,
+.layer i:nth-child(119) b,.layer i:nth-child(119) b:before,.layer i:nth-child(119) b:after,
+.layer i:nth-child(120),.layer i:nth-child(120):after,.layer i:nth-child(120):before,
+.layer i:nth-child(120) b,.layer i:nth-child(120) b:before,.layer i:nth-child(120) b:after,
+.layer i:nth-child(123),.layer i:nth-child(123):after,.layer i:nth-child(123):before,
+.layer i:nth-child(123) b,.layer i:nth-child(123) b:before,.layer i:nth-child(123) b:after,
+.layer i:nth-child(124),.layer i:nth-child(124):after,.layer i:nth-child(124):before,
+.layer i:nth-child(124) b,.layer i:nth-child(124) b:before,.layer i:nth-child(124) b:after,
+.layer i:nth-child(125),.layer i:nth-child(125):after,.layer i:nth-child(125):before,
+.layer i:nth-child(125) b,.layer i:nth-child(125) b:before,.layer i:nth-child(125) b:after,
+.layer i:nth-child(126),.layer i:nth-child(126):after,.layer i:nth-child(126):before,
+.layer i:nth-child(126) b,.layer i:nth-child(126) b:before,.layer i:nth-child(126) b:after,
+.layer i:nth-child(127),.layer i:nth-child(127):after,.layer i:nth-child(127):before,
+.layer i:nth-child(127) b,.layer i:nth-child(127) b:before,.layer i:nth-child(127) b:after,
+.layer i:nth-child(128),.layer i:nth-child(128):after,.layer i:nth-child(128):before,
+.layer i:nth-child(128) b,.layer i:nth-child(128) b:before,.layer i:nth-child(128) b:after,
+.layer i:nth-child(5),.layer i:nth-child(5):after,.layer i:nth-child(5):before,
+.layer i:nth-child(5) b,.layer i:nth-child(5) b:before,.layer i:nth-child(5) b:after,
+.layer i:nth-child(6),.layer i:nth-child(6):after,.layer i:nth-child(6):before,
+.layer i:nth-child(6) b,.layer i:nth-child(6) b:before,.layer i:nth-child(6) b:after,
+.layer i:nth-child(7),.layer i:nth-child(7):after,.layer i:nth-child(7):before,
+.layer i:nth-child(7) b,.layer i:nth-child(7) b:before,.layer i:nth-child(7) b:after,
+.layer i:nth-child(8),.layer i:nth-child(8):after,.layer i:nth-child(8):before,
+.layer i:nth-child(8) b,.layer i:nth-child(8) b:before,.layer i:nth-child(8) b:after,
+.layer i:nth-child(9),.layer i:nth-child(9):after,.layer i:nth-child(9):before,
+.layer i:nth-child(9) b,.layer i:nth-child(9) b:before,.layer i:nth-child(9) b:after,
+.layer i:nth-child(10),.layer i:nth-child(10):after,.layer i:nth-child(10):before,
+.layer i:nth-child(10) b,.layer i:nth-child(10) b:before,.layer i:nth-child(10) b:after,
+.layer i:nth-child(11),.layer i:nth-child(11):after,.layer i:nth-child(11):before,
+.layer i:nth-child(11) b,.layer i:nth-child(11) b:before,.layer i:nth-child(11) b:after,
+.layer i:nth-child(12),.layer i:nth-child(12):after,.layer i:nth-child(12):before,
+.layer i:nth-child(12) b,.layer i:nth-child(12) b:before,.layer i:nth-child(12) b:after,
+.layer i:nth-child(13),.layer i:nth-child(13):after,.layer i:nth-child(13):before,
+.layer i:nth-child(13) b,.layer i:nth-child(13) b:before,.layer i:nth-child(13) b:after,
+.layer i:nth-child(14),.layer i:nth-child(14):after,.layer i:nth-child(14):before,
+.layer i:nth-child(14) b,.layer i:nth-child(14) b:before,.layer i:nth-child(14) b:after,
+.layer i:nth-child(1),.layer i:nth-child(1):after,.layer i:nth-child(1):before,
+.layer i:nth-child(1) b,.layer i:nth-child(1) b:before,.layer i:nth-child(1) b:after,
+.layer i:nth-child(2),.layer i:nth-child(2):after,.layer i:nth-child(2):before,
+.layer i:nth-child(2) b,.layer i:nth-child(2) b:before,.layer i:nth-child(2) b:after,
+.layer i:nth-child(3),.layer i:nth-child(3):after,.layer i:nth-child(3):before,
+.layer i:nth-child(3) b,.layer i:nth-child(3) b:before,.layer i:nth-child(3) b:after,
+.layer i:nth-child(4),.layer i:nth-child(4):after,.layer i:nth-child(4):before,
+.layer i:nth-child(4) b,.layer i:nth-child(4) b:before,.layer i:nth-child(4) b:after,
+.layer i:nth-child(5),.layer i:nth-child(5):after,.layer i:nth-child(5):before,
+.layer i:nth-child(5) b,.layer i:nth-child(5) b:before,.layer i:nth-child(5) b:after
+{background:rgba(255,0,0,.7);}
+
+.layer i:nth-child(94),.layer i:nth-child(94):after,.layer i:nth-child(94):before,
+.layer i:nth-child(94) b,.layer i:nth-child(94) b:before,.layer i:nth-child(94) b:after,
+.layer i:nth-child(21),.layer i:nth-child(21):after,.layer i:nth-child(21):before,
+.layer i:nth-child(21) b,.layer i:nth-child(21) b:before,.layer i:nth-child(21) b:after,
+.layer i:nth-child(18),.layer i:nth-child(18):after,.layer i:nth-child(18):before,
+.layer i:nth-child(18) b,.layer i:nth-child(18) b:before,.layer i:nth-child(18) b:after,
+.layer i:nth-child(19),.layer i:nth-child(19):after,.layer i:nth-child(19):before,
+.layer i:nth-child(19) b,.layer i:nth-child(19) b:before,.layer i:nth-child(19) b:after,
+.layer i:nth-child(143),.layer i:nth-child(143):after,.layer i:nth-child(143):before,
+.layer i:nth-child(143) b,.layer i:nth-child(143) b:before,.layer i:nth-child(143) b:after,
+.layer i:nth-child(29),.layer i:nth-child(29):after,.layer i:nth-child(29):before,
+.layer i:nth-child(29) b,.layer i:nth-child(29) b:before,.layer i:nth-child(29) b:after,
+.layer i:nth-child(30),.layer i:nth-child(30):after,.layer i:nth-child(30):before,
+.layer i:nth-child(30) b,.layer i:nth-child(30) b:before,.layer i:nth-child(30) b:after,
+.layer i:nth-child(25),.layer i:nth-child(25):after,.layer i:nth-child(25):before,
+.layer i:nth-child(25) b,.layer i:nth-child(25) b:before,.layer i:nth-child(25) b:after,
+.layer i:nth-child(26),.layer i:nth-child(26):after,.layer i:nth-child(26):before,
+.layer i:nth-child(26) b,.layer i:nth-child(26) b:before,.layer i:nth-child(26) b:after,
+.layer i:nth-child(27),.layer i:nth-child(27):after,.layer i:nth-child(27):before,
+.layer i:nth-child(27) b,.layer i:nth-child(27) b:before,.layer i:nth-child(27) b:after,
+.layer i:nth-child(23),.layer i:nth-child(23):after,.layer i:nth-child(23):before,
+.layer i:nth-child(23) b,.layer i:nth-child(23) b:before,.layer i:nth-child(23) b:after,
+.layer i:nth-child(32),.layer i:nth-child(32):after,.layer i:nth-child(32):before,
+.layer i:nth-child(32) b,.layer i:nth-child(32) b:before,.layer i:nth-child(32) b:after,
+.layer i:nth-child(35),.layer i:nth-child(35):after,.layer i:nth-child(35):before,
+.layer i:nth-child(35) b,.layer i:nth-child(35) b:before,.layer i:nth-child(35) b:after,
+.layer i:nth-child(36),.layer i:nth-child(36):after,.layer i:nth-child(36):before,
+.layer i:nth-child(36) b,.layer i:nth-child(36) b:before,.layer i:nth-child(36) b:after,
+.layer i:nth-child(37),.layer i:nth-child(37):after,.layer i:nth-child(37):before,
+.layer i:nth-child(37) b,.layer i:nth-child(37) b:before,.layer i:nth-child(37) b:after,
+.layer i:nth-child(97),.layer i:nth-child(97):after,.layer i:nth-child(97):before,
+.layer i:nth-child(97) b,.layer i:nth-child(97) b:before,.layer i:nth-child(97) b:after,
+.layer i:nth-child(98),.layer i:nth-child(98):after,.layer i:nth-child(98):before,
+.layer i:nth-child(98) b,.layer i:nth-child(98) b:before,.layer i:nth-child(98) b:after,
+.layer i:nth-child(87),.layer i:nth-child(87):after,.layer i:nth-child(87):before,
+.layer i:nth-child(87) b,.layer i:nth-child(87) b:before,.layer i:nth-child(87) b:after,
+.layer i:nth-child(88),.layer i:nth-child(88):after,.layer i:nth-child(88):before,
+.layer i:nth-child(88) b,.layer i:nth-child(88) b:before,.layer i:nth-child(88) b:after,
+.layer i:nth-child(121),.layer i:nth-child(121):after,.layer i:nth-child(121):before,
+.layer i:nth-child(121) b,.layer i:nth-child(121) b:before,.layer i:nth-child(121) b:after,
+.layer i:nth-child(122),.layer i:nth-child(122):after,.layer i:nth-child(122):before,
+.layer i:nth-child(122) b,.layer i:nth-child(122) b:before,.layer i:nth-child(122) b:after,
+.layer i:nth-child(111),.layer i:nth-child(111):after,.layer i:nth-child(111):before,
+.layer i:nth-child(111) b,.layer i:nth-child(111) b:before,.layer i:nth-child(111) b:after,
+.layer i:nth-child(112),.layer i:nth-child(112):after,.layer i:nth-child(112):before,
+.layer i:nth-child(112) b,.layer i:nth-child(112) b:before,.layer i:nth-child(112) b:after,
+.layer i:nth-child(108),.layer i:nth-child(108):after,.layer i:nth-child(108):before,
+.layer i:nth-child(108) b,.layer i:nth-child(108) b:before,.layer i:nth-child(108) b:after,
+.layer i:nth-child(109),.layer i:nth-child(109):after,.layer i:nth-child(109):before,
+.layer i:nth-child(109) b,.layer i:nth-child(109) b:before,.layer i:nth-child(109) b:after,
+.layer i:nth-child(110),.layer i:nth-child(110):after,.layer i:nth-child(110):before,
+.layer i:nth-child(110) b,.layer i:nth-child(110) b:before,.layer i:nth-child(110) b:after,
+.layer i:nth-child(99),.layer i:nth-child(99):after,.layer i:nth-child(99):before,
+.layer i:nth-child(99) b,.layer i:nth-child(99) b:before,.layer i:nth-child(99) b:after,
+.layer i:nth-child(100),.layer i:nth-child(100):after,.layer i:nth-child(100):before,
+.layer i:nth-child(100) b,.layer i:nth-child(100) b:before,.layer i:nth-child(100) b:after,
+.layer i:nth-child(101),.layer i:nth-child(101):after,.layer i:nth-child(101):before,
+.layer i:nth-child(101) b,.layer i:nth-child(101) b:before,.layer i:nth-child(101) b:after,
+.layer i:nth-child(39),.layer i:nth-child(39):after,.layer i:nth-child(39):before,
+.layer i:nth-child(39) b,.layer i:nth-child(39) b:before,.layer i:nth-child(39) b:after,
+.layer i:nth-child(40),.layer i:nth-child(40):after,.layer i:nth-child(40):before,
+.layer i:nth-child(40) b,.layer i:nth-child(40) b:before,.layer i:nth-child(40) b:after,
+.layer i:nth-child(41),.layer i:nth-child(41):after,.layer i:nth-child(41):before,
+.layer i:nth-child(41) b,.layer i:nth-child(41) b:before,.layer i:nth-child(41) b:after,
+.layer i:nth-child(44),.layer i:nth-child(44):after,.layer i:nth-child(44):before,
+.layer i:nth-child(44) b,.layer i:nth-child(44) b:before,.layer i:nth-child(44) b:after,
+.layer i:nth-child(45),.layer i:nth-child(45):after,.layer i:nth-child(45):before,
+.layer i:nth-child(45) b,.layer i:nth-child(45) b:before,.layer i:nth-child(45) b:after,
+.layer i:nth-child(46),.layer i:nth-child(46):after,.layer i:nth-child(46):before,
+.layer i:nth-child(46) b,.layer i:nth-child(46) b:before,.layer i:nth-child(46) b:after,
+.layer i:nth-child(47),.layer i:nth-child(47):after,.layer i:nth-child(47):before,
+.layer i:nth-child(47) b,.layer i:nth-child(47) b:before,.layer i:nth-child(47) b:after,
+.layer i:nth-child(52),.layer i:nth-child(52):after,.layer i:nth-child(52):before,
+.layer i:nth-child(52) b,.layer i:nth-child(52) b:before,.layer i:nth-child(52) b:after,
+.layer i:nth-child(53),.layer i:nth-child(53):after,.layer i:nth-child(53):before,
+.layer i:nth-child(53) b,.layer i:nth-child(53) b:before,.layer i:nth-child(53) b:after,
+.layer i:nth-child(54),.layer i:nth-child(54):after,.layer i:nth-child(54):before,
+.layer i:nth-child(54) b,.layer i:nth-child(54) b:before,.layer i:nth-child(54) b:after,
+.layer i:nth-child(55),.layer i:nth-child(55):after,.layer i:nth-child(55):before,
+.layer i:nth-child(55) b,.layer i:nth-child(55) b:before,.layer i:nth-child(55) b:after,
+.layer i:nth-child(56),.layer i:nth-child(56):after,.layer i:nth-child(56):before,
+.layer i:nth-child(56) b,.layer i:nth-child(56) b:before,.layer i:nth-child(56) b:after,
+.layer i:nth-child(57),.layer i:nth-child(57):after,.layer i:nth-child(57):before,
+.layer i:nth-child(57) b,.layer i:nth-child(57) b:before,.layer i:nth-child(57) b:after,
+.layer i:nth-child(58),.layer i:nth-child(58):after,.layer i:nth-child(58):before,
+.layer i:nth-child(58) b,.layer i:nth-child(58) b:before,.layer i:nth-child(58) b:after,
+.layer i:nth-child(91),.layer i:nth-child(91):after,.layer i:nth-child(91):before,
+.layer i:nth-child(91) b,.layer i:nth-child(91) b:before,.layer i:nth-child(91) b:after
+{background:rgba(255,165,59,.7);}
+
+
+/*---------------------
+    Rotate 
+----------------------*/
+
+@-webkit-keyframes "rotate" {
+	0% {
+		-webkit-transform: rotateX(70deg) rotateZ(0deg);
+		}
+	25% {
+		-webkit-transform: rotateX(70deg) rotateZ(-90deg);
+	}
+	
+	50% {
+		-webkit-transform: rotateX(70deg) rotateZ(-180deg);
+ 
+	}
+	75% {
+		-webkit-transform: rotateX(70deg) rotateZ(-270deg);
+	}
+	100% {
+		-webkit-transform: rotateX(70deg) rotateZ(-360deg);
+	}
+}
+
+.orima i{
+    -webkit-transition:all 1s linear;
+}
+.orima:active i{
+    top:180px;
+    left:100px;
+}
+</style>
+<div id="ground">
+<div class="orima">
+<div class="layer"><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i> <i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+</div>

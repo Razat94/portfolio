@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!--- basic page needs (Meta Information)
+	================================================== -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- SEO Tags -->
+	<meta name="description" content="Portfolio Website">
+	<meta name="author" content="Raza Tahir">
+	<meta name="keywords" content="raza, tahir, raza tahir, portfolio, github, projects, website, web development" />
+
+	<!-- Tab Icon & Title -->
+	<title>Blog-Inc sProject - Raza Tahir</title>
+	<link id="titleImg" rel="icon" type="image/png" href="./public/img/icons/Blue_orb.png" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137821771-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-137821771-1');
+	</script>
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" type="text/css" href="../../public/css/routes.css">
+
+	<!-- JS
+	================================================== -->
+	<script src="../../vendor/jquery/jquery.min.js"></script>
+	<script src="../../vendor/popper/popper.js"></script>
+	<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-light navbar-expand-md">
+		<div class="container">
+			<a href="../../" class="navbar-brand mr" id="site-header" style="color: #02487e;">
+				Raza Tahir
+			</a>
+			<button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse" id="collapsingNavbar2">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="../../">
+							Projects
+							<span class="sr-only">Home</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../../about.html">About</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav ml-auto flex-row flex-nowrap">
+					<li class="nav-item">
+						<a class="nav-link" href="mailto:Razat51@gmail.com" target="_blank">
+							<i class="fa fa-envelope mr-1"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/Razat94?tab=repositories">
+							<i class="fa fa-github-alt mr-1"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.linkedin.com/in/razatahir">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="site-header border-bottom logo--left" role="banner">
+	</header>
+
+	<!-- __________________________Beginning of Project_________________________________________________ -->
+
+	<!-- Add aboutContainer class to main tag to always make webpage single column -->
+	<main class="container aboutContainer" id="animation">
+		<div class="text-center" id="site-header">
+			<h1>Blog Inc.</h1>
+			<h2>A CRUD application that utilizes Express and MongoDB</h2>
+		</div>
+
+		<section class="row">
+			<div class="col-md-6 mt-3">
+
+				<form action="http://bloginc.herokuapp.com/" target="_blank">
+					<button class="projectLinksButton">Visit</button>
+				</form>
+
+				<form action="https://github.com/Razat94/Bloginc" target="_blank">
+					<button class="projectLinksButton">Source Code</button>
+				</form>
+			</div>
+
+			<div class="col-md-6 mt-3">
+				<h6 class="text-center font-weight-bold">
+					<u>Description</u>
+				</h6>
+				<p>
+					This is the first website that I've ever created using the Express framework!
+					I used Heroku to host the project & mLabs to host the MongoDB Database.
+				</p>
+
+				<p>
+					Routing the end points and having the server return files was fun to learn.
+					Although developing the back end of the website with a Node based framework seemed daunting at
+					first,
+					it was surprisingly was very easy to learn. If anything, making requests seemed easier in Express
+					than it did
+					in plain old Node.js.
+				</p>
+			</div> <!-- End of div explanation -->
+		</section>
+	</main>
+
+	<!-- __________________________End Project_________________________________________________ -->
+
+</body>
+
+</html>

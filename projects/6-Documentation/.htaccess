@@ -1,0 +1,3 @@
+# How to set an index page in a subfolder 
+# https://stackoverflow.com/questions/46616901/how-to-open-an-index-page-into-a-subdirectory-without-adding-index-html
+DirectoryIndex index.html
