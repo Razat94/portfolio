@@ -324,6 +324,22 @@ ul {
 	margin: 0% auto 3%;
 }
 
+.linkedin-img-output {
+	margin-top: 4rem;
+	height: 7rem;
+}
+
+.a .linkedin-img-output {
+	background-color: none;
+}
+
+/* For devices 576 px and smaller */
+@media (max-width: 767px) {
+	.linkedin-img-output {
+		margin-top: 0rem;
+	}
+}
+
 /* Bootstrap Navbar */
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
