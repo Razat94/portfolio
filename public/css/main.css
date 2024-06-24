@@ -325,7 +325,7 @@ ul {
 }
 
 .linkedin-img-output {
-	margin-top: 4rem;
+	margin-top: 2rem;
 	height: 7rem;
 }
 
@@ -336,7 +336,7 @@ ul {
 /* For devices 576 px and smaller */
 @media (max-width: 767px) {
 	.linkedin-img-output {
-		margin-top: 0rem;
+		margin-top: 1rem;
 	}
 }
 
