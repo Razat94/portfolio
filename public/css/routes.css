@@ -3,7 +3,7 @@
 @import url("./fonts/avenir.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("../../vendor/bootstrap/css/bootstrap.min.css");
- /* Following two lines MUST be placed after importing bootstrap.min.css*/
+/* Following two lines MUST be placed AFTER importing bootstrap.min.css to overwrite some classes */
 @import url("./main.css");
 @import url("./github-css/jumbotron-bootstrap.css");
 @import url("../../public/css/textbox-colors.css");
