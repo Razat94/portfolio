@@ -22,8 +22,12 @@
 ##########################################################################################################
 */
 
-/* Background Colors */
+.sm-rectangle {
+	width: 20px;
+	height: 20px;
+}
 
+/* Background Colors */
 .bg-f123 { /* f1f2f3 for life */ 
 	background-color: #f1f2f3;
 }
