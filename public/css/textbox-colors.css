@@ -23,32 +23,45 @@
 */
 
 /* Background Colors */
+
+.bg-f123 { /* f1f2f3 for life */ 
+	background-color: #f1f2f3;
+}
+
 .bg1 {
+	background-color: var(--bg-color, #f6f8fa); /*Same as this:  background-color: #f6f8fa; */
+}
+
+.bg2 {
 	background-color: rgb(67, 206, 162);
 	color: white;
 }
 
-.bg2 {
+.bg3 {
 	background-color: #28a745!important; /* Green */;
 	color: white;
 }
 
-.bg3 {
+.bg4 {
 	background-color: #77aee7!important;
 	color: white;
 }
 
-.bg4 {
+.bg5 {
 	background-color: rgb(204, 255, 204);
 	color: black;
 }
 
-.bg5 {
+.bg6 {
 	background-color: #33d6ff; 
 	color: white;
 }
 
-.bg6 {
+.bg7 {
 	background-color: rgb(24, 90, 157);
 	color: white;
+}
+
+.bg {
+	border: ;
 }
