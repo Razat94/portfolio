@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--- basic page needs (Meta Information)
+	================================================== -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- SEO Tags -->
+	<meta name="description" content="Portfolio website showcasing documentation created by Raza Tahir, 
+	a software web developer based in Los Angeles, CA.">
+	<meta name="author" content="Raza Tahir">
+	<meta name="keywords" content="raza, tahir, raza tahir, portfolio, github, projects, website, web development" />
+
+	<!-- Tab Icon & Title -->
+	<title> Documentation | Raza Tahir </title>
+	<link id="titleImg" rel="icon" type="image/png" href="../../public/img/icons/Blue_orb.png" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137821771-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-137821771-1');
+	</script>
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" type="text/css" href="../../public/css/routes.css">
+	<link rel="stylesheet" href="../../public/css/github-css/jumbotron-bootstrap.css">
+	<link id="Light" rel="stylesheet" href="../../public/css/github-css/github-markdown.css">
+	<link rel="stylesheet" type="text/css" href="../../public/css/documentation-style.css" />
+
+	<!-- JS
+	================================================== -->
+	<script src="../../vendor/jquery/jquery.min.js"></script>
+	<script src="../../vendor/popper/popper.js"></script>
+	<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<script>
+	function runthis() {
+		var buttonValue = document.getElementById("darkMode").checked;
+		var LightSheet = document.getElementById("Light");
+		var DarkSheet = document.getElementById("Dark");
+
+		if (buttonValue == false) {
+			// alert("Run Light Mode");
+			DarkSheet.disabled = true;
+			DarkSheet.parentNode.removeChild(DarkSheet);
+		}
+		else {
+			// alert("Run Dark Mode");
+
+			// Get HTML head element
+			let head = document.getElementsByTagName('HEAD')[0];
+
+			// Create new link Element
+			let link = document.createElement('link');
+
+			// set the attributes for link element
+			link.id = "Dark"
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = '../../public/css/github-css/github-markdown-dark.css';
+
+			// Append link element to HTML head
+			head.appendChild(link);
+		}
+	}
+</script>
+
+<style>
+	label {
+		margin-bottom: 0px;
+	}
+
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 60px;
+		height: 35px;
+		margin-top: 5px;
+	}
+
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 25px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	input:checked+.slider {
+		background-color: #2196F3;
+	}
+
+	input:focus+.slider {
+		box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked+.slider:before {
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+		border-radius: 34px;
+	}
+
+	.slider.round:before {
+		border-radius: 50%;
+	}
+</style>
+
+<body>
+
+	<script type="text/javascript" src="../../public/js/documentation_autoscroll.js"></script>
+
+	<div id="theme-wrapper">
+		<!-- NAVIGATION -->
+		<div id="theme-navigation">
+			<div id="theme-navigation-body">
+				<div id="theme-navigation-heading">
+					<div id="theme-navigation-title">
+						<span>Table of Contents </span>
+					</div>
+
+					<div class="hidden"><a href="#">Menu</a></div>
+					<div class="clearfix"></div>
+				</div>
+				<div id="theme-navigation-list">
+					<ul>
+						<li>
+							<span>Dark Mode?
+								<br />
+								<label class="switch">
+									<input id="darkMode" type="checkbox" onclick="runthis()">
+									<span class="slider round"></span>
+								</label>
+							</span>
+						</li>
+
+						<li><a href="#docA">A) Getting Started</a></li>
+						<li><a href="#docC">B) HTML and CSS files</a></li>
+						<li><a href="#docD">C) Php</a></li>
+						<li><a href="#docE">D) Search Engine Optimization</a></li>
+						<li><a href="#credits">E) Credits</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- NAVIGATION -->
+
+		<!-- CONTENT -->
+		<div id="theme-content" class="markdown-body">
+			<div id="theme-content-heading">Appic - Documentation</div>
+			<div id="theme-content-info">
+				<div id="theme-content-info-created">
+					<div id="theme-content-info-created-body">
+						Created: Jule 02, 2018<br />
+						By: Pierian Design<br />
+					</div>
+				</div>
+				<div id="theme-content-info-description">
+					<div id="theme-content-info-description-body">
+						Thank you for purchasing my theme.
+					</div>
+				</div>
+			</div>
+
+			<div id="theme-content-body">
+				<h3 id="docA">A) Getting Started</h3>
+				<p>Thank you for purchasing a website template from our company. This manual will show you how to work
+					with your template, how to edit it and make it a "live" website.</p>
+				<p>All pages content is made with HTML and dynamic animation is made with JavaScript.</p>
+				<p>This template made with Bootstrap, using HTML5, CSS3, JS and jQuery.</p>
+
+				<blockquote>
+					<p>Blockquotes are very handy in email to emulate reply text.
+						This line is part of the same quote.</p>
+				</blockquote>
+
+				<br>
+				<h3>The following scheme displays the template files structure.</h3>
+				<ul class="files_structure">
+					<li><b>Documentation</b><span> – contains documentation on template editing and installation.</span>
+					</li>
+					<li><b>Appic.zip</b><span> - archive the .html files of the template.</span>
+					</li>
+
+				</ul>
+				<h4>Get Yourself a Code Editor</h4>
+				<p>Yes, it’s completely possible to edit HTML in Notepad or a similar program, but things will go much
+					more smoothly for you if you use a proper code editing app. One of the main reasons is you’ll get
+					colored highlighting of your code, as you’ll see shortly, which will make it much easier to read and
+					edit.</p>
+
+				<p>I recommend Sublime Text, which you can download here: <a
+						href="https://www.sublimetext.com/3">https://www.sublimetext.com/3</a></p>
+
+				<p>Most HTML templates will come in a ZIP file - if so, go ahead and extract yours now. Then look around
+					inside the template’s folders until you find the “index.html” or “index.htm” file. </p>
+
+				<br>
+				<hr />
+
+				<h3 id="docC">B) HTML and CSS files</h3>
+
+				<p>Working with the template you need to edit the .html, .css and .js files.</p>
+
+				<h4>Editing HTML and CSS files</h4>
+
+				<p>All editable HTML files are located in "Appic" folder of the template package. Each index-#.html file
+					represents a single template page.</p>
+				<p>To open .html file with Sublime Text 3 application, you should right mouse click on the file, and in
+					the context menu select Open with > Sublime Text 3. When the file is opened you can start editing
+					it.</p>
+				<p>Sublime Text 3 is a recommended application as it allows you to edit the HTML files content. </p>
+				<p>CSS files are used to change the template appearance like fonts (font-family, font-size, color etc),
+					backgrounds, column width values etc. You can edit the css files with Sublime Text 3 application.
+
+				<p>For default colors (style.css)</p>
+
+				<h4>Google Web Fonts</h4>
+
+				<h4>Loading data from Google servers</h4>
+
+				<p>Some countries have issues connecting to Google servers. This can cause issues loading Google Fonts
+					and Java Script libraries from Google CDN. To resolve these issues please do the following: </p>
+
+				<h4>Can't load Google Fonts:</h4>
+
+				<ol>
+					<li>Open 'Appic\index-*.html' or 'Appic\css\style.css' files</li>
+					<li>
+						Locate the line:
+						<pre>//fonts.googleapis.com/css?family=[---your_web_font_name_here---]</pre>
+					</li>
+					<li>
+						Replace it with the following:
+						<pre>//fonts.useso.com/css?family=[---your_web_font_name_here---]</pre>
+					</li>
+				</ol>
+
+				<h4>How to edit text</h4>
+
+				<p>Templates are HTML based templates so all content is stored and could be accessed though the .html
+					files.</p>
+
+				<ol>
+					<li>Open your template package and go to the site folder.</li>
+					<li>There open index.html&nbsp; file with your HTML editor.</li>
+					<li>You can use the search tool <strong>CTRL+F </strong>to find any text you need.</li>
+					<li>Edit text in HTML editor. Save the file and open it with your Browser to see the changes.</li>
+				</ol>
+
+				<p>The other way is to use the browser developer tool to find the blocks you want to edit. You can learn
+					more about the developer tools checking the tools description and tutorials.</p>
+
+				<h4>How to edit images</h4>
+
+				<p>Open the template folder, go to '<strong>Appic/images</strong>' directory. You can upload your images
+					with the same name and extension to replace the default ones.</p>
+
+				<p>The other way is to upload custom images with your titles and extensions. Then you’ll need to change
+					the image file names in the html files.</p>
+
+				<ol>
+					<li>Open <strong>.html</strong> file from the “<strong>Appic</strong>” folder with your html editor.
+					</li>
+					<li>Use search tool <strong>CTRL+F</strong> to find the images in the html file.</li>
+					<li>Replace the image title and extension.</li>
+				</ol>
+
+				<br>
+				<hr />
+				<h3 id="docD">C) Php</h3>
+
+				<h4>Contact Form</h4>
+
+				<ol>
+					<li>Go the Appic/php directory.</li>
+					<li>
+						Open the file in "form-process.php" line 9 <br />
+					</li>
+					<li>
+						$EmailTo = "emailaddress@test.com" <br />
+						edited 'emailaddress@test.com' with your email
+					</li>
+				</ol>
+
+				<h4>Newsletter Form</h4>
+
+				<ol>
+					<li>Go the Appic/php directory.</li>
+					<li>
+						Open the file in "newsletter.php" line 4 <br />
+					</li>
+					<li>
+						$EmailTo = "emailaddress@test.com" <br />
+						edited 'emailaddress@test.com' with your email
+					</li>
+				</ol>
+
+				<br />
+
+				<hr />
+
+				<h3 id="docE">E) Search Engine Optimization</h3>
+				<p>In order to improve your search engine ranking, and thus enable your web site to appear among search
+					results, please don't forget to change the description and keywords with your own.</p>
+				<pre>
+					<span>&lt;</span>meta name="description" content=""<span>&gt;</span>
+					<span>&lt;</span>meta name="keywords" content=""<span>&gt;</span>
+				</pre>
+
+				<hr />
+
+
+				<h3 id="credits">F) Sources and Credits</h3>
+
+				<p>I've used the following images, icons or other files as listed.</p>
+				<h4>HTML, CSS and JS:</h4>
+				<ul>
+					<li><a href="http://getbootstrap.com/" title="">Bootstrap</a></li>
+					<li><a href="https://jquery.com/" title="">jquery</a></li>
+					<li><a href="http://fortawesome.github.io/Font-Awesome/" title="">Font Awesome</a></li>
+					<li><a href="http://simplelineicons.com/" title="">Simple Line Icons</a></li>
+					<li><a href="https://dimsemenov.com/plugins/magnific-popup/" title="">Magnific Popup</a></li>
+					<li><a href="http://rochestb.github.io/jQuery.YoutubeBackground/" title="">Jquery Youtube Background
+							Video</a></li>
+					<li><a href="https://imagesloaded.desandro.com/" title="">imagesLoaded</a></li>
+					<li><a href="https://github.com/bfintal/Counter-Up" title="">Counter Up</a></li>
+					<li><a href="https://github.com/bas2k/jquery.appear/" title="">jQuery Appear</a></li>
+
+					<li><a href="https://github.com/VincentGarreau/particles.js/" title="">Particles.js</a></li>
+					<li><a href="https://github.com/metafizzy/isotope/" title="">Isotope.js</a></li>
+					<li><a href="https://github.com/matthieua/WOW/" title="">Wow.js</a></li>
+					<li><a href="https://github.com/pixelcog/parallax.js/" title="">Jquery Parallax</a></li>
+					<li><a href="https://github.com/flesler/jquery.localScroll" title="">Jquery Localscroll</a></li>
+					<li><a href="https://github.com/flesler/jquery.scrollTo/" title="">Jquery ScrollTo</a></li>
+					<li><a href="https://github.com/cycdpo/swiper-animation/" title="">SwiperAnimation </a></li>
+				</ul>
+				<h4>Images:</h4>
+				<ul>
+					<li><a href="https://unsplash.com/" title="">unsplash.com</a></li>
+				</ul>
+				<h4>Fonts:</h4>
+				<ul>
+					<li><a href="http://www.google.com/fonts/specimen/Poppins" title="">Poppins</a></li>
+				</ul>
+				<hr />
+
+				<p class="append-bottom">Leyar</p>
+
+				<a href="#">Back to Top</a>
+
+				<hr class="space" />
+
+			</div>
+		</div>
+		<!-- CONTENT -->
+	</div>
+
+</body>
+
+</html>
