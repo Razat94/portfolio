@@ -35,7 +35,7 @@
 	================================================== -->
 	<link rel="stylesheet" type="text/css" href="../../public/css/routes.css">
 	<link id="Light" rel="stylesheet" href="../../public/css/github-css/github-markdown.css">
-	<link rel="stylesheet" type="text/css" href="../../public/css/documentation-style.css" />
+	<link rel="stylesheet" type="text/css" href="../../public/css/documentation-style.css">
 
 	<!-- JS
 	================================================== -->
@@ -143,23 +143,23 @@
 			<h4>Reminder: Please download the files</h4>
 			<p>Please remember to download the files that were given. </p>
 
+			<blockquote class="border-success">
+				<p>
+					I would recommend reading the reference articles from
+					<a
+						href="https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">Microsoft</a>
+					and
+					<a href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
+					for more information.
+				</p>
+			</blockquote>
+
 			<h3 id="topicA">A) Getting Started</h3>
 			<section>
 				<p>
 					VLOOKUP is a premade Excel & Google Sheets lookup function that can find information in a row.
 					<br /> I.E. Given any row, I can find information from other columns in that row.
 				</p>
-
-				<blockquote>
-					<p>
-						I would recommend reading the reference articles from
-						<a
-							href="https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">Microsoft</a>
-						and
-						<a href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
-						for more information.
-					</p>
-				</blockquote>
 
 				<div class="alert alert-warning" role="alert">
 					FYI: XLOOKUPs are the new & improved VLOOKUP. <br />
@@ -229,7 +229,8 @@
 					lookup. </p>
 				<ul class="">
 					<li><b>Lookup Value: </b>
-						<span> The value you want to search for. <u>Remember</u> that this identifier must be in the first
+						<span> The value you want to search for. <u>Remember</u> that this identifier must be in the
+							first
 							column.</span>
 					</li>
 					<li><b>Table Array: </b>
@@ -253,7 +254,7 @@
 				<hr />
 			</section>
 
-			<h3 id="topicB">B) Example #1</h3>
+			<!-- <h3 id="topicL">B) Example #1</h3>
 			<section>
 				<p>Working with the template you need to edit the .html, .css and .js files.</p>
 
@@ -323,6 +324,170 @@
 
 				<br>
 				<hr />
+			</section> -->
+
+			<h3 id="topicB">B) Example #1:</h3>
+
+			<section>
+				<h4>Let's look at the "Example 1" Worksheet</h4>. You can open the file by:
+				<ol>
+					<li>Going to the file directory.</li>
+					<li>
+						Open the file named "Vlookup Examples" <br />
+					</li>
+					<li>
+						Open up "Example 1".
+					</li>
+				</ol>
+
+				<p>
+					Suppose we have a table of some produce as seen below:
+				</p>
+
+				<table class="table">
+					<caption>Each produce has a price per pound and availability.</caption>
+					<thead>
+						<tr>
+							<th scope="col">Produce</th>
+							<th scope="col">Available?</th>
+							<th scope="col">Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Apple</th>
+							<td>Yes</td>
+							<td>$1.50</td>
+						</tr>
+						<tr>
+							<th scope="row">Banana</th>
+							<td>No</td>
+							<td>$2.03</td>
+						</tr>
+						<tr>
+							<th scope="row">Lemon</th>
+							<td colspan="">No</td>
+							<td colspan="">$3.10</td>
+						</tr>
+						<tr>
+							<th scope="row">Orange</th>
+							<td>Yes</td>
+							<td>$1.01</td>
+						</tr>
+						<tr>
+							<th scope="row">Peach</th>
+							<td>Yes</td>
+							<td>$2.00</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>
+					Since this example is simplified, we can find the price of the produce just by looking at the table.
+					However, suppose we are SuperKing Markets & we sell 100s of produce.
+					It would be very daunting to scan row by row! So instead we can create what's called a "Lookup
+					Table" to find out answer.
+					Below is an example:
+				</p>
+
+				<table class="table">
+					<tbody>
+						<tr class="">
+							<td class="bg-success text-center">Produce</td>
+							<td colspan="2" class="text-center btn btn-primary dropdown-toggle" type="button"
+								data-toggle="dropdown">
+								Fruit
+								<span class="caret"></span>
+								<ul class="dropdown-menu">
+									<li><a href="#">Apples</a></li>
+									<li><a href="#">Banana</a></li>
+									<li><a href="#">Orange</a></li>
+									<li><a href="#">Peach</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">Price?</th>
+							<td colspan="2" class="text-center">-</td>
+						</tr>
+						<tr>
+							<th scope="row">Lemon</th>
+							<td colspan="2" class="text-center">-</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<blockquote>
+					Remember: A VLOOKUP simply looks up related values in a row.
+				</blockquote>
+
+				<p>
+					In this example, cell B1 will hold our lookup value,
+					and cells B2 and B3 will contain VLookups that output the price and stock availability.
+					As we change the produce listed in B1, the values in B2 and B3 will update automatically.
+				</p>
+
+				<p>In short, if given a fruit, we can use VLOOKUP to find both its price and stock status.
+					<br />So if we want to find the price of Oranges,
+					we’ll use Orange as our lookup value to find its price and stock availability.
+				</p>
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="alert alert-success" role="alert">
+							It's important not to overcomplicate this function. Always focus on what the output should
+							be.
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="alert alert-warning" role="alert">
+							Remember: If you know the price of ginger, you don't need a VLOOKUP; you can see the price
+							directly just by looking.
+							<br /> <br />The lookup function is Excels way of telling you the answer; it also updates
+							the result based on what’s in B1.
+						</div>
+					</div>
+				</div>
+
+				<p>
+					Now, let’s break down how VLOOKUP works:
+				</p>
+				
+				<ul>
+					<li>Lookup Value (B1): This is what we're searching for, like cucumbers.</li>
+					<li>Table Array (A7 to C11): This range includes all our data. While you can include the header row, it's usually excluded.</li>
+					<li>Column Index Number: This identifies which column to pull data from—1 for vegetables, 2 for price, and 3 for stock. For price, we use column 2.</li>
+					<li>Match: This would be an EXACT match, since we're looking up exact words.</li>
+				</ul>
+				
+				<p>
+					In our example, the VLOOKUP in B2 returns the price, and the one in B3 shows availability, both based on exact matches.
+
+				</p>
+				
+				<p>
+					Question: If we move the data set to another location,
+					will the function still work?
+				</p>
+
+				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+					aria-expanded="false" aria-controls="collapseExample">
+					Show Answer
+				</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+
+					<blockquote class="border-danger">
+						Yes. Because the function still uses cell references.
+						Whether the data set moves or not, the column index number for price is still 2,
+						and the function will still work despite the data range moving.
+					</blockquote>
+
+				</div>
+
+				<br />
+
+				<hr />
 			</section>
 
 			<h3 id="topicC">C) Example #2:</h3>
@@ -374,6 +539,11 @@
 
 			<h3 id="topicE">E) Xlookup</h3>
 			<section>
+				<p>
+					XLOOKUP is an improved and updated version of VLOOKUP,
+					but VLOOKUP is more compatible & more widely supported with older Excel versions.
+				</p>
+
 				<p>In order to improve your search engine ranking, and thus enable your web site to appear among search
 					results, please don't forget to change the description and keywords with your own.</p>
 				<pre>
@@ -383,7 +553,7 @@
 
 				<hr />
 			</section>
-			
+
 			<h3 id="credits">F) Sources and Credits</h3>
 
 			<p>I've used the following images, icons or other files as listed.</p>
