@@ -122,6 +122,7 @@ table tr th {
 	color: #fff;
 	position: fixed;
 	height: 100%;
+	margin: auto;
 	vertical-align: top;
 	overflow-y: auto;
 }
