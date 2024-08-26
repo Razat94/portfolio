@@ -1,9 +1,10 @@
-*, body{
+*,
+body {
 	margin: 0;
 	padding: 0;
 }
 
-body{
+body {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 16px;
 }
@@ -12,30 +13,30 @@ body {
 	width: 100%;
 }
 
-a{
+a {
 	transition: all ease 0.2s;
 	-webkit-transition: all ease 0.2s;
 	-moz-transition: all ease 0.2s;
 }
 
-.left{
-	float:left;
+.left {
+	float: left;
 }
 
-.right{
-	float:right;
+.right {
+	float: right;
 }
 
-.clearfix{
+.clearfix {
 	float: none;
 	clear: both;
 }
 
-.hidden{
+.hidden {
 	display: none;
 }
 
-img{
+img {
 	max-width: 100%;
 }
 
@@ -59,62 +60,62 @@ hr {
 	border: none;
 }
 
-.append-bottom{
-	font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+.append-bottom {
+	font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
 	font-weight: bold;
 	font-style: italic;
 	font-size: 17px;
 }
 
-.space{
+.space {
 	background: none !important;
 	color: none !important;
 }
 
-table{
-    max-width: 100%;
-    border-spacing: 0;
-    border-collapse: collapse;
+table {
+	max-width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
 	margin-bottom: 30px;
 }
 
-table>thead>tr>th, 
-table>tbody>tr>th, 
-table>tfoot>tr>th, 
-table>thead>tr>td, 
-table>tbody>tr>td, 
+table>thead>tr>th,
+table>tbody>tr>th,
+table>tfoot>tr>th,
+table>thead>tr>td,
+table>tbody>tr>td,
 table>tfoot>tr>td {
-    border: 1px solid #e5e5e5;
+	border: 1px solid #e5e5e5;
 }
 
 table tr th,
-table tr td{
-    padding: 10px 25px;
+table tr td {
+	padding: 10px 25px;
 }
 
-table tr th{
+table tr th {
 	background-color: #fbfbfb;
 	font-size: 16px;
 	font-weight: bold;
 	color: #444;
 }
 
-.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>td,
 .table-striped>tbody>tr:nth-child(odd)>th {
-    background-color: #fbfbfb;
+	background-color: #fbfbfb;
 }
 
-#theme-wrapper{
+#theme-wrapper {
 	display: table;
 	width: 100%;
 }
 
 /* ========== NAVIGATION ========== */
-#theme-navigation-title{
+#theme-navigation-title {
 	color: white;
 }
 
-#theme-navigation{
+#theme-navigation {
 	display: table-cell;
 	min-width: auto;
 	background: #272727;
@@ -125,23 +126,24 @@ table tr th{
 	overflow-y: auto;
 }
 
-#theme-navigation-heading{
+#theme-navigation-heading {
 	padding: 19px 30px;
 	font-size: 19px;
 	color: #fff !important;
 	background-image: -moz-linear-gradient(0deg, #43cea2 0%, #185a9d 100%);
-    background-image: -webkit-linear-gradient(0deg, #43cea2 0%, #185a9d 100%);
-    background-image: -ms-linear-gradient(0deg, #43cea2 0%, #185a9d 100%);
+	background-image: -webkit-linear-gradient(0deg, #43cea2 0%, #185a9d 100%);
+	background-image: -ms-linear-gradient(0deg, #43cea2 0%, #185a9d 100%);
 	line-height: 30px;
 }
 
-#theme-navigation-list ul{
+#theme-navigation-list ul {
 	list-style: none;
 	padding-left: 0em;
 	width: 100%;
 }
 
-#theme-navigation-list ul li a, #theme-navigation-list ul li span {
+#theme-navigation-list ul li a,
+#theme-navigation-list ul li span {
 	text-decoration: none;
 	color: #EDEDED;
 	padding: 15px 30px;
@@ -150,28 +152,28 @@ table tr th{
 	line-height: 26px;
 }
 
-#theme-navigation-list ul li a:hover{
+#theme-navigation-list ul li a:hover {
 	background: #65859D;
 	color: #fff;
 }
 
-#theme-navigation-list ul li ul{
-	padding:20px 50px;
+#theme-navigation-list ul li ul {
+	padding: 20px 50px;
 	border-top: 1px solid #424242;
 	list-style: circle;
 }
 
-#theme-navigation-list ul li ul li a{
-	border:0px;
-	padding:0px;
+#theme-navigation-list ul li ul li a {
+	border: 0px;
+	padding: 0px;
 	border-top: 0px;
 	padding: 0px;
 	margin-bottom: 9px;
 	color: #CBCBCB;
 }
 
-#theme-navigation-list ul li ul li a:hover{
-	background:none;
+#theme-navigation-list ul li ul li a:hover {
+	background: none;
 	color: #eee;
 }
 
@@ -179,48 +181,49 @@ table tr th{
 	padding: 5px 30px;
 	border-top: 0px;
 }
+
 /* ========== NAVIGATION ========== */
 
 
 /* ========== CONTENT ========== */
-#theme-content{
+#theme-content {
 	display: table-cell;
 	width: 75%;
 	vertical-align: top;
 	padding: 32px 49px;
 }
 
-#theme-content a{
+#theme-content a {
 	text-decoration: none;
 	color: #6381e5;
 }
 
-#theme-content a:hover{
+#theme-content a:hover {
 	text-decoration: underline;
 }
 
-#theme-content-heading{
+#theme-content-heading {
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: bold;
 }
 
-#theme-content-info{
-	border:1px solid #e5e5e5;
-	border-left:0px;
-	border-right:0px;
+#theme-content-info {
+	border: 1px solid #e5e5e5;
+	border-left: 0px;
+	border-right: 0px;
 	margin: 27px 0px 40px;
 	display: table;
 }
 
 #theme-content-info-created,
-#theme-content-info-description{
+#theme-content-info-description {
 	padding: 23px 30px;
 	display: table-cell;
 	vertical-align: top;
 }
 
-#theme-content-info-created{
+#theme-content-info-created {
 	width: 35%;
 	background: #f7f7f7;
 	font-weight: bold;
@@ -229,7 +232,7 @@ table tr th{
 	color: #555;
 }
 
-#theme-content-info-description{
+#theme-content-info-description {
 	width: 65%;
 	line-height: 26px;
 }
@@ -249,7 +252,7 @@ table tr th{
 }
 
 #theme-content-body ol,
-#theme-content-body ul{
+#theme-content-body ul {
 	margin: 7px 0px 14px 25px;
 }
 
@@ -257,12 +260,12 @@ table tr th{
 
 
 /* ========== RESPONSIVE ========== */
-@media only screen and (max-width: 995px){
-	#theme-navigation-title{
-		float:left;
+@media only screen and (max-width: 995px) {
+	#theme-navigation-title {
+		float: left;
 	}
 
-	.hidden{
+	.hidden {
 		display: block;
 		float: right;
 	}
@@ -277,7 +280,7 @@ table tr th{
 		font-weight: bold;
 	}
 
-	.hidden a:hover{
+	.hidden a:hover {
 		background: #303030;
 	}
 
@@ -297,26 +300,26 @@ table tr th{
 		display: block;
 		width: 100%;
 		padding: 0px;
-		margin-top:20px;
+		margin-top: 20px;
 	}
 
 	#theme-content-heading,
 	#theme-content-info,
-	#theme-content-body{
+	#theme-content-body {
 		margin: 0px 20px;
 	}
 
-	#theme-content-info{
+	#theme-content-info {
 		margin: 27px 20px 40px;
 	}
 
-	#theme-navigation-list{
+	#theme-navigation-list {
 		display: none;
 	}
 }
 
-@media only screen and (max-width: 675px){
-	#theme-content-info{
+@media only screen and (max-width: 675px) {
+	#theme-content-info {
 		display: block;
 	}
 
@@ -340,4 +343,72 @@ table tr th{
 		padding: 20px 0px;
 	}
 }
+
 /* ========== RESPONSIVE ========== */
+
+
+/* W3 Schools How To Toggle Switch Button */
+label {
+	margin-bottom: 0px;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 35px;
+	margin-top: 5px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 25px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: #2196F3;
+}
+
+input:focus+.slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
