@@ -725,9 +725,10 @@ section {
   border-top: 1px solid #c6cbd1;
 }
 
-.markdown-body table tr:nth-child(2n) {
+/* .markdown-body table tr:nth-child(2n) {
+  // Following Code will make every other row gray.
   background-color: #f6f8fa;
-}
+} */
 
 .markdown-body img {
   background-color: #fff;

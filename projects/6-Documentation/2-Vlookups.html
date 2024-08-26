@@ -105,10 +105,11 @@
 					</li>
 
 					<li><a href="#topicA"> A) Getting Started</a></li>
-					<li><a href="#docC"> B) HTML and CSS files</a></li>
-					<li><a href="#docD"> C) Php</a></li>
-					<li><a href="#docE"> D) Search Engine Optimization</a></li>
-					<li><a href="#credits"> E) Credits</a></li>
+					<li><a href="#topicB"> B) Example #1</a></li>
+					<li><a href="#topicC"> C) Example #2</a></li>
+					<li><a href="#topicD"> D) Example #3</a></li>
+					<li><a href="#topicE"> E) Peek into XLookup</a></li>
+					<li><a href="#credits"> F) Credits</a></li>
 
 				</ul>
 			</div>
@@ -118,7 +119,7 @@
 
 	<!-- CONTENT -->
 	<main id="theme-content" class="markdown-body">
-		<div id="theme-content-heading">Vlookup - Documentation</div>
+		<h1 id="theme-content-heading">Vlookup - Documentation</h1>
 		<section id="theme-content-info">
 			<div id="theme-content-info-created">
 				<div id="theme-content-info-created-body">
@@ -139,158 +140,250 @@
 		</section>
 
 		<div id="theme-content-body">
+			<h4>Reminder: Please download the files</h4>
+			<p>Please remember to download the files that were given. </p>
+
 			<h3 id="topicA">A) Getting Started</h3>
-			<p>
-				VLOOKUP is an Excel & Google Sheets lookup function to search for related information by row.
-
-			<blockquote>
+			<section>
 				<p>
-					I would recommend reading the reference articles from
-					<a
-						href="https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">Microsoft</a>
-					and
-					<a href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
-					for more information.
+					VLOOKUP is a premade Excel & Google Sheets lookup function that can find information in a row.
+					<br /> I.E. Given any row, I can find information from other columns in that row.
 				</p>
-			</blockquote>
 
-			<br>
-			<h3>The following scheme displays the template files structure.</h3>
-			<ul class="files_structure">
-				<li><b>Documentation</b><span> – contains documentation on template editing and installation.</span>
-				</li>
-				<li><b>Appic.zip</b><span> - archive the .html files of the template.</span>
-				</li>
+				<blockquote>
+					<p>
+						I would recommend reading the reference articles from
+						<a
+							href="https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">Microsoft</a>
+						and
+						<a href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
+						for more information.
+					</p>
+				</blockquote>
 
-			</ul>
-			<h4>Get Yourself a Code Editor</h4>
-			<p>Yes, it’s completely possible to edit HTML in Notepad or a similar program, but things will go much
-				more smoothly for you if you use a proper code editing app. One of the main reasons is you’ll get
-				colored highlighting of your code, as you’ll see shortly, which will make it much easier to read and
-				edit.</p>
+				<div class="alert alert-warning" role="alert">
+					FYI: XLOOKUPs are the new & improved VLOOKUP. <br />
+					XLOOKUP addresses and improves on the limitations of Vlookup, thereby making it easier to use.
+				</div>
 
-			<p>I recommend Sublime Text, which you can download here: <a
-					href="https://www.sublimetext.com/3">https://www.sublimetext.com/3</a></p>
+				<p>
+					For a vlookup to work, the data set must be structured such that each record/entry is in a separate
+					row.
+				</p>
 
-			<p>Most HTML templates will come in a ZIP file - if so, go ahead and extract yours now. Then look around
-				inside the template’s folders until you find the “index.html” or “index.htm” file. </p>
+				<span> E.g. Given someones ID Number, find their domain handle.</span>
+				<table class="table table-hover">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">First</th>
+							<th scope="col">Last</th>
+							<th scope="col">Handle</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@mdo</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>@fat</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Larry</td>
+							<td>Bird</td>
+							<td>@twitter</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					In an inventory/product list, VLOOKUP can help you find an item's price or details using a part
+					number.
+					It can also be handy for getting a specific employees info (Name, Email, Department, etc.) from a
+					badge number.
+				</p>
 
-			<br>
-			<hr />
+				<div class="alert alert-danger" role="alert">
+					Danger #1:
+					For Vlookups to work, the lookup value <u><strong>MUST</strong></u> be in the 1st column!
+					E.G, The badge number must be in the first column otherwise the function will not work.
+					<br /> <br />
+					The Xlookup function overcomes this issue.
+				</div>
 
-			<h3 id="docC">B) HTML and CSS files</h3>
+				<div class="alert alert-danger" role="alert">
+					Danger #2:
+					Columns must be adjacent i.e. there can be no empty columns in your data set.
+					<br /> <br />
+					The Xlookup function overcomes this issue.
+				</div>
 
-			<p>Working with the template you need to edit the .html, .css and .js files.</p>
+				<h3>Now, let’s go over the VLOOKUP Function Syntax. </h3>
+				<p>This function takes in four arguments: lookup value, table array, column index number, and range
+					lookup. </p>
+				<ul class="">
+					<li><b>Lookup Value: </b>
+						<span> The value you want to search for. <u>Remember</u> that this identifier must be in the first
+							column.</span>
+					</li>
+					<li><b>Table Array: </b>
+						<span>The dataset(range) you’re working with and will use for the search.</span>
+					</li>
+					<li><b>Column Index Number: </b>
+						<span>Based/Relative on the table array, this number represents the column from which you want
+							to retrieve the value.</span>
+					</li>
+					<li><b>Range Lookup: </b>
+						<span>Indicates whether you're looking for an exact(FALSE) or approximate(TRUE) match.</span>
+					</li>
+				</ul>
 
-			<h4>Editing HTML and CSS files</h4>
+				<p>
+					The following examples will help examine this function better.
+					The key is not to overcomplicate things since all this function does is return a value from another
+					column.
+				</p>
+				<br>
+				<hr />
+			</section>
 
-			<p>All editable HTML files are located in "Appic" folder of the template package. Each index-#.html file
-				represents a single template page.</p>
-			<p>To open .html file with Sublime Text 3 application, you should right mouse click on the file, and in
-				the context menu select Open with > Sublime Text 3. When the file is opened you can start editing
-				it.</p>
-			<p>Sublime Text 3 is a recommended application as it allows you to edit the HTML files content. </p>
-			<p>CSS files are used to change the template appearance like fonts (font-family, font-size, color etc),
-				backgrounds, column width values etc. You can edit the css files with Sublime Text 3 application.
+			<h3 id="topicB">B) Example #1</h3>
+			<section>
+				<p>Working with the template you need to edit the .html, .css and .js files.</p>
 
-			<p>For default colors (style.css)</p>
+				<h4>Editing HTML and CSS files</h4>
 
-			<h4>Google Web Fonts</h4>
+				<p>All editable HTML files are located in "Appic" folder of the template package. Each index-#.html file
+					represents a single template page.</p>
+				<p>To open .html file with Sublime Text 3 application, you should right mouse click on the file, and in
+					the context menu select Open with > Sublime Text 3. When the file is opened you can start editing
+					it.</p>
+				<p>Sublime Text 3 is a recommended application as it allows you to edit the HTML files content. </p>
+				<p>CSS files are used to change the template appearance like fonts (font-family, font-size, color etc),
+					backgrounds, column width values etc. You can edit the css files with Sublime Text 3 application.
 
-			<h4>Loading data from Google servers</h4>
+				<p>For default colors (style.css)</p>
 
-			<p>Some countries have issues connecting to Google servers. This can cause issues loading Google Fonts
-				and Java Script libraries from Google CDN. To resolve these issues please do the following: </p>
+				<h4>Google Web Fonts</h4>
 
-			<h4>Can't load Google Fonts:</h4>
+				<h4>Loading data from Google servers</h4>
 
-			<ol>
-				<li>Open 'Appic\index-*.html' or 'Appic\css\style.css' files</li>
-				<li>
-					Locate the line:
-					<pre>//fonts.googleapis.com/css?family=[---your_web_font_name_here---]</pre>
-				</li>
-				<li>
-					Replace it with the following:
-					<pre>//fonts.useso.com/css?family=[---your_web_font_name_here---]</pre>
-				</li>
-			</ol>
+				<p>Some countries have issues connecting to Google servers. This can cause issues loading Google Fonts
+					and Java Script libraries from Google CDN. To resolve these issues please do the following: </p>
 
-			<h4>How to edit text</h4>
+				<h4>Can't load Google Fonts:</h4>
 
-			<p>Templates are HTML based templates so all content is stored and could be accessed though the .html
-				files.</p>
+				<ol>
+					<li>Open 'Appic\index-*.html' or 'Appic\css\style.css' files</li>
+					<li>
+						Locate the line:
+						<pre>//fonts.googleapis.com/css?family=[---your_web_font_name_here---]</pre>
+					</li>
+					<li>
+						Replace it with the following:
+						<pre>//fonts.useso.com/css?family=[---your_web_font_name_here---]</pre>
+					</li>
+				</ol>
 
-			<ol>
-				<li>Open your template package and go to the site folder.</li>
-				<li>There open index.html&nbsp; file with your HTML editor.</li>
-				<li>You can use the search tool <strong>CTRL+F </strong>to find any text you need.</li>
-				<li>Edit text in HTML editor. Save the file and open it with your Browser to see the changes.</li>
-			</ol>
+				<h4>How to edit text</h4>
 
-			<p>The other way is to use the browser developer tool to find the blocks you want to edit. You can learn
-				more about the developer tools checking the tools description and tutorials.</p>
+				<p>Templates are HTML based templates so all content is stored and could be accessed though the .html
+					files.</p>
 
-			<h4>How to edit images</h4>
+				<ol>
+					<li>Open your template package and go to the site folder.</li>
+					<li>There open index.html&nbsp; file with your HTML editor.</li>
+					<li>You can use the search tool <strong>CTRL+F </strong>to find any text you need.</li>
+					<li>Edit text in HTML editor. Save the file and open it with your Browser to see the changes.</li>
+				</ol>
 
-			<p>Open the template folder, go to '<strong>Appic/images</strong>' directory. You can upload your images
-				with the same name and extension to replace the default ones.</p>
+				<p>The other way is to use the browser developer tool to find the blocks you want to edit. You can learn
+					more about the developer tools checking the tools description and tutorials.</p>
 
-			<p>The other way is to upload custom images with your titles and extensions. Then you’ll need to change
-				the image file names in the html files.</p>
+				<h4>How to edit images</h4>
 
-			<ol>
-				<li>Open <strong>.html</strong> file from the “<strong>Appic</strong>” folder with your html editor.
-				</li>
-				<li>Use search tool <strong>CTRL+F</strong> to find the images in the html file.</li>
-				<li>Replace the image title and extension.</li>
-			</ol>
+				<p>Open the template folder, go to '<strong>Appic/images</strong>' directory. You can upload your images
+					with the same name and extension to replace the default ones.</p>
 
-			<br>
-			<hr />
-			<h3 id="docD">C) Php</h3>
+				<p>The other way is to upload custom images with your titles and extensions. Then you’ll need to change
+					the image file names in the html files.</p>
 
-			<h4>Contact Form</h4>
+				<ol>
+					<li>Open <strong>.html</strong> file from the “<strong>Appic</strong>” folder with your html editor.
+					</li>
+					<li>Use search tool <strong>CTRL+F</strong> to find the images in the html file.</li>
+					<li>Replace the image title and extension.</li>
+				</ol>
 
-			<ol>
-				<li>Go the Appic/php directory.</li>
-				<li>
-					Open the file in "form-process.php" line 9 <br />
-				</li>
-				<li>
-					$EmailTo = "emailaddress@test.com" <br />
-					edited 'emailaddress@test.com' with your email
-				</li>
-			</ol>
+				<br>
+				<hr />
+			</section>
 
-			<h4>Newsletter Form</h4>
+			<h3 id="topicC">C) Example #2:</h3>
 
-			<ol>
-				<li>Go the Appic/php directory.</li>
-				<li>
-					Open the file in "newsletter.php" line 4 <br />
-				</li>
-				<li>
-					$EmailTo = "emailaddress@test.com" <br />
-					edited 'emailaddress@test.com' with your email
-				</li>
-			</ol>
+			<section>
+				<h4>Contact Form</h4>
 
-			<br />
+				<ol>
+					<li>Go the Appic/php directory.</li>
+					<li>
+						Open the file in "form-process.php" line 9 <br />
+					</li>
+					<li>
+						$EmailTo = "emailaddress@test.com" <br />
+						edited 'emailaddress@test.com' with your email
+					</li>
+				</ol>
 
-			<hr />
+				<h4>Newsletter Form</h4>
 
-			<h3 id="docE">E) Search Engine Optimization</h3>
-			<p>In order to improve your search engine ranking, and thus enable your web site to appear among search
-				results, please don't forget to change the description and keywords with your own.</p>
-			<pre>
+				<ol>
+					<li>Go the Appic/php directory.</li>
+					<li>
+						Open the file in "newsletter.php" line 4 <br />
+					</li>
+					<li>
+						$EmailTo = "emailaddress@test.com" <br />
+						edited 'emailaddress@test.com' with your email
+					</li>
+				</ol>
+
+				<br />
+
+				<hr />
+			</section>
+
+			<h3 id="topicD">D) Example 3:</h3>
+
+			<section>
+				<p>In order to improve your search engine ranking, and thus enable your web site to appear among search
+					results, please don't forget to change the description and keywords with your own.</p>
+				<pre>
 					<span>&lt;</span>meta name="description" content=""<span>&gt;</span>
 					<span>&lt;</span>meta name="keywords" content=""<span>&gt;</span>
 				</pre>
 
-			<hr />
+				<hr />
+			</section>
 
+			<h3 id="topicE">E) Xlookup</h3>
+			<section>
+				<p>In order to improve your search engine ranking, and thus enable your web site to appear among search
+					results, please don't forget to change the description and keywords with your own.</p>
+				<pre>
+					<span>&lt;</span>meta name="description" content=""<span>&gt;</span>
+					<span>&lt;</span>meta name="keywords" content=""<span>&gt;</span>
+				</pre>
 
+				<hr />
+			</section>
+			
 			<h3 id="credits">F) Sources and Credits</h3>
 
 			<p>I've used the following images, icons or other files as listed.</p>

@@ -597,9 +597,9 @@ body {
   border-top: 1px solid #30363db3;
 }
 
-.markdown-body table tr:nth-child(2n) {
+/* .markdown-body table tr:nth-child(2n) {
   background-color: #161b22;
-}
+} */
 
 .markdown-body table img {
   background-color: transparent;
