@@ -503,15 +503,17 @@
 
 				<div class="alert alert-warning" role="alert">
 					When using Vlookup, make sure to spell the names/lookup value correctly or it won’t find a match.
-					<br/> For example, if I typed in "Razaaa" in the lookup table, I will get a NA error since there is no person named "Razaaaa"
+					<br /> For example, if I typed in "Razaaa" in the lookup table, I will get a NA error since there is
+					no person named "Razaaaa"
 
 					<br /> <br />Avoid adding extra characters too like blank spaces.
 				</div>
 
 				<p>
 					<u class="text-danger font-weight-bold">Question:</u>
-					In the <i>data source table</i>, imagine if there is a wrong name recorded like "Raza Tahir" or "Razaaa" in cell A2.
-					<br/> If I now type "Raza" correctly in the lookup table F1, will the functions still work?
+					In the <i>data source table</i>, imagine if there is a wrong name recorded like "Raza Tahir" or
+					"Razaaa" in cell A2.
+					<br /> If I now type "Raza" correctly in the lookup table F1, will the functions still work?
 				</p>
 
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ2"
@@ -566,7 +568,7 @@
 				<br />
 
 				<p>
-					The only difference between the 2 vlookups functions is the output; 
+					The only difference between the 2 vlookups functions is the output;
 					one outputs price and the other output salary.
 					</br> Therefore, the difference between each functions syntax is the parameter
 					<i>column index number.</i>
@@ -576,25 +578,25 @@
 					Please note that the <i>lookup value</i> in both of the functions are the same cell F1.
 					The value of F1 turns out to be whatever the user chooses.
 
-					Say for instance the user chooses F1 to be "Sarah". 
+					Say for instance the user chooses F1 to be "Sarah".
 					Naturally the VLOOKUPs in F2 & F3 will output Sarahs position & department respectively.
-					
-					<br/> <br/>So the question that must be asked is this:
 
-					<br/> <br/> 
+					<br /> <br />So the question that must be asked is this:
+
+					<br /> <br />
 					<u class="text-danger font-weight-bold">Question:</u>
-					If I have two cells with the same name (e.g. "Raza" in both A2 and F1), 
+					If I have two cells with the same name (e.g. "Raza" in both A2 and F1),
 					does it matter if the lookup value in the VLOOKUP is F1, A2, or even the literal text "Raza"?
 
 				</p>
 				<div class="alert alert-danger" role="alert">
-					Answer: In the long run, yes! 
+					Answer: In the long run, yes!
 					Using A2 as a lookup value in the function will get me Razas' correct position & position,
-					but that function will <i>only</i> show me Razas' info. 
+					but that function will <i>only</i> show me Razas' info.
 					In other words, this will cause issues if you're trying to look up a different name, e.g. Zehra,
 					since then the answer will still output Razas' info.
 
-					<br /> <br/>
+					<br /> <br />
 					Again, in this case we want the lookup tables to be sustainable in the long run.
 				</div>
 
@@ -615,7 +617,7 @@
 						By adding an extra name, our data set becomes bigger.
 						So what will change is the data array.
 
-						<br /> <br /> In the VLOOKUP function, 
+						<br /> <br /> In the VLOOKUP function,
 						If we reference a table by its name for the <i>Table Array</i> parameter,
 						then our function will stay the same since the table size will be changing.
 					</blockquote>
@@ -628,7 +630,116 @@
 
 			<h3 id="topicD">D) Example 3:</h3>
 			<section>
+				<p> Let's take a look an example where a company sells laptops to companies: </p>
+				<div class="row">
+					<div class="col-md-6">
+						<table class="table">
+							<caption>Data Source Table</caption>
+							<thead>
+								<tr>
+									<th scope="col">School</th>
+									<th scope="col">Laptops Bought</th>
+									<th scope="col">Free Laptops Received</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">CSUN</th>
+									<td>70</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<th scope="row">UCLA</th>
+									<td>103</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<th scope="row">UCB</th>
+									<td>151</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<th scope="row">UCI</th>
+									<td>199</td>
+									<td>5</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-6">
+						<table class="table">
+							<caption>Free Incentive Lookup Table</caption>
+							<thead>
+								<tr>
+									<th scope="col">Laptops Order Volume</th>
+									<th scope="col">Free Giveaways</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>100</td>
+									<td>5</td>
+								</tr>
+								<tr>
+									<td>200</td>
+									<td>10</td>
+								</tr>
+								<tr>
+									<td>300</td>
+									<td>15</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+
 				<p>
+					Imagine we're offering incentives for purchasing laptops in multiples of 100.
+					For example:
+					Buying 100 laptops earns 5 free laptops,
+					buying 200 laptops earns 10 free laptops,
+					etc.
+
+
+				</p>
+
+				<p>
+					If a client orders 103 laptops, they receive 5 free laptops.
+					If a client order 151 or even 199 laptops,
+					they'll get 10 free laptops because VLOOKUP rounds down to the nearest multiple.
+					If we needed to be generous and round up, we'll need the ROUND() function.
+					This is where XLOOKUP improves by rounding up and eliminating the need for an additional rounding
+					function.
+				</p>
+
+				<p>
+					In VLOOKUP:
+				<ul>
+					<li>
+						The lookup value is the number of laptops purchased.
+					</li>
+					<li>
+						The table array contains the incentive ranges.
+					</li>
+					<li>
+						The column index number is 2 (for free laptops).
+					</li>
+					<li>
+						Range lookup is set to true to allow approximate matching.
+					</li>
+				</ul>
+
+				<p>
+					So for example, the VLOOKUP in B3 is:
+					=VLOOKUP(B2,LOOKUP-TABLE,2,TRUE);
+				</p>
+
+				
 				</p>
 				<hr />
 			</section>
@@ -660,14 +771,14 @@
 						href="https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">Microsoft</a>
 				</li>
 				<li>
-					<a href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>	
+					<a href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
 				</li>
 			</ul>
 			<hr />
 
 			<p class="append-bottom">
 				<a href="../../index.html">
-					
+
 					<span>Back to www.its.raza.com</span>
 				</a>
 			</p>
