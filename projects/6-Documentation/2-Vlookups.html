@@ -7,21 +7,17 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 	<!-- mobile specific metas
 	================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<!-- SEO Tags -->
 	<meta name="description" content="Portfolio website showcasing documentation created by Raza Tahir, 
 	a software web developer based in Los Angeles, CA.">
 	<meta name="author" content="Raza Tahir">
 	<meta name="keywords" content="raza, tahir, raza tahir, portfolio, github, projects, website, web development" />
-
 	<!-- Tab Icon & Title -->
 	<title> Documentation | Raza Tahir </title>
 	<link id="titleImg" rel="icon" type="image/png" href="../../public/img/icons/Blue_orb.png" />
-
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137821771-1"></script>
 	<script>
@@ -30,13 +26,11 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-137821771-1');
 	</script>
-
 	<!-- CSS
 	================================================== -->
 	<link rel="stylesheet" type="text/css" href="../../public/css/routes.css">
 	<link id="Light" rel="stylesheet" href="../../public/css/github-css/github-markdown.css">
 	<link rel="stylesheet" type="text/css" href="../../public/css/documentation-style.css">
-
 	<!-- JS
 	================================================== -->
 	<script src="../../vendor/jquery/jquery.min.js"></script>
@@ -50,7 +44,6 @@
 		var buttonValue = document.getElementById("darkMode").checked;
 		var LightSheet = document.getElementById("Light");
 		var DarkSheet = document.getElementById("Dark");
-
 		if (buttonValue == false) {
 			// alert("Run Light Mode");
 			DarkSheet.disabled = true;
@@ -58,19 +51,15 @@
 		}
 		else {
 			// alert("Run Dark Mode");
-
 			// Get HTML head element
 			let head = document.getElementsByTagName('HEAD')[0];
-
 			// Create new link Element
 			let link = document.createElement('link');
-
 			// Set the attributes for link element
 			link.id = "Dark"
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
 			link.href = '../../public/css/github-css/github-markdown-dark.css';
-
 			// Append link element to HTML head
 			head.appendChild(link);
 		}
@@ -78,9 +67,7 @@
 </script>
 
 <body id="theme-wrapper">
-
 	<script type="text/javascript" src="../../public/js/documentation_autoscroll.js"></script>
-
 	<!-- NAVIGATION -->
 	<section id="theme-navigation">
 		<div id="theme-navigation-body">
@@ -88,7 +75,6 @@
 				<div id="theme-navigation-title">
 					<h2>Table of Contents </h2>
 				</div>
-
 				<div class="hidden"><a href="#">Menu</a></div>
 				<div class="clearfix"></div>
 			</div>
@@ -103,20 +89,17 @@
 							</label>
 						</span>
 					</li>
-
 					<li><a href="#topicA"> A) Getting Started</a></li>
 					<li><a href="#topicB"> B) Example #1</a></li>
 					<li><a href="#topicC"> C) Example #2</a></li>
 					<li><a href="#topicD"> D) Example #3</a></li>
 					<li><a href="#topicE"> E) Peek into XLookup</a></li>
 					<li><a href="#credits"> F) Credits</a></li>
-
 				</ul>
 			</div>
 		</div>
 	</section>
 	<!-- END OF NAVIGATION -->
-
 	<!-- CONTENT -->
 	<main id="theme-content" class="markdown-body">
 		<h1 id="theme-content-heading">Vlookup - Documentation</h1>
@@ -138,14 +121,11 @@
 				</div>
 			</div>
 		</section>
-
 		<div id="theme-content-body">
-			<h4>Reminder: Please download the files</h4>
-			<p>Please remember to download the files that were given. </p>
-
+			<h4>Reminder: Please download the files that were given.</h4>
 			<blockquote class="border-success">
 				<p>
-					To learn more, I would recommend reading the reference articles from
+					For additional reading, I would recommend reading the reference articles from
 					<a
 						href="https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">Microsoft</a>
 					and
@@ -153,25 +133,21 @@
 					.
 				</p>
 			</blockquote>
-
-			<h3 id="topicA">A) Getting Started</h3>
+			<h2 class="" id="topicA">Getting Started</h2>
+			<p>
+				In Excel & Google Sheets, VLOOKUP is a premade lookup function that can find information in a row.
+				<br /> I.E. Given any row, I can find information from other columns in that row.
+			</p>
 			<section>
-				<p>
-					VLOOKUP is a premade Excel & Google Sheets lookup function that can find information in a row.
-					<br /> I.E. Given any row, I can find information from other columns in that row.
-				</p>
-
-				<div class="alert alert-warning" role="alert">
+				<div class="alert alert-success" role="alert">
 					FYI: XLOOKUPs are the new & improved VLOOKUP. <br />
 					XLOOKUP addresses and improves on the limitations of Vlookup, thereby making it easier to use.
 				</div>
-
 				<p>
-					For a vlookup to work, the data set must be structured such that each record/entry is in a separate
-					row.
+					Each record/entry must be in a separate row for VLOOKUP to work.
+					<br /><span> E.g. Given someones ID Number, find their domain handle.</span>
 				</p>
 
-				<span> E.g. Given someones ID Number, find their domain handle.</span>
 				<table class="table table-hover">
 					<thead class="thead-dark">
 						<tr>
@@ -191,8 +167,8 @@
 						<tr>
 							<th scope="row">2</th>
 							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
+							<td>Striver</td>
+							<td>@Striver</td>
 						</tr>
 						<tr>
 							<th scope="row">3</th>
@@ -202,77 +178,89 @@
 						</tr>
 					</tbody>
 				</table>
-				<p>
-					In an inventory/product list, VLOOKUP can help you find an item's price or details using a part
-					number.
-					It can also be handy for getting a specific employees info (Name, Email, Department, etc.) from a
-					badge number.
-				</p>
-
-				<div class="alert alert-danger" role="alert">
+				<span>
+					VLOOKUP can also be used: </br>
+					<ul>
+						<li>
+							<span class="font-weight-bold">in Product/Inventory lists</span>
+							<span>where VLOOKUP helps find an items price or details by using the part number.</span>
+						</li>
+						<li>
+							<span class="font-weight-bold">for finding employee information</span>
+							<span>and specific details (e.g., Name, Email, Department) using their <u
+									class="font-weight-bold">unique</u> EIN.</span>
+						</li>
+					</ul>
+					<br />
+				</span>
+				<div class="alert border border-danger border-3" role="alert">
 					Danger #1:
-					For Vlookups to work, the lookup value <u><strong>MUST</strong></u> be in the 1st column!
-					E.G, The badge number must be in the first column otherwise the function will not work.
+					Vlookups require that <u><strong>the lookup value MUST be in the 1st column!</strong></u>
+					<br /> E.G. The product/badge number must be in the first column otherwise the function will not
+					work.
 					<br /> <br />
 					The Xlookup function overcomes this issue.
 				</div>
-
-				<div class="alert alert-danger" role="alert">
+				<div class="alert alert-warning" role="alert">
 					Danger #2:
-					Columns must be adjacent i.e. there can be no empty columns in your data set.
+					<u>Be careful when adding columns into a data set</u> since Vlookups rely on column numbers.
 					<br /> <br />
 					The Xlookup function overcomes this issue.
 				</div>
-
 				<h3>Now, let’s go over the VLOOKUP Function Syntax. </h3>
 				<p>This function takes in four arguments: lookup value, table array, column index number, and range
 					lookup. </p>
 				<ul class="">
-					<li><b>Lookup Value: </b>
+					<li><b class="font-italic">Lookup Value: </b>
 						<span> The value you want to search for. <u>Remember</u> that this identifier must be in the
 							first
 							column.</span>
 					</li>
-					<li><b>Table Array: </b>
+					<li><b class="font-italic">Table Array: </b>
 						<span>The dataset(range) you’re working with and will use for the search.</span>
 					</li>
-					<li><b>Column Index Number: </b>
+					<li><b class="font-italic">Column Index Number: </b>
 						<span>Based/Relative on the table array, this number represents the column from which you want
 							to retrieve the value.</span>
 					</li>
-					<li><b>Range Lookup: </b>
+					<li><b class="font-italic">Range Lookup: </b>
 						<span>Indicates whether you're looking for an exact(FALSE) or approximate(TRUE) match.</span>
 					</li>
 				</ul>
-
 				<p>
 					The following examples will help examine this function better.
 					The key is not to overcomplicate things since all this function does is return a value from another
 					column.
 				</p>
+				<blockquote class="border-success">
+					Use the FX tool/<a
+						href="https://support.microsoft.com/en-us/office/insert-function-74474114-7c7f-43f5-bec3-096c56e2fb13">Insert
+						Function dialog box</a>
+					to simplify and break down the function for easier understanding.
+				</blockquote>
 				<br>
 				<hr />
 			</section>
-
 			<h3 id="topicB">B) Example #1:</h3>
 			<section>
-				<h4>Let's look at the "Example 1" Worksheet</h4>. You can open the file by:
+				<h4>Let's look at the "Example 1" Worksheet.</h4> You can open the file by:
 				<ol>
 					<li>Going to the file directory.</li>
 					<li>
-						Open the file named "Vlookup Examples" <br />
+						Open the folder named "Vlookup Examples" <br />
 					</li>
 					<li>
 						Open up "Example 1".
 					</li>
 				</ol>
-
 				<p>
-					Suppose we have a table of some produce as seen below:
+					Suppose below we have a table of some produce:
 				</p>
-
 				<table class="table">
-					<caption>Each produce has a price per pound and availability.</caption>
+					<caption class="text-center">
+						In our <i>dataset</i> i.e. "Table Array",
+						each produce has a price per pound and availability.
+					</caption>
 					<thead>
 						<tr>
 							<th scope="col">Produce</th>
@@ -303,21 +291,18 @@
 						</tr>
 					</tbody>
 				</table>
-
 				<p>
-					Since this example is simplified, we can find the price of the produce just by looking at the table.
-					However, suppose we are SuperKing Markets & we sell 100s of produce.
-					It would be very daunting to scan row by row! So instead we can create what's called a "Lookup
-					Table" to find out answer.
-					Below is an example:
+					In the above example, we can find the price of a fruit simply by looking at the data table.
+					But for a store with hundreds of products, it would be very daunting to look row by row!
+
+					So instead we can use a "Lookup Table" to find the price easily.
+
+					<br /> <br />Below is an example:
 				</p>
-
 				<table class="table">
-					<caption>Lookup Table</caption>
+					<caption>A Lookup Table can allow us to search for a fruit.</caption>
 					<tbody>
-
 						<tr class="dropdown">
-
 							<td olspan="2" class="bg-success">Produce</td>
 							<td class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
 								Insert Fruit.
@@ -338,7 +323,7 @@
 							</td>
 						</tr>
 						<tr>
-							<th scope="row">Lemon</th>
+							<th scope="row">Available?</th>
 							<td colspan="2" class="text-center">
 								=VLOOKUP(B1, <i>Dataset</i>, 3, FALSE);
 							</td>
@@ -346,94 +331,93 @@
 					</tbody>
 				</table>
 
-				<blockquote>
-					Remember: A VLOOKUP simply looks up related values in a row.
-				</blockquote>
 
-				<p>
-					In this example, cell B1 will hold our lookup value,
-					and cells B2 and B3 will contain VLOOKUPs that output the price and stock availability.
-					As we change the produce listed in B1, the values in B2 and B3 will update automatically.
-					The <i>dataset</i> will refer to our table of produce.
+				<span>
+					<strong><u>Note:</u></strong> A VLOOKUP simply looks up related values in a row.
+					In this example,
+					</br>
+					<ul>
+						<li>
+							<span class="font-weight-bold">Cell B1</span>
+							<span>has the fruit item we’re looking up (i.e. our lookup value)</span>
+						</li>
+						<li>
+							<span class="font-weight-bold">Cells B2 and B3</span>
+							<span>will display the price and stock based on B1 and
+								will update automatically as we change B1.</span>
+						</li>
+					</ul>
+					<br />
+				</span>
+
+				<p>In short, if we know a fruit, we can use VLOOKUP to find both its price and stock status.
+					<br />E.G, To find the price of Oranges,
+					type 'Orange' in cell B1 (the lookup value)
+					to find its price and availability (B2 & B3).
 				</p>
-
-				<p>In short, if given a fruit, we can use VLOOKUP to find both its price and stock status.
-					<br />So if we want to find the price of Oranges,
-					we’ll use Orange as our lookup value to find its price and stock availability.
-				</p>
-
 				<div class="row">
 					<div class="col-md-6">
 						<div class="alert alert-success" role="alert">
-							It's important not to overcomplicate this function. Always focus on what the output should
-							be.
+							Never overcomplicate this function. Always focus on the desired output.
+						</div>
+						<div class="alert alert-secondary" role="alert">
+							Lookup values are not case sensitive
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="alert alert-warning" role="alert">
-							Remember: If you know the price of ginger, you don't need a VLOOKUP; you can see the price
-							directly just by looking.
-							<br /> <br />The lookup function is Excels way of telling you the answer; it also updates
-							the result based on what’s in B1.
+							Remember: You don't need a VLOOKUP to find the price of Ginger;
+							you can see it directly from the produce table.
+							<br /> <br />The lookup function is Excels way of telling you the answer
+							and changes as B1 changes.
 						</div>
 					</div>
 				</div>
-
 				<p>
 					Now, let’s break down how VLOOKUP works:
 				</p>
-
 				<ul>
 					<li>Lookup Value (B1): This is what we're searching for, like cucumbers.</li>
 					<li>Table Array (A7 to C11): This range includes all our data. While you can include the header row,
 						it's usually excluded.</li>
-					<li>Column Index Number: This identifies which column to pull data from—1 for vegetables, 2 for
-						price, and 3 for stock. For price, we use column 2.</li>
-					<li>Match: This would be an EXACT match, since we're looking up exact words.</li>
+					<li>Column Index Number: This identifies which column to pull data from—
+						1 for vegetables, 2 for price, and 3 for stock. 
+						For cell B2 (price), we use the number 2 and for cell B3 (stock) we'll use 3.</li>
+					<li>Match: We will use EXACT match since we're looking up an exact fruit that's spelled correctly.
+						<blockquote>
+							We can apply a data validation on B1 to ensure that the user doesn't mispell the name of the fruit.
+						</blockquote>
+					</li>
 				</ul>
-
-				<p>
-					In our example, the VLOOKUP in B2 returns the price, and the one in B3 shows availability, both
-					based on exact matches.
-
-				</p>
 
 				<p>
 					<u class="text-danger font-weight-bold">Question:</u>
 					If we move the data set to another location,
 					will the function still work?
 				</p>
-
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ1"
 					aria-expanded="false" aria-controls="collapseQ1">
 					Show Answer
 				</button>
 				</p>
 				<div class="collapse" id="collapseQ1">
-
 					<blockquote class="border-danger">
 						Yes. Because the function still uses cell references.
 						Whether the data set moves or not, the column index number for price is still 2,
 						and the function will still work despite the data range moving.
 					</blockquote>
-
 				</div>
-
 				<br />
-
 				<hr />
 			</section>
-
 			<h3 id="topicC">C) Example #2:</h3>
 			<section>
 				<h4>Let's now open up the Example #2 Spreadsheet.</h4>
-
 				<p>
 					Let's look at another example using a payroll sheet with
 					names, roles, join dates, and total income.
 					Seen below is an example of the data set and the lookup table
 				</p>
-
 				<div class="row">
 					<div class="col-md-6">
 						<table class="table">
@@ -483,7 +467,6 @@
 								<tr>
 									<th scope="row">
 										Position
-
 									</th>
 									<td colspan="2" class="text-center">-</td>
 								</tr>
@@ -495,40 +478,33 @@
 						</table>
 					</div>
 				</div>
-
 				<p>
 					In the example above, when you type a person’s name in F1 in the lookup table, cells F2 and F3,
 					which contain the VLOOKUP functions, will retrieve their role and total income.
 				</p>
-
 				<div class="alert alert-warning" role="alert">
 					When using Vlookup, make sure to spell the names/lookup value correctly or it won’t find a match.
 					<br /> For example, if I typed in "Razaaa" in the lookup table, I will get a NA error since there is
 					no person named "Razaaaa"
-
 					<br /> <br />Avoid adding extra characters too like blank spaces.
 				</div>
-
 				<p>
 					<u class="text-danger font-weight-bold">Question:</u>
 					In the <i>data source table</i>, imagine if there is a wrong name recorded like "Raza Tahir" or
 					"Razaaa" in cell A2.
 					<br /> If I now type "Raza" correctly in the lookup table F1, will the functions still work?
 				</p>
-
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ2"
 					aria-expanded="false" aria-controls="collapseQ2">
 					Show Answer
 				</button>
 				</p>
-
 				<div class="collapse" id="collapseQ2">
 					<blockquote class="border-danger">
 						No. Although now we are changing the record entry value,
 						there are no people whose name is exactly "Raza" to find so the NA error will be given.
 					</blockquote>
 				</div>
-
 				<p> The answers below will show what each VLOOKUP should look like: </p>
 				<div class="accordion">
 					<div class="card">
@@ -540,7 +516,6 @@
 								</button>
 							</h5>
 						</div>
-
 						<!-- Add class 'show' to line below to show value. -->
 						<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent=".accordion">
 							<div class="card-body">
@@ -564,30 +539,23 @@
 						</div>
 					</div> <!-- End of class card-->
 				</div> <!-- End of accordion -->
-
 				<br />
-
 				<p>
 					The only difference between the 2 vlookups functions is the output;
 					one outputs price and the other output salary.
 					</br> Therefore, the difference between each functions syntax is the parameter
 					<i>column index number.</i>
 				</p>
-
 				<p>
 					Please note that the <i>lookup value</i> in both of the functions are the same cell F1.
 					The value of F1 turns out to be whatever the user chooses.
-
 					Say for instance the user chooses F1 to be "Sarah".
 					Naturally the VLOOKUPs in F2 & F3 will output Sarahs position & department respectively.
-
 					<br /> <br />So the question that must be asked is this:
-
 					<br /> <br />
 					<u class="text-danger font-weight-bold">Question:</u>
 					If I have two cells with the same name (e.g. "Raza" in both A2 and F1),
 					does it matter if the lookup value in the VLOOKUP is F1, A2, or even the literal text "Raza"?
-
 				</p>
 				<div class="alert alert-danger" role="alert">
 					Answer: In the long run, yes!
@@ -595,39 +563,31 @@
 					but that function will <i>only</i> show me Razas' info.
 					In other words, this will cause issues if you're trying to look up a different name, e.g. Zehra,
 					since then the answer will still output Razas' info.
-
 					<br /> <br />
 					Again, in this case we want the lookup tables to be sustainable in the long run.
 				</div>
-
 				<p>
 					<u class="text-danger font-weight-bold">Question:</u>
 					In the data source table, if I entered another name,
 					how will our functions change?
 				</p>
-
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ3"
 					aria-expanded="false" aria-controls="collapseQ3">
 					Show Answer
 				</button>
 				</p>
 				<div class="collapse" id="collapseQ3">
-
 					<blockquote class="border-danger">
 						By adding an extra name, our data set becomes bigger.
 						So what will change is the data array.
-
 						<br /> <br /> In the VLOOKUP function,
 						If we reference a table by its name for the <i>Table Array</i> parameter,
 						then our function will stay the same since the table size will be changing.
 					</blockquote>
-
 				</div>
-
 				<br />
 				<hr />
 			</section>
-
 			<h3 id="topicD">D) Example 3:</h3>
 			<section>
 				<p> Let's take a look an example where a company sells laptops to companies: </p>
@@ -692,22 +652,17 @@
 									<td>300</td>
 									<td>15</td>
 								</tr>
-
 							</tbody>
 						</table>
 					</div>
 				</div>
-
 				<p>
 					Imagine we're offering incentives for purchasing laptops in multiples of 100.
 					For example:
 					Buying 100 laptops earns 5 free laptops,
 					buying 200 laptops earns 10 free laptops,
 					etc.
-
-
 				</p>
-
 				<p>
 					If a client orders 103 laptops, they receive 5 free laptops.
 					If a client order 151 or even 199 laptops,
@@ -716,7 +671,6 @@
 					This is where XLOOKUP improves by rounding up and eliminating the need for an additional rounding
 					function.
 				</p>
-
 				<p>
 					In VLOOKUP:
 				<ul>
@@ -733,31 +687,24 @@
 						Range lookup is set to true to allow approximate matching.
 					</li>
 				</ul>
-
 				<p>
 					So for example, the VLOOKUP in B3 is:
 					=VLOOKUP(B2,LOOKUP-TABLE,2,TRUE);
 				</p>
-
-				
 				</p>
 				<hr />
 			</section>
-
 			<h3 id="topicE">E) Xlookup</h3>
 			<section>
 				<p>
 					XLOOKUP is an improved and updated version of VLOOKUP that improves on the limitations of VLOOKUP,
 					but VLOOKUP is more compatible & more widely supported with older Excel versions.
 				</p>
-
 				<pre>
 					<span>=XLOOKUP()</span>
 				</pre>
-
 				<hr />
 			</section>
-
 			<h3 id="credits">F) Sources and Credits</h3>
 			<h4>Reference Links</h4>
 			<blockquote class="border-success">
@@ -775,25 +722,20 @@
 				</li>
 			</ul>
 			<hr />
-
 			<p class="append-bottom">
 				<a href="../../index.html">
-
 					<span>Back to www.its.raza.com</span>
 				</a>
 			</p>
-
 			<a href="#">
 				<i class="fa fa-arrow-circle-o-up"></i>
 				Back to Top
 			</a>
-
 			<hr class="space" />
 			</section>
 		</div>
 	</main>
 	<!-- CONTENT -->
-
 </body>
 
 </html>

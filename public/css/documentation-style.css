@@ -72,6 +72,18 @@ hr {
 	color: none !important;
 }
 
+.border-1 {
+    border-width:1px !important;
+}
+
+.border-2 {
+    border-width:2px !important;
+}
+
+.border-3 {
+    border-width:3px !important;
+}
+
 table {
 	max-width: 100%;
 	border-spacing: 0;
