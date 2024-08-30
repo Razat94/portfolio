@@ -331,7 +331,6 @@
 					</tbody>
 				</table>
 
-
 				<span>
 					<strong><u>Note:</u></strong> A VLOOKUP simply looks up related values in a row.
 					In this example,
@@ -385,7 +384,8 @@
 						For cell B2 (price), we use the number 2 and for cell B3 (stock) we'll use 3.</li>
 					<li>Match: We will use EXACT match since we're looking up an exact fruit that's spelled correctly.
 						<blockquote>
-							We can apply a data validation on B1 to ensure that the user doesn't mispell the name of the fruit.
+							Data validation can be applied on B1 to ensure no spelling mistakes. 
+							That way, the user doesn't mispell the name of the fruit.
 						</blockquote>
 					</li>
 				</ul>
@@ -402,9 +402,8 @@
 				</p>
 				<div class="collapse" id="collapseQ1">
 					<blockquote class="border-danger">
-						Yes. Because the function still uses cell references.
-						Whether the data set moves or not, the column index number for price is still 2,
-						and the function will still work despite the data range moving.
+						Yes because the function uses cell references, 
+						the column index for the price remains to be 2 regardless of whether the data set moves or not. 
 					</blockquote>
 				</div>
 				<br />
@@ -416,7 +415,7 @@
 				<p>
 					Let's look at another example using a payroll sheet with
 					names, roles, join dates, and total income.
-					Seen below is an example of the data set and the lookup table
+					<br/>Seen below is an example of the payroll data set and the lookup table:
 				</p>
 				<div class="row">
 					<div class="col-md-6">
@@ -478,21 +477,25 @@
 						</table>
 					</div>
 				</div>
+				
 				<p>
-					In the example above, when you type a person’s name in F1 in the lookup table, cells F2 and F3,
-					which contain the VLOOKUP functions, will retrieve their role and total income.
+					In the lookup table, when we enter a person's name in cell F1, 
+					cells F2 and F3, which contain the VLOOKUPs, will retrieve their role and salary.
 				</p>
-				<div class="alert alert-warning" role="alert">
-					When using Vlookup, make sure to spell the names/lookup value correctly or it won’t find a match.
-					<br /> For example, if I typed in "Razaaa" in the lookup table, I will get a NA error since there is
-					no person named "Razaaaa"
-					<br /> <br />Avoid adding extra characters too like blank spaces.
+				<div class="alert border border-warning border-3" role="alert">
+					With VLOOKUPs, <strong>spell the names/lookup value correctly</strong>
+					or the function won’t find a match.
+					<br /> For example, if I typed in "Razaaa" in the lookup table, 
+					I will get a <strong><u>#N/A</u></strong> error since there is no person named "Razaaaa"
+					<br /> <br />Avoid adding extra characters too like blank spaces, '-' or underscores
 				</div>
 				<p>
 					<u class="text-danger font-weight-bold">Question:</u>
-					In the <i>data source table</i>, imagine if there is a wrong name recorded like "Raza Tahir" or
+					In the <i>data source table</i>, 
+					imagine if there is a wrong name recorded like "Raza Tahir" or
 					"Razaaa" in cell A2.
-					<br /> If I now type "Raza" correctly in the lookup table F1, will the functions still work?
+					<br /> If I now type "Raza" correctly in the lookup table in cell F1, 
+					will the functions still work?
 				</p>
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ2"
 					aria-expanded="false" aria-controls="collapseQ2">
@@ -547,28 +550,31 @@
 					<i>column index number.</i>
 				</p>
 				<p>
-					Please note that the <i>lookup value</i> in both of the functions are the same cell F1.
-					The value of F1 turns out to be whatever the user chooses.
-					Say for instance the user chooses F1 to be "Sarah".
-					Naturally the VLOOKUPs in F2 & F3 will output Sarahs position & department respectively.
+					Please note that the <i>lookup value</i> for both functions is the same, cell F1.
+					The value of F1 depends on what the user chooses.
+					So if the user selects "Sarah" for F1, 
+					the VLOOKUPs in F2 and F3 will show Sarah's position and department.
 					<br /> <br />So the question that must be asked is this:
 					<br /> <br />
 					<u class="text-danger font-weight-bold">Question:</u>
 					If I have two cells with the same name (e.g. "Raza" in both A2 and F1),
-					does it matter if the lookup value in the VLOOKUP is F1, A2, or even the literal text "Raza"?
+					does it make a difference if the lookup value in the VLOOKUP is F1, A2, or even the text "Raza"?
 				</p>
 				<div class="alert alert-danger" role="alert">
 					Answer: In the long run, yes!
 					Using A2 as a lookup value in the function will get me Razas' correct position & position,
-					but that function will <i>only</i> show me Razas' info.
+					but that function will <i><u>only</u></i> show me Razas' info.
 					In other words, this will cause issues if you're trying to look up a different name, e.g. Zehra,
 					since then the answer will still output Razas' info.
-					<br /> <br />
-					Again, in this case we want the lookup tables to be sustainable in the long run.
+					
 				</div>
+				<div class="alert border border-danger border-3" role="alert">
+					To restate: We want lookup tables to be sustainable in the long run.	
+				</div>
+				
 				<p>
 					<u class="text-danger font-weight-bold">Question:</u>
-					In the data source table, if I entered another name,
+					In the data source table, if I added another name,
 					how will our functions change?
 				</p>
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ3"
@@ -579,10 +585,10 @@
 				<div class="collapse" id="collapseQ3">
 					<blockquote class="border-danger">
 						By adding an extra name, our data set becomes bigger.
-						So what will change is the data array.
+						So our <u><strong>table array</strong></u> is what changes.
 						<br /> <br /> In the VLOOKUP function,
-						If we reference a table by its name for the <i>Table Array</i> parameter,
-						then our function will stay the same since the table size will be changing.
+						for the <i>Table Array</i> parameter if we use a table name,
+						then our function will stay the same since the table size will be the only thing that changes.
 					</blockquote>
 				</div>
 				<br />
