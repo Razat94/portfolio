@@ -126,10 +126,10 @@
 			<blockquote class="border-success">
 				<p>
 					For additional reading, I would recommend reading the reference articles from
-					<a
+					<a class = "font-italic"
 						href="https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">Microsoft</a>
 					and
-					<a href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
+					<a class = "font-italic" href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
 					.
 				</p>
 			</blockquote>
@@ -343,8 +343,8 @@
 						</li>
 						<li>
 							<span class="font-weight-bold">Cells B2 and B3</span>
-							<span>will display the price and stock based on B1 and
-								will update automatically as we change B1.</span>
+							<span>contain the VLOOKUP function that displays the price and stock based on B1 and
+								updates automatically as we change B1.</span>
 						</li>
 					</ul>
 					<br />
@@ -361,15 +361,15 @@
 							Never overcomplicate this function. Always focus on the desired output.
 						</div>
 						<div class="alert alert-secondary" role="alert">
-							Lookup values are not case sensitive
+
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="alert alert-warning" role="alert">
 							Remember: You don't need a VLOOKUP to find the price of Ginger;
-							you can see it directly from the produce table.
+							you can see the price of a produce item directly from the produce table.
 							<br /> <br />The lookup function is Excels way of telling you the answer
-							and changes as B1 changes.
+							and updates as B1 changes.
 						</div>
 					</div>
 				</div>
@@ -377,7 +377,9 @@
 					Now, let’s break down how VLOOKUP works:
 				</p>
 				<ul>
-					<li>Lookup Value (B1): This is what we're searching for, like cucumbers.</li>
+					<li>Lookup Value (B1): This is what we're searching for, like cucumbers.
+						<u class = "text-danger font-weight-bold">NOTE:</u> Lookup values are not case sensitive
+					</li>
 					<li>Table Array (A7 to C11): This range includes all our data. While you can include the header row,
 						it's usually excluded.</li>
 					<li>Column Index Number: This identifies which column to pull data from—
@@ -681,11 +683,11 @@
 				etc.
 				</p>
 				<p>
-					For this example, the VLOOKUPs are in column C.
+					For this example, the VLOOKUPs are in column C of the data source table.
 				</p>
 				<blockquote class="border-primary">
 					In C3, the function is:
-					<span class="text-success">=VLOOKUP(B3,LOOKUP-TABLE,2,TRUE);</span>
+					<u class="font-italic text-success">=VLOOKUP(B3,LOOKUP-TABLE,2,TRUE);</u>
 				</blockquote>
 				<p class="mb-0">
 					Since universities have their own individual needs,
