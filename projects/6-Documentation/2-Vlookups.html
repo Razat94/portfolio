@@ -380,8 +380,8 @@
 					<li>Lookup Value (B1): This is what we're searching for, like cucumbers.
 						<u class = "text-danger font-weight-bold">NOTE:</u> Lookup values are not case sensitive
 					</li>
-					<li>Table Array (A7 to C11): This range includes all our data. While you can include the header row,
-						it's usually excluded.</li>
+					<li>Table Array (A7 to C11): This range includes all our data. 
+						The header row is usually excluded but can be added.</li>
 					<li>Column Index Number: This identifies which column to pull data from—
 						1 for vegetables, 2 for price, and 3 for stock.
 						For cell B2 (price), we use the number 2 and for cell B3 (stock) we'll use 3.</li>
@@ -470,11 +470,11 @@
 									<th scope="row">
 										Position
 									</th>
-									<td colspan="2" class="text-center">-</td>
+									<td colspan="2" class="text-center"><i>(VLOOKUP goes here)</i></td>
 								</tr>
 								<tr>
 									<th scope="row">Salary</th>
-									<td colspan="2" class="text-center">-</td>
+									<td colspan="2" class="text-center"><i>(VLOOKUP goes here)</i></td>
 								</tr>
 							</tbody>
 						</table>
@@ -555,8 +555,7 @@
 				</p>
 				<p>
 					Please note that the <i>lookup value</i> for both functions is the same, cell F1.
-					The value of F1 depends on what the user chooses.
-					So if the user selects "Sarah" for F1,
+					The value of F1 depends on the user so if the user selects "Sarah" for F1,
 					the VLOOKUPs in F2 and F3 will show Sarah's position and department.
 					<br /> <br />So the question that must be asked is this:
 					<br /> <br />
@@ -684,11 +683,11 @@
 				</p>
 				<p>
 					For this example, the VLOOKUPs are in column C of the data source table.
+					<blockquote class="mt-0 border-primary">
+						In C3, the function is:
+						<u class="font-italic text-success">=VLOOKUP(B3,LOOKUP-TABLE,2,TRUE);</u>
+					</blockquote>
 				</p>
-				<blockquote class="border-primary">
-					In C3, the function is:
-					<u class="font-italic text-success">=VLOOKUP(B3,LOOKUP-TABLE,2,TRUE);</u>
-				</blockquote>
 				<p class="mb-0">
 					Since universities have their own individual needs,
 					<strong class="text-dark bg-warning">
