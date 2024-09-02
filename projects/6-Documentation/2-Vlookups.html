@@ -126,10 +126,10 @@
 			<blockquote class="border-success">
 				<p>
 					For additional reading, I would recommend reading the reference articles from
-					<a class = "font-italic"
+					<a class="font-italic"
 						href="https://support.microsoft.com/en-us/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1">Microsoft</a>
 					and
-					<a class = "font-italic" href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
+					<a class="font-italic" href="https://support.google.com/docs/answer/3093318?hl=en">Google</a>
 					.
 				</p>
 			</blockquote>
@@ -378,9 +378,9 @@
 				</p>
 				<ul>
 					<li>Lookup Value (B1): This is what we're searching for, like cucumbers.
-						<u class = "text-danger font-weight-bold">NOTE:</u> Lookup values are not case sensitive
+						<u class="text-danger font-weight-bold">NOTE:</u> Lookup values are not case sensitive
 					</li>
-					<li>Table Array (A7 to C11): This range includes all our data. 
+					<li>Table Array (A7 to C11): This range includes all our data.
 						The header row is usually excluded but can be added.</li>
 					<li>Column Index Number: This identifies which column to pull data from—
 						1 for vegetables, 2 for price, and 3 for stock.
@@ -563,29 +563,35 @@
 					If I have two cells with the same name (e.g. "Raza" in both A2 and F1),
 					does it make a difference if the lookup value in the VLOOKUP is F1, A2, or even the text "Raza"?
 				</p>
-				<div class="alert alert-danger" role="alert">
-					Answer: In the long run, yes!
-					Using A2 as a lookup value in the function will get me Razas' correct position & position,
-					but that function will <i><u>only</u></i> show me Razas' info.
-					In other words, this will cause issues if you're trying to look up a different name, e.g. Zehra,
-					since then the answer will still output Razas' info.
-
-				</div>
-				<div class="alert border border-info border-3" role="alert">
-					To restate: We want lookup tables to be sustainable in the long run.
-				</div>
-
-				<p>
-					<u class="text-danger font-weight-bold">Question:</u>
-					In the data source table, if I added another name,
-					how will our functions change?
-				</p>
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ3"
 					aria-expanded="false" aria-controls="collapseQ3">
 					Show Answer
 				</button>
 				</p>
 				<div class="collapse" id="collapseQ3">
+					<div class="alert alert-danger" role="alert">
+						Answer: In the long run, yes!
+						Using A2 as a lookup value in the function will get me Razas' correct position & position,
+						but that function will <i><u>only</u></i> show me Razas' info.
+						In other words, this will cause issues if you're trying to look up a different name, e.g. Zehra,
+						since then the answer will still output Razas' info.
+
+					</div>
+					<div class="alert border border-info border-3" role="alert">
+						To restate: We want lookup tables to be sustainable in the long run.
+					</div>
+				</div>
+				<p>
+					<u class="text-danger font-weight-bold">Question:</u>
+					In the data source table, if I added another name,
+					how will our functions change?
+				</p>
+				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ4"
+					aria-expanded="false" aria-controls="collapseQ4">
+					Show Answer
+				</button>
+				</p>
+				<div class="collapse" id="collapseQ4">
 					<blockquote class="border-danger">
 						By adding an extra name, our data set becomes bigger.
 						So our <u><strong>table array</strong></u> is what changes.
@@ -682,11 +688,12 @@
 				etc.
 				</p>
 				<p>
-					For this example, the VLOOKUPs are in column C of the data source table.
-					<blockquote class="mt-0 border-primary">
-						In C3, the function is:
-						<u class="font-italic text-success">=VLOOKUP(B3,LOOKUP-TABLE,2,TRUE);</u>
-					</blockquote>
+					*For this case, the VLOOKUPs are in column C of the data source table. E.G. In C3, the function is:
+					</br> <u class="ml-4 font-italic text-success">=VLOOKUP(B3,LOOKUP-TABLE,2,TRUE);</u>
+				<blockquote class="mt-0 border-primary">
+
+
+				</blockquote>
 				</p>
 				<p class="mb-0">
 					Since universities have their own individual needs,
@@ -712,7 +719,8 @@
 					In other words, sometimes we want to do an
 					<i><strong class="text-danger">approximate match</strong></i>
 					and round/estimate our lookup values since they won't appear on the lookup table.
-					Other times, we need to do an exact match since we're searching for a unique identifier (E.g., Product Number,
+					Other times, we need to do an exact match since we're searching for a unique identifier (E.g.,
+					Product Number,
 					Student ID, etc)
 				</p>
 				<p>
