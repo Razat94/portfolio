@@ -748,12 +748,82 @@
 			<h3 id="topicE">E) Xlookup</h3>
 			<section>
 				<p>
-					XLOOKUP is an improved and updated version of VLOOKUP that improves on the limitations of VLOOKUP,
-					but VLOOKUP is more compatible & more widely supported with older Excel versions.
+					XLOOKUP is the new and improved version of VLOOKUP function that improves on the limitations of VLOOKUP.
+					The benefit of using VLOOKUPs is that they are more widely supported & compatible with older Excel versions.
 				</p>
-				<pre>
+				<!-- <pre>
 					<span>=XLOOKUP()</span>
-				</pre>
+				</pre> -->
+
+				<p>
+				Let's take a look at an example: 
+				</p>
+				<div class="row">
+					<div class="col-md-6">
+						<table class="">
+							<caption>Data Source Table</caption>
+							<thead>
+								<tr>
+									<th scope="col">Country</th>
+									<th scope="col">Abbreviation</th>
+									<th scope="col">Prefix</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">China</th>
+									<td>CN</td>
+									<td>+86</td>
+								</tr>
+								<tr>
+									<th scope="row">Brazil</th>
+									<td>BR</td>
+									<td>+55</td>
+								</tr>
+								<tr>
+									<th scope="row">United States</th>
+									<td>US</td>
+									<td>+1</td>
+								</tr>
+								<tr>
+									<th scope="row">Russia</th>
+									<td>RU</td>
+									<td>+7</td>
+								</tr>
+								<tr>
+									<th scope="row">Mexico</th>
+									<td>MX</td>
+									<td>+52</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-6">
+						<table class="">
+							<caption>Dial Code Lookup Table</caption>
+							<thead>
+								<tr class = "">
+									<th colspan="2" scope="col">Dial Code?</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="d-row">
+									<td class="m-0 btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+										Country
+										<span class="caret"></span>
+										<ul class="dropdown-menu">
+											<li><a href="#">China</a></li>
+											<li><a href="#">Brazil</a></li>
+											<li><a href="#">United States</a></li>
+											<li><a href="#">Russia</a></li>
+										</ul>
+									</td>
+									<td class="">Produce</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 				<hr />
 			</section>
 			<h3 id="credits">F) Sources and Credits</h3>
