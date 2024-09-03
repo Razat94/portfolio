@@ -753,6 +753,41 @@
 					The benefit of using VLOOKUPs is that they are more widely supported & compatible with older Excel
 					versions.
 				</p>
+
+				<div class="jumbotron">
+					<h4 class = "m-0">Some reasons as to why you should use XLOOKUP over VLOOKUP:</h4>
+					<ul>
+						<li>
+							Works faster for larger data sets.
+						</li>
+						<li>
+							Substitutes for the VLOOKUP <u class="text-danger">and</u> HLOOKUP functions.
+						</li>
+						<li>
+							Since XLOOKUP uses arrays and not data sets, columns become irrelavant.
+							<ul class = "m-0">
+								<li>
+									E.G. We can add empty columns.
+									Also, there's no need to count columns when retrieving information.
+								</li>
+								<li>
+									The lookup value doesn't need to be in the first column
+									because we choose any row or column for the lookup range.
+								</li>
+							</ul>
+						</li>
+						<li>
+							When looking up multiple values, we can use 1 XLOOKUP to spill values 
+							instead of writing multiple VLOOKUPs.
+						</li>
+						<li>
+							Interacts with APPROXIMATE matches more accurately
+						</li>
+						<li>
+							Provides in-built error handling that omits the need for IFERROR function
+						</li>
+					</ul>
+				</div>
 				<!-- <pre>
 					<span>=XLOOKUP()</span>
 				</pre> -->
@@ -821,19 +856,19 @@
 											<li><a href="#">Russia</a></li>
 										</ul>
 									</td>
-									<td class="">(XLOOKUP goes here)</td>
+									<td class=""><i>=XLOOKUP(E2, A2:A6, C2:C6)</i></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					<p>
 						In this example, XLOOKUP works just like VLOOKUP.
-						Although we could use VLOOKUP to get the answer, 
-						we'll instead be using XLOOKUP to get our answer.
+						Although we could use VLOOKUP to get the answer,
+						we'll instead use XLOOKUP.
 					</p>
 					<p>
-						XLOOKUP has a total of 6 parameters. 
-						Only the first 3 are required and the last 3 are optional. 
+						XLOOKUP has a total of 6 parameters.
+						Only the first 3 are required and the last 3 are optional.
 						Here are the 3 main ones to know:
 					</p>
 					<ul class="">
@@ -846,10 +881,10 @@
 								This is the range in which you search for the Lookup Value.
 								I.E. The lookup value should be in this range.
 								<blockquote class="m-1 border-danger">
-									This range does <u>not</u> have to be found in the first column!
+									This range does <u>not</u> have to be the first column!
 								</blockquote>
 								<blockquote class="m-1">
-									This range can be a single column or row, 
+									This range can be any single column or row,
 									thereby making up for the HLOOKUP function as well!
 								</blockquote>
 							</span>
@@ -857,20 +892,13 @@
 						<li><b class="font-italic">Return Array: </b>
 							<span>
 								This is the range where the result should be found.
+								XLOOKUP allows mapping between the Lookup & Return arrays.
 							</span>
 							<blockquote>
-								The <u>size</u> of this range should be the same as the lookup array.
+								The ranges <u>size</u> should be the same as the lookup array.
 							</blockquote>
 						</li>
 					</ul>
-					<p>
-						The answer for the following should be: <br/>
-						=XLOOKUP(E2, A2:A6, C2:C6)
-					</p>
-					<p>
-						XLOOKUP makes it easier to lookup/retrieve values since it doesn't 
-						rely on column numbers and it allows mapping between arrays, 
-					</p>
 				</div>
 				<hr />
 			</section>
