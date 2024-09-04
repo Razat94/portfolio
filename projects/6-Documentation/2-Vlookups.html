@@ -602,10 +602,9 @@
 				</div>
 				<blockquote class="border-success">
 					<strong class="text-success"><u>Optional Task:</u></strong>
-					Add a column to our data table for "Salary".
-					Assign fictional salaries to everyone.
+					Add an "Email" column to our data table and assign fictional emails to everyone.
 
-					Then, add a vlookup on the lookup table to find a persons salary.
+					Then, add a vlookup on the lookup table to find a persons email.
 				</blockquote>
 				<br />
 				<hr />
@@ -716,12 +715,11 @@
 					</li>
 				</ul>
 				<p class="">
-					In other words, sometimes we want to do an
+					In other words, an
 					<i><strong class="text-danger">approximate match</strong></i>
-					and round/estimate our lookup values since they won't appear on the lookup table.
-					Other times, we need to do an exact match since we're searching for a unique identifier (E.g.,
-					Product Number,
-					Student ID, etc)
+					can round/estimate our lookup values since those don't appear on the lookup table.
+					In other cases, we use exact match when searching for a unique identifier (E.g.,
+					Product Number, Student ID, etc)
 				</p>
 				<p>
 					For cell C3, let's take a dive into the syntax our VLOOKUP:
@@ -782,13 +780,13 @@
 									Also, there's no need to count columns when retrieving information.
 								</li>
 								<li>
-									The lookup value doesn't need to be in the first column
-									because we choose any row or column for the lookup range.
+									The lookup value isn't required to be in the first column
+									since the lookup range can be any row/column
 								</li>
 							</ul>
 						</li>
 						<li>
-							When looking up multiple values, we can use 1 XLOOKUP to spill values 
+							When looking up multiple values, use 1 XLOOKUP to spill values 
 							instead of writing multiple VLOOKUPs.
 						</li>
 						<li>
@@ -873,9 +871,7 @@
 						</table>
 					</div>
 					<p>
-						In this example, XLOOKUP works just like VLOOKUP.
-						Although we could use VLOOKUP to get the answer,
-						we'll instead use XLOOKUP.
+						In this example, XLOOKUP works just like VLOOKUP and provides the same answer.
 					</p>
 					<p>
 						XLOOKUP has a total of 6 parameters.
@@ -903,7 +899,7 @@
 						<li><b class="font-italic">Return Array: </b>
 							<span>
 								This is the range where the result should be found.
-								XLOOKUP allows mapping between the Lookup & Return arrays.
+								XLOOKUP maps the Lookup & Return arrays.
 							</span>
 							<blockquote>
 								The ranges <u>size</u> should be the same as the lookup array.
