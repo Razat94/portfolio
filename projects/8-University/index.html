@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!--- basic page needs (Meta Information)
+	================================================== -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- mobile specific metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- SEO Tags -->
+	<meta name="description" content="Portfolio website showcasing documentation created by Raza Tahir, 
+	a software web developer based in Los Angeles, CA.">
+	<meta name="author" content="Raza Tahir">
+	<meta name="keywords" content="raza, tahir, raza tahir, portfolio, github, projects, website, web development" />
+
+	<!-- Tab Icon & Title -->
+	<title> College Designs | Raza Tahir </title>
+	<link id="titleImg" rel="icon" type="image/png" href="../../public/img/icons/Blue_orb.png" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137821771-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-137821771-1');
+	</script>
+
+	<!-- CSS
+	================================================== -->
+	<link rel="stylesheet" type="text/css" href="../../public/css/routes.css">
+
+	<!-- JS
+	================================================== -->
+	<script src="../../vendor/jquery/jquery.min.js"></script>
+	<script src="../../vendor/popper/popper.js"></script>
+	<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-light navbar-expand-md">
+		<div class="container">
+			<a href="../../" class="navbar-brand mr" id="site-header" style="color: #02487e;">
+				Raza Tahir
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar2"
+				aria-label="Hamburger Icon">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse" id="collapsingNavbar2">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="../../" aria-label="Learn more about Razas projects">
+							Projects
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../../about.html" aria-label="Learn more about Raza">About</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav ml-auto flex-row flex-nowrap">
+					<li class="nav-item">
+						<a class="nav-link" href="mailto:Razat51@gmail.com" target="_blank"
+							aria-label="E-mail me at Razat51@gmail.com">
+							<i class="fa fa-envelope mr-1"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/Razat94?tab=repositories"
+							aria-label="Look at some of Raza's other projects!">
+							<i class="fa fa-github-alt mr-1"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.linkedin.com/in/razatahir"
+							aria-label="Check out Raza's LinkedIn!">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<header class="site-header border-bottom logo--left" role="banner">
+	</header>
+
+	<main class="container">
+
+		<div class="text-center section-heading mb-0">
+			<h2>UCLA + USC</h2>
+			<h6>Graphics that I created about UCLA & USC </h6>
+			<div class="heading-after"><span></span></div>
+		</div>
+
+		<div class="aboutContainer mb-0 pb-0">
+			<ul class="breadcrumb m-auto d-block">
+				<li><a href="../../index.html">Projects</a></li>
+				<li>UCLA + USC</li>
+			</ul>
+		</div>
+
+		<section class="row">
+			<div class="col-md-6 mt-4 offset-md-3">
+
+				<h6 class="text-center font-weight-bold">
+					<u>Description</u>
+				</h6>
+				<p>
+					I recreated several graphics found on LinkedIn and
+					various UCLA & USC departmental sites, replicating their banner images.
+				</p>
+				<p>
+					Things to note:
+				<ul>
+					<li>All pictures were downloaded for free via <a href="https://www.unsplash.com/">Unsplash</a>
+						<br />or are taken from UCLAs/USCs LinkedIn page.
+					</li>
+					<li>The following are fan-made remakes. Please support their official site.
+					</li>
+				</ul>
+				</p>
+			</div>
+
+		</section>
+
+		<h6 class="text-center font-weight-bold mb-3">
+			<u>Click on the image below to show the respective work:</u>
+		</h6>
+
+		<div class="row" id="animation">
+			<!-- LinkedIn Design Projects -->
+			<div class="col-md-6 col-xl-4 offset-xl-2 text-center">
+				<a href="./UCLA.html" title="Click to learn more!" style="text-decoration: none;"
+					class="collegeLinks text-dark" onclick="openCollege(event, 'Nickki')">
+					<img class="w-50 h-75 border border-primary demo-box moveOnHover p-0" style=""
+						src="../../public/img/UCLA/ucla-logo-cursive.jpg" />
+				</a>
+			</div> <!-- End of Project -->
+
+			<div class="col-md-6 col-xl-4 text-center">
+				<a href="./USC.html" title="Click to learn more!"
+					style="text-decoration: none; color: black;">
+					<img class="w-50 h-75 p-0 border border-danger demo-box moveOnHover" style=""
+						src="../../public/img/USC/usc-2x1.png" />
+				</a>
+			</div> <!-- End of Project -->
+		</div> <!-- End of Row -->
+	</main>
+</body>
+
+</html>
