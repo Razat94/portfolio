@@ -81,12 +81,12 @@
 							</label>
 						</span>
 					</li>
-					<li><a href="#topicA"> A) Getting Started</a></li>
-					<li><a href="#topicB"> B) SUM Function</a></li>
-					<li><a href="#topicC"> C) AVERAGE Function</a></li>
-					<li><a href="#topicD"> D) COUNTIF</a></li>
-					<li><a href="#topicE"> E) SUMIF</a></li>
-					<li><a href="#topicF"> E) IF</a></li>
+					<!-- <li><a href="#topicA"> Getting Started</a></li> -->
+					<li><a href="#topicA"> A) SUM Function</a></li>
+					<li><a href="#topicB"> B) AVERAGE Function</a></li>
+					<li><a href="#topicC"> C) COUNTIF</a></li>
+					<li><a href="#topicD"> D) SUMIF</a></li>
+					<li><a href="#topicE"> E) IF</a></li>
 					<li><a href="#credits"> F) Credits</a></li>
 				</ul>
 			</div>
@@ -100,7 +100,7 @@
 			<div id="theme-content-info-created">
 				<div id="theme-content-info-created-body">
 					Created: October 7th, 2024<br />
-					By: <a href = "../../index.html"> Raza Tahir </a><br />
+					By: <a href="../../index.html"> Raza Tahir </a><br />
 				</div>
 			</div>
 			<div id="theme-content-info-description">
@@ -134,7 +134,7 @@
 					.
 				</p>
 			</blockquote>
-			<h2 class="" id="topicA">Getting Started</h2>
+			<h2 class="" id="topic0">Getting Started</h2>
 			<section>
 				<span>
 					Functions are pre-built formulas in Excel. <br>
@@ -158,8 +158,12 @@
 					</ul>
 				</span>
 
-				<div class="alert alert-success" role="alert">
-					Remember: <u>Every</u> function <strong>MUST</strong> start with an "="
+				<div class="row">
+					<div class="col-md-8">
+						<div class="alert alert-success" role="alert">
+							Remember: <u>Every</u> function <strong>MUST</strong> start with an "="
+						</div>
+					</div>
 				</div>
 
 				<p> To learn more, read
@@ -174,26 +178,36 @@
 				</p>
 
 				<p>
-					Below will be some common functions you should know about:
+					Below will be some common functions you should know about.
 				</p>
 				<hr />
 			</section>
-			<h3 id="topicB">B) SUM Function</h3> 
-			<span> 
-				<a target="_blank" href = "https://support.microsoft.com/en-us/office/use-the-sum-function-to-sum-numbers-in-a-range-323569b2-0d2b-4e7b-b2f8-b433f9f0ac96">
+
+			<!-- SUM Heading using flexbox -->
+			<!-- <div id="topicA" style="display: flex; align-items: baseline;">
+				<h3 class="m-0">A) SUM Function | </h3>
+				<a style="margin-left: 10px; text-decoration: none;" target="_blank"
+					href="https://support.microsoft.com/en-us/office/use-the-sum-function-to-sum-numbers-in-a-range-323569b2-0d2b-4e7b-b2f8-b433f9f0ac96">
 					Reference guide
 				</a>
-			</span>
+			</div> -->
+
+			<!-- SUM -->
+			<h3 id="topicA" class="m-0 d-inline">A) SUM Function | </h3>
+			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
+				href="https://support.microsoft.com/en-us/office/use-the-sum-function-to-sum-numbers-in-a-range-323569b2-0d2b-4e7b-b2f8-b433f9f0ac96">
+				Reference guide
+			</a>
 
 			<section>
 				<h4>The SUM function is often considered one of the most commonly used functions.</h4>
-				<p>To add the numbers 1, 3, and 5, we can simply write <i>=SUM(1,3,5)</i></p>
-				
-				<p>Suppose we have the sum the following data: </p>
+				<p>To add constant numbers 1, 3, and 5, we can simply write <i>=SUM(1,3,5)</i></p>
+
+				<p>Suppose we have to find the sum of the following data: </p>
 				<table class="table">
 					<caption class="text-center">
 						In our <i>dataset</i> i.e. "Table Array",
-						each record/entry is a person. <br/>"Salesperson" is cell A1.
+						each record/entry is a person. <br />"Salesperson" is cell A1.
 					</caption>
 					<thead>
 						<tr>
@@ -216,32 +230,43 @@
 						</tr>
 				</table>
 
-				<p>
-					There are a few ways we can add these numbers.
+				<p class="mb-0">
+					There are a few ways we can add these numbers to get the total.
 					We can:
-					<ul>
-						<li>
-							Using a Manual Addition Formula: =B2 + C2 + D2 + E2
-							<br> This formula adds each quarter's sales figure individually.
-						</li>
-						<li>
-							Use the SUM function on each number individually: = SUM(B2,C2,D2,E2)
-							<br> This SUM function adds each quarter's sales figure individually.
-						</li>
-						<li>
-							Use the SUM function with a range: Formula: =SUM(B2:E2)
-							<br/>This formula sums the values in cells B2 through E2, which contains the sales figures for Quarter 1 to Quarter 4.
-						</li>
-					</ul>
+				<ul>
+					<li>
+						Using a Manual Addition Formula: <u class=" text-danger font-italic">=B2 + C2 + D2 + E2</u>
+						<br> This formula adds each quarter's sales figure individually.
+					</li>
+					<li>
+						Use the SUM function on each number individually: <u class=" text-danger font-italic">=
+							SUM(B2,C2,D2,E2)</u>
+						<br> This SUM function adds each quarter's sales figure individually.
+					</li>
+					<li>
+						Use the SUM function with a range: Formula:
+						<u class="bg-warning text-dark font-italic">
+							=SUM(B2:E2)
+						</u>
+						<br />The <u>best</u> way to calculate the total is by summing the values in cells B2 to E2,
+						which contain the sales figures for Quarters 1 to 4.
+					</li>
+				</ul>
 				</p>
 
-				<p> Few things to note: </p>
-					<ul>
-						<li>
-							The SUM function doesn’t need to be in all caps, but it's common to write it that way.
-						</li>
-					</ul>
-					
+				<p class="mb-0"> Few things to note:
+				<ul>
+					<li>
+						The word "SUM" doesn’t need to be in all caps, but it's common to write it that way.
+					</li>
+					<li>
+						The SUM function ignores cells with text.
+					</li>
+				</ul>
+				</p>
+
+				<p class="mt-0"> Let's take a look at another example for a table of movies: </p>
+
 				<table class="table">
 					<caption class="text-center">
 						In our <i>dataset</i> i.e. "Table Array",
@@ -327,12 +352,12 @@
 					</tbody>
 				</table>
 				<p>
-					In the above example, 
+					In the above example,
 					try to find the sum of all sales.
-					
-					<br /> <br />
+
+					<br />
 				</p>
-							
+
 				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ1"
 					aria-expanded="false" aria-controls="collapseQ1">
 					Show Answer
@@ -347,10 +372,173 @@
 				<br />
 				<hr />
 			</section>
-			<h3 id="topicC">C) Example #2:</h3>
+
+			<!-- AVERAGE -->
+			<h3 id="topicB" class="m-0 d-inline">B) AVERAGE Function | </h3>
+			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
+				href="https://support.microsoft.com/en-us/office/average-function-047bac88-d466-426c-a32b-8f33eb960cf6">
+				Reference guide
+			</a>
+
 			<section>
+				<h5> A function that returns the average (arithmetic mean) of each of the arguments. </h5>
+
+				<p> It is typed as '=AVERAGE' and is formatted as: </p>
+
+				<blockquote class="border-success">
+					<strong class="text-success"><u>=AVERAGE(value1, value2, [value3, ...])</u></strong>
+				</blockquote>
+
+				<blockquote class="border-warning">
+					<strong><u>Example 1</u></strong>
+				</blockquote>
+				<table class="table">
+					<caption class="text-center">
+						Find the AVERAGE of each quarter.
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Salesperson</th>
+							<th scope="col">Quarter 1</th>
+							<th scope="col">Quarter 2</th>
+							<th scope="col">Quarter 3</th>
+							<th scope="col">Quarter 4</th>
+							<th scope="col">Total</th>
+							<th scope="col">Average</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Brian</td>
+							<td>$52,000</td>
+							<td>$73,000</td>
+							<td>$72,000</td>
+							<td>$18,000</td>
+							<td>=SUM(B2:E2)</td>
+							<td>???</td>
+						</tr>
+				</table>
+
+				<span>
+					To average the numbers in cells B2 through E2,
+					we can use the AVERAGE Function in 2 ways: <br />
+					<ul>
+						<li> <u class=" text-danger font-italic">=AVERAGE(B2,C2, D2, E2)</u> </li>
+						<li>
+							<u class="bg-warning text-dark font-italic">
+								=AVERAGE(B2:E2)
+							</u>
+						</li>
+					</ul>
+				</span>
+				<br/>
+
+				<blockquote class="border-warning">
+					<strong><u>Example 2</u></strong>
+				</blockquote>
+
+				<div class="row">
+					<div class="col-md-6">
+						<table class="table">
+							<caption>Data Source Table</caption>
+							<thead>
+								<tr>
+									<th scope="col">Name</th>
+									<th scope="col">Position?</th>
+									<th scope="col">Salary</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Raza</th>
+									<td>Trainer</td>
+									<td>$1M</td>
+								</tr>
+								<tr>
+									<th scope="row">Zehra</th>
+									<td>English Teacher</td>
+									<td>$2M</td>
+								</tr>
+								<tr>
+									<th scope="row">Sarah</th>
+									<td>Director of Training</td>
+									<td>$4M</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-6">
+						<table class="table">
+							<caption>Lookup Table</caption>
+							<tbody>
+								<tr class="">
+									<td class = "bg-light text-dark">SUM?</td>
+									<td>=SUM(C2:C4)</td>
+								</tr>
+								<tr>
+									<th scope="row" class="bg-success">AVERAGE</th>
+									<td colspan="2" class="text-center"><i>(AVERAGE function goes here)</i></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<p>
+					Calculate the average salary of the three employees.
+				</p>
+
+				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ2"
+					aria-expanded="false" aria-controls="collapseQ2">
+					Show Answer
+				</button>
+				</p>
+				<div class="collapse" id="collapseQ2">
+					<div class="col-md-3 alert alert-danger" role="alert">
+						=AVERAGE(C2:C4)
+					</div>
+
+					<blockquote class="border-danger">
+						Notice that the average function uses the same range as that of the SUM function. 
+					</blockquote>
+				</div>
+
+				<blockquote class="border-warning">
+					<strong><u>Example 3</u></strong>
+				</blockquote>
+
+				<p> Using the previous example for a table of Movies, calculate the AVERAGE Box Office Earnings.  </p>
+			
+				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ3"
+					aria-expanded="false" aria-controls="collapseQ3">
+					Show Answer
+				</button>
+				</p>
+				<div class="collapse" id="collapseQ3">
+					<div class="col-md-3 alert alert-danger" role="alert">
+						=SUM(D2:D12)
+
+					</div>
+				</div>
 				
+				<br />
+				<hr />
+			</section>
+
+			<h3 id="topicC">C) Function</h3>
+			<section>
+				<span>
+					<a target="_blank"
+						href="https://support.microsoft.com/en-us/office/average-function-047bac88-d466-426c-a32b-8f33eb960cf6">
+						Reference guide
+					</a>
+				</span>
 				<h4>Let's now open up the Example #2 Spreadsheet.</h4>
+
+				<p>
+					A function that returns the average (arithmetic mean) of each of the arguments.
+				</p>
+
 				<span>
 					<strong><u>Note:</u></strong> A VLOOKUP simply looks up related values in a row.
 					In this example,
@@ -586,6 +774,7 @@
 				<br />
 				<hr />
 			</section>
+
 			<h3 id="topicD">D) Example 3: Understanding approximate vs. exact match</h3>
 			<section>
 				<p> Let's take a look an example where a company sells laptops to universities: </p>
@@ -720,6 +909,7 @@
 				</p>
 				<hr />
 			</section>
+
 			<h3 id="topicE">E) Xlookup</h3>
 			<section>
 				<p>
@@ -887,6 +1077,7 @@
 				</div>
 				<hr />
 			</section>
+
 			<h3 id="credits">F) Sources and Credits</h3>
 			<h4>Reference Links</h4>
 			<blockquote class="border-success">
