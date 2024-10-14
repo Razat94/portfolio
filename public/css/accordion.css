@@ -1,0 +1,55 @@
+/* Accordion */
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: inherit;
+    padding: 20px 20px 20px 25px;
+    cursor: pointer;
+	font-size: 16px;
+}
+
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+  padding: 20px 20px 20px 25px;
+  cursor: pointer;
+}
+
+.panel-default {
+    border: none;
+    border-left: 2px solid #43cea2;
+}
+
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+
+.panel-default > .panel-heading {
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #272727;
+  -webkit-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+  border: none;
+}
+
+.panel-default > .panel-heading:hover {
+  text-decoration: underline;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 15px;
+}
+.panel-group > h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.panel-body {
+  padding: 25px;
+  font-size: 14px;
+}
+.panel-body p {
+  margin: 0;
+}

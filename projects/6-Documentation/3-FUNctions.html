@@ -32,6 +32,9 @@
 	<link id="Light" disabled rel="stylesheet" href="../../public/css/github-css/github-markdown.css">
 	<link id="Dark" rel="stylesheet" href="../../public/css/github-css/github-markdown-dark.css">
 	<link rel="stylesheet" type="text/css" href="../../public/css/documentation-style.css">
+
+
+
 	<!-- JS
 	================================================== -->
 	<script src="../../vendor/jquery/jquery.min.js"></script>
@@ -539,22 +542,22 @@
 				</h5>
 
 				<span>
-					It is typed =COUNTIF which has two parts: <br />
-					<ul>
-						<li> the range of cells to count (i.e. where do you want to look) </li>
-						<li> the criteria/condition for what do you want to look for </li>
-					</ul>
+					Function Syntax:
 				</span>
 
-				<p>
-					Below is the Function Syntax:
-				</p>
-
-				<blockquote class="border-success">
+				<blockquote class="mt-1 border-success">
 					<strong class="text-success"><u>=COUNTIF(range, criterion)</u></strong>
 				</blockquote>
 
-				<p>Let's take a look at a grocery list of items</p>
+				<span>
+					It is typed =COUNTIF which has two parts: <br />
+					<ul>
+						<li> the <u>range</u> of cells to count (i.e. where do you want to look) </li>
+						<li> the <u>criteria/condition</u> for what do you want to look for </li>
+					</ul>
+				</span>
+
+				<p>As an example, let's take a look at a grocery list of items</p>
 				<table class="table">
 					<caption class="text-center">
 
@@ -576,7 +579,7 @@
 					We can use the COUNTIF function
 				</p>
 				<p>
-					= COUNTIF(A2:A7, "Apples") <span class = "text-muted">// Output: 2</span>
+					= COUNTIF(A2:A7, "Apples") <span class="text-muted">// Output: 2</span>
 				</p>
 
 				<blockquote class="border-danger">
@@ -585,273 +588,412 @@
 					as there are no exact matches available.
 				</blockquote>
 
-				<blockquote class="border-warning">
-					<strong><u>Example #1</u></strong>
+				<!-- CountIF Accordion -->
+				<section class="panel-group accordion">
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#countIfEx1"
+								class="panel-title">
+								COUNTIF Example #1
+							</h4>
+						</div>
+						<div id="countIfEx1" class="collapse">
+							<div class="panel-body">
+								<p>
+									Using our earlier example with the table of movies,
+									find out how many films were made by James Cameron
+									<br>
+								<div class="col-md-6 alert alert-danger" role="alert">
+									=COUNTIF(C2:C12, "James Cameron") <span class="text-muted">// Output: 2</span>
+								</div>
+								</p>
+							</div> <!-- End of Panel-Body -->
+						</div>
+					</div>
+					<div class="panel panel-default active" data-vp-animate="fadeIn">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#countIfExample2"
+								class="panel-title">
+								COUNTIF Example #2
+							</h4>
+						</div>
+						<div id="countIfExample2" class="collapse in">
+							<div class="panel-body">
+								<p>
+									Given a list of tasks assigned to various individuals,
+									find out how many tasks are assigned to Danny Brown:
+								</p>
+
+								<div class="row">
+									<div class="col-md-4">
+										<table class="table table-responsive" border="1">
+											<caption class="text-center">
+												<a
+													href="https://www.ablebits.com/office-addins-blog/excel-countif-function-examples/#countif-text-partial">
+													Ablebits Example
+												</a>
+
+											</caption>
+											<thead>
+												<tr>
+													<th>Task</th>
+													<th>Assigned To</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Task 1:</td>
+													<td>Peter Smith</td>
+												</tr>
+												<tr>
+													<td>Task 2:</td>
+													<td class="bg-success">Danny Brown</td>
+												</tr>
+												<tr>
+													<td>Task 3:</td>
+													<td>Alex Day</td>
+												</tr>
+												<tr>
+													<td>Task 4:</td>
+													<td>Sam Ramirez</td>
+												</tr>
+												<tr>
+													<td>Task 5:</td>
+													<td class="bg-success">D. Brown</td>
+												</tr>
+												<tr>
+													<td>Task 6:</td>
+													<td>Alexander Day</td>
+												</tr>
+												<tr>
+													<td>Task 7:</td>
+													<td class="bg-success">Daniel Brown</td>
+												</tr>
+												<tr>
+													<td>Task 8:</td>
+													<td>P. Smith</td>
+												</tr>
+												<tr>
+													<td>Task 9:</td>
+													<td class="bg-success">Mr. Brown</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="col-md-8">
+										<p>
+											<u>Solution:</u> <br />
+											The asterisk (*) is used to find cells with any characters before or after,
+											as shown in the example.
+										</p>
+										<p>
+											Since Danny's name is written in various ways,
+											we can use "Brown" as the search criteria:
+											<br>
+										<div class="alert alert-success">
+											=COUNTIF(D2:D10, "*Brown*")
+											<span class="text-muted">// Output: 4</span>
+										</div>
+										</p>
+									</div>
+								</div>
+							</div> <!-- End of Panel-Body-->
+						</div>
+					</div>
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="100">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#countIfEx3"
+								class="panel-title">
+								COUNTIF Example #3
+							</h4>
+						</div>
+						<div id="countIfEx3" class="collapse">
+							<div class="panel-body">
+								<p>
+									Use the COUNTIF function in Excel to count the number of
+									employees with Years
+									of Service over 20.
+									<br>
+								</p>
+								<table border="1" style=" margin: 20px auto;">
+									<thead>
+										<tr>
+											<th>Employee</th>
+											<th>Hire Date</th>
+											<th>Years of Service</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Claire Watson</td>
+											<td>2/21/2010</td>
+											<td>14.7</td>
+										</tr>
+										<tr>
+											<td>Paulette Diaz</td>
+											<td>9/16/2011</td>
+											<td>13.1</td>
+										</tr>
+										<tr>
+											<td>Gwen Patrick</td>
+											<td>7/8/2000</td>
+											<td>24.3</td>
+										</tr>
+										<tr>
+											<td>Cecelia Nash</td>
+											<td>4/28/2001</td>
+											<td>23.5</td>
+										</tr>
+										<tr>
+											<td>Terrance Reyes</td>
+											<td>3/21/2004</td>
+											<td>20.6</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="col-md-6 offset-md-3 alert alert-danger" role="alert">
+									Solution: =COUNTIF(C2:C6, ">20")
+									<span class="text-muted">// Output: 3</span>
+								</div>
+							</div> <!-- End of Panel-Body-->
+						</div>
+					</div>
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#countIfEx4"
+								class="panel-title">
+								COUNTIF Example #4
+							</h4>
+						</div>
+						<div id="countIfEx4" class="collapse">
+							<div class="panel-body">
+								<p>
+									As part of the hotel staff, you are responsible for checking customers' dues.
+									<br>
+									How many guests have a balance exceeding $1,300 based on the records?
+
+								<table border="1"
+									style="border-collapse: collapse; margin: 20px auto; text-align: left;">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Arrival Date</th>
+											<th>Balance</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Austin</td>
+											<td>06-16</td>
+											<td>$640</td>
+										</tr>
+										<tr>
+											<td>Denton</td>
+											<td>06-14</td>
+											<td>$480</td>
+										</tr>
+										<tr>
+											<td>Hickman</td>
+											<td>06-12</td>
+											<td>$760</td>
+										</tr>
+										<tr>
+											<td>Littleton</td>
+											<td>06-15</td>
+											<td>$1,340</td>
+										</tr>
+										<tr>
+											<td>Shah</td>
+											<td>06-12</td>
+											<td>$1,200</td>
+										</tr>
+										<tr>
+											<td>Swatz</td>
+											<td>06-18</td>
+											<td>$1,100</td>
+										</tr>
+										<tr>
+											<td>Whitson</td>
+											<td>06-14</td>
+											<td>$960</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="col-md-6 offset-md-3 alert alert-danger" role="alert">
+									=COUNTIF(C2:C7, ">1300") <span class="text-muted">// Output: 1</span>
+								</div>
+								</p>
+							</div> <!-- End of Panel-Body -->
+						</div>
+					</div>
+
+				</section>
+				<!-- End of CountIF Accordion -->
+
+				<hr />
+			</section>
+
+			<h3 id="topicD" class="m-0 d-inline">D) SUMIF Function | </h3>
+			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
+				href="https://support.microsoft.com/en-us/office/sumif-function-169b8c99-c05c-4483-a712-1697a653039b">
+				Reference guide
+			</a>
+
+			<section>
+				<h5>
+					The Excel SUMIF function returns the sum of values in a range that meet a single condition.
+				</h5>
+
+				<span>
+					Function Syntax:
+				</span>
+
+				<blockquote class="mt-1 border-success">
+					<strong class="text-success"><u>=SUMIF(range, criteria, [sum_range])</u></strong>
 				</blockquote>
+
+				<span>
+					It is typed =SUMIF and takes in 3 arguments: <br />
+					<ul>
+						<li> the <u>range</u> of cells that the criteria is applied to. </li>
+						<li> the specific <u>criteria</u> that we want to look for
+							<u>in the previously defined range.</u>
+						</li>
+						<li> the actual <u>range</u> of cells to add </li>
+					</ul>
+				</span>
+
+				<p> The sum range should be the same size and shape as range. </p>
 
 				<p>
-					Given a list of tasks assigned to various individuals, 
-					find out how many tasks are assigned to Danny Brown:
+					Let's take a look at an example:
 				</p>
-
-				<div class="row">
-					<div class="col-md-4">
-						<table class="table table-responsive" border="1">
-							<caption class="text-center">
-								<a
-									href="https://www.ablebits.com/office-addins-blog/excel-countif-function-examples/#countif-text-partial">
-									Ablebits Example
-								</a>
-
-							</caption>
-							<thead>
-								<tr>
-									<th>Task</th>
-									<th>Assigned To</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Task 1:</td>
-									<td>Peter Smith</td>
-								</tr>
-								<tr>
-									<td>Task 2:</td>
-									<td class="bg-success">Danny Brown</td>
-								</tr>
-								<tr>
-									<td>Task 3:</td>
-									<td>Alex Day</td>
-								</tr>
-								<tr>
-									<td>Task 4:</td>
-									<td>Sam Ramirez</td>
-								</tr>
-								<tr>
-									<td>Task 5:</td>
-									<td class="bg-success">D. Brown</td>
-								</tr>
-								<tr>
-									<td>Task 6:</td>
-									<td>Alexander Day</td>
-								</tr>
-								<tr>
-									<td>Task 7:</td>
-									<td class="bg-success">Daniel Brown</td>
-								</tr>
-								<tr>
-									<td>Task 8:</td>
-									<td>P. Smith</td>
-								</tr>
-								<tr>
-									<td>Task 9:</td>
-									<td class="bg-success">Mr. Brown</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="col-md-8">
-						<p>
-							<u>Solution:</u> <br/>
-							The asterisk (*) is used to find cells with any characters before or after, 
-							as shown in the example.
-						</p>
-						<p>
-							Since Danny's name is written in various ways, 
-							we can use "Brown" as the search criteria:
-							<br>
-							<div class = "alert alert-success">
-								=COUNTIF(D2:D10, "*Brown*")
-								<span class = "text-muted">// Output: 4</span>
-							</div>
-						</p>
-					</div>
-				</div>
-
-				<blockquote class="border-warning">
-					<strong><u>Example #2</u></strong>
-				</blockquote>
-				
-				<table border="1" style=" margin: 20px auto;">
+				<table border="1" style="border-collapse: collapse; margin: 20px auto; text-align: center;">
 					<thead>
 						<tr>
-							<th>Employee</th>
-							<th>Hire Date</th>
-							<th>Years of Service</th>
+							<th>Quarter</th>
+							<th>Product</th>
+							<th>Total Sales</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>Claire Watson</td>
-							<td>2/21/2010</td>
-							<td>14.7</td>
+							<td>Q1</td>
+							<td>Cameras</td>
+							<td>$97,236.00</td>
 						</tr>
 						<tr>
-							<td>Paulette Diaz</td>
-							<td>9/16/2011</td>
-							<td>13.1</td>
+							<td>Q1</td>
+							<td>Desktops</td>
+							<td>$230,920.00</td>
 						</tr>
 						<tr>
-							<td>Gwen Patrick</td>
-							<td>7/8/2000</td>
-							<td>24.3</td>
+							<td>Q1</td>
+							<td>Laptops</td>
+							<td>$238,374.00</td>
 						</tr>
 						<tr>
-							<td>Cecelia Nash</td>
-							<td>4/28/2001</td>
-							<td>23.5</td>
+							<td>Q1</td>
+							<td>Printers</td>
+							<td>$26,536.00</td>
 						</tr>
 						<tr>
-							<td>Terrance Reyes</td>
-							<td>3/21/2004</td>
-							<td>20.6</td>
+							<td>Q2</td>
+							<td>Cameras</td>
+							<td>$174,933.00</td>
+						</tr>
+						<tr>
+							<td>Q2</td>
+							<td>Desktops</td>
+							<td>$225,765.00</td>
+						</tr>
+						<tr>
+							<td>Q2</td>
+							<td>Laptops</td>
+							<td>$353,772.00</td>
+						</tr>
+						<tr>
+							<td>Q2</td>
+							<td>Printers</td>
+							<td>$166,616.00</td>
+						</tr>
+						<tr>
+							<td>Q3</td>
+							<td>Cameras</td>
+							<td>$51,660.00</td>
+						</tr>
+						<tr>
+							<td>Q3</td>
+							<td>Desktops</td>
+							<td>$165,462.00</td>
+						</tr>
+						<tr>
+							<td>Q3</td>
+							<td>Laptops</td>
+							<td>$271,746.00</td>
+						</tr>
+						<tr>
+							<td>Q3</td>
+							<td>Printers</td>
+							<td>$70,512.00</td>
+						</tr>
+						<tr>
+							<td>Q4</td>
+							<td>Cameras</td>
+							<td>$46,944.00</td>
+						</tr>
+						<tr>
+							<td>Q4</td>
+							<td>Desktops</td>
+							<td>$180,880.00</td>
+						</tr>
+						<tr>
+							<td>Q4</td>
+							<td>Laptops</td>
+							<td>$84,840.00</td>
+						</tr>
+						<tr>
+							<td>Q4</td>
+							<td>Printers</td>
+							<td>$51,092.00</td>
 						</tr>
 					</tbody>
 				</table>
-				
-				<p>
-					Suppose we want to use the COUNTIF function in Excel to count the number of employees with Years of Service over 20.
-					<br>
-					<div class="col-md-6 alert alert-danger" role="alert">
-						=COUNTIF(C2:C6, ">20") <span class = "text-muted">// Output: 3</span>
-					</div>
-				</p>
-				
-				<hr />
-			</section>
 
-			<h3 id="topicD">D) Example 3: Understanding approximate vs. exact match</h3>
-			<section>
-				<p> Let's take a look an example where a company sells laptops to universities: </p>
-				<div class="row">
-					<div class="col-md-6">
-						<table class="table">
-							<caption>Data Source Table</caption>
-							<thead>
-								<tr>
-									<th scope="col">University</th>
-									<th scope="col">Laptops Bought</th>
-									<th scope="col">Free Laptops Received</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">CSUN</th>
-									<td>70</td>
-									<td>-</td>
-								</tr>
-								<tr>
-									<th scope="row">UCLA</th>
-									<td>103</td>
-									<td>5</td>
-								</tr>
-								<tr>
-									<th scope="row">UCB</th>
-									<td>151</td>
-									<td>5</td>
-								</tr>
-								<tr>
-									<th scope="row">UCI</th>
-									<td>199</td>
-									<td>5</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="col-md-6">
-						<table class="table">
-							<caption>Free Incentive Lookup Table</caption>
-							<thead>
-								<tr>
-									<th scope="col">Laptops Order Volume</th>
-									<th scope="col">Free Giveaways</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>0</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td>100</td>
-									<td>5</td>
-								</tr>
-								<tr>
-									<td>200</td>
-									<td>10</td>
-								</tr>
-								<tr>
-									<td>300</td>
-									<td>15</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+				<p>
+					Suppose we want to find all total sales for Q2.
+					We can write the SUMIF Function as:
+				</p>
+
+				<div class="col-md-6 offset-md-3 alert alert-danger" role="alert">
+					=SUMIF(A2:A13, "Q2", C2:C13) <span class="text-muted">// Output: </span>
 				</div>
-				<p class="mb-0">
-					The lookup table shows incentives for purchasing laptops in multiples of 100.
-					For example:
-				<ul class="mb-0">
-					<li>Buying 100 laptops earns 5 free laptops</li>
-					<li>Buying 200 laptops earns 10 free laptops,</li>
-				</ul>
-				etc.
-				</p>
-				<p>
-					*For this case, the VLOOKUPs are in column C of the data source table. E.G. In C3, the function is:
-					</br> <u class="ml-4 font-italic text-success">=VLOOKUP(B3,LOOKUP-TABLE,2,TRUE);</u>
-				<blockquote class="mt-0 border-primary">
 
+				<section class="panel-group accordion">
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMIFEx1"
+								class="panel-title">
+								SUMIF Example #1
+							</h4>
+						</div>
+						<div id="SUMIFEx1" class="collapse">
+							<div class="panel-body">
+								<p>
+									Using our earlier example, 
+									find the sum of total Laptop sales. 
+									<br>
+								<div class="col-md-6 alert alert-danger" role="alert">
+									=SUMIF(B2:B13, "Laptops", C2:C13) <span class="text-muted">// Output: </span>
+								</div>
+								</p>
+							</div> <!-- End of Panel-Body -->
+						</div>
+					</div>
+				</section>
+				<!-- End of SUMIF Accordion -->
 
-				</blockquote>
-				</p>
-				<p class="mb-0">
-					Since universities have their own individual needs,
-					<strong class="text-dark bg-warning">
-						universities are allowed to purchase any arbitrary amount of laptops
-						(including non-multiples of 100).</strong>
-					So for example:
-				</p>
-				<ul>
-					<li>If a client orders 103 laptops, they receive 5 free laptops.</li>
-					<li>If a client orders 151 or even 199 laptops,
-						they'll only get 5 free laptops because VLOOKUP rounds down to the nearest multiple.
-						If we need to be generous and round up, we use the ROUND() function.
-
-						<blockquote class="mt-1">
-							XLOOKUP simplifies this by offering an extra parameter that can be used to round up if
-							needed,
-							thereby eliminating the need for an additional function.
-						</blockquote>
-					</li>
-				</ul>
-				<p class="">
-					In other words, an
-					<i><strong class="text-danger">approximate match</strong></i>
-					can round/estimate our lookup values since those don't appear on the lookup table.
-					In other cases, we use exact match when searching for a unique identifier (E.g.,
-					Product Number, Student ID, etc)
-				</p>
-				<p>
-					For cell C3, let's take a dive into the syntax our VLOOKUP:
-				<ul class="mt-0">
-					<li>
-						The lookup value is the number of laptops purchased (Cell B3 in this case since it's UCLAs
-						purchase quantity)
-					</li>
-					<li>
-						The table array contains the incentive ranges. This time we're looking at the lookup table!
-					</li>
-					<li>
-						The column index number is 2 to view the free laptops giveaways column.
-					</li>
-					<li>
-						Range lookup is set to <strong><u class="text-danger">TRUE</u></strong> to allow approximate
-						matching.
-					</li>
-				</ul>
-
-				</p>
 				<hr />
 			</section>
 
