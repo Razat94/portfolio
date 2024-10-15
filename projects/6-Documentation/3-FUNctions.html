@@ -33,8 +33,6 @@
 	<link id="Dark" rel="stylesheet" href="../../public/css/github-css/github-markdown-dark.css">
 	<link rel="stylesheet" type="text/css" href="../../public/css/documentation-style.css">
 
-
-
 	<!-- JS
 	================================================== -->
 	<script src="../../vendor/jquery/jquery.min.js"></script>
@@ -527,7 +525,7 @@
 				<hr />
 			</section>
 
-			<!-- COUNTIF -->
+			<!-- COUNTIF Function -->
 			<h3 id="topicC" class="m-0 d-inline">C) COUNTIF Function | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
 				href="https://support.microsoft.com/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
@@ -602,11 +600,12 @@
 								<p>
 									Using our earlier example with the table of movies,
 									find out how many films were made by James Cameron
-									<br>
+
+								</p>
+								<u>Solution:</u>
 								<div class="col-md-6 alert alert-danger" role="alert">
 									=COUNTIF(C2:C12, "James Cameron") <span class="text-muted">// Output: 2</span>
 								</div>
-								</p>
 							</div> <!-- End of Panel-Body -->
 						</div>
 					</div>
@@ -820,6 +819,8 @@
 										</tr>
 									</tbody>
 								</table>
+
+								<u class="text-center d-block m-auto">Solution: </u>
 								<div class="col-md-6 offset-md-3 alert alert-danger" role="alert">
 									=COUNTIF(C2:C7, ">1300") <span class="text-muted">// Output: 1</span>
 								</div>
@@ -834,6 +835,7 @@
 				<hr />
 			</section>
 
+			<!-- SUMIF Function -->
 			<h3 id="topicD" class="m-0 d-inline">D) SUMIF Function | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
 				href="https://support.microsoft.com/en-us/office/sumif-function-169b8c99-c05c-4483-a712-1697a653039b">
@@ -864,9 +866,9 @@
 					</ul>
 				</span>
 
-				<p> 
-					The sum range should be the same size and shape as range. 
-					<br/> NOTE: Sorting the data by any column will not make a difference to the final output.
+				<p>
+					The sum range should be the same size and shape as range.
+					<br /> NOTE: Sorting the data by any column will not make a difference to the final output.
 				</p>
 
 				<p>
@@ -984,13 +986,15 @@
 						<div id="SUMIFEx1" class="collapse">
 							<div class="panel-body">
 								<p>
-									Using our earlier example, 
-									find the sum of total Laptop sales. 
+									Using our earlier example,
+									find the sum of total Laptop sales.
 									<br>
+								</p>
+								<u>Solution:</u>
 								<div class="col-md-6 alert alert-danger" role="alert">
 									=SUMIF(B2:B13, "Laptops", C2:C13) <span class="text-muted">// Output: </span>
 								</div>
-								</p>
+
 							</div> <!-- End of Panel-Body -->
 						</div>
 					</div>
@@ -1000,423 +1004,316 @@
 				<hr />
 			</section>
 
-			<h3 id="topicE">E) Xlookup</h3>
-			<section>
-				<p>
-					XLOOKUP is the new and improved version of VLOOKUP function that improves on the limitations of
-					VLOOKUP.
-					The benefit of using VLOOKUPs is that they are more widely supported & compatible with older Excel
-					versions.
-				</p>
-				<p class="m-1">
-					Note: On <i><a
-							href="https://support.microsoft.com/en-us/office/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929">
-							Microsofts website
-						</a></i>, they say:
-				</p>
-				<blockquote class="border-danger">
-					"XLOOKUP is not available in Excel 2016 and Excel 2019,
-					however, you may come across a situation of using a workbook in Excel 2016
-					or Excel 2019 with the XLOOKUP function in it created by someone else
-					using a newer version of Excel."
-				</blockquote>
-
-				<div class="jumbotron">
-					<h4 class="m-0">Some reasons as to why you should use XLOOKUP over VLOOKUP:</h4>
-					<ul>
-						<li>
-							Works faster for larger data sets.
-						</li>
-						<li>
-							Substitutes for the VLOOKUP <u class="text-danger">and</u> HLOOKUP functions.
-						</li>
-						<li>
-							Since XLOOKUP uses arrays and not data sets, columns become irrelavant.
-							<ul class="m-0">
-								<li>
-									E.G. We can add empty columns.
-									Also, there's no need to count columns when retrieving information.
-								</li>
-								<li>
-									The lookup value isn't required to be in the first column
-									since the lookup range can be any row/column
-								</li>
-							</ul>
-						</li>
-						<li>
-							When looking up multiple values, use 1 XLOOKUP to spill values
-							instead of writing multiple VLOOKUPs.
-						</li>
-						<li>
-							Interacts with APPROXIMATE matches more accurately
-						</li>
-						<li>
-							Provides in-built error handling that omits the need for IFERROR function
-						</li>
-					</ul>
-				</div>
-				<!-- <pre>
-					<span>=XLOOKUP()</span>
-				</pre> -->
-
-				<p>
-					Let's take a look at an example:
-				</p>
-				<div class="row">
-					<div class="col-md-6">
-						<table class="">
-							<caption>Data Source Table</caption>
-							<thead>
-								<tr>
-									<th scope="col">Country</th>
-									<th scope="col">Abbreviation</th>
-									<th scope="col">Prefix</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">China</th>
-									<td>CN</td>
-									<td>+86</td>
-								</tr>
-								<tr>
-									<th scope="row">Brazil</th>
-									<td>BR</td>
-									<td>+55</td>
-								</tr>
-								<tr>
-									<th scope="row">United States</th>
-									<td>US</td>
-									<td>+1</td>
-								</tr>
-								<tr>
-									<th scope="row">Russia</th>
-									<td>RU</td>
-									<td>+7</td>
-								</tr>
-								<tr>
-									<th scope="row">Mexico</th>
-									<td>MX</td>
-									<td>+52</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="col-md-6">
-						<table class="">
-							<caption>Dial Code Lookup Table</caption>
-							<thead>
-								<tr class="">
-									<th colspan="2" scope="col">Dial Code?</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="d-row">
-									<td class="m-0 btn btn-primary dropdown-toggle" type="button"
-										data-toggle="dropdown">
-										Country
-										<span class="caret"></span>
-										<ul class="dropdown-menu">
-											<li><a href="#">China</a></li>
-											<li><a href="#">Brazil</a></li>
-											<li><a href="#">United States</a></li>
-											<li><a href="#">Russia</a></li>
-										</ul>
-									</td>
-									<td class=""><i>=XLOOKUP(E2, A2:A6, C2:C6)</i></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<p>
-						In this example, XLOOKUP works just like VLOOKUP and provides the same answer.
-					</p>
-					<p>
-						XLOOKUP has a total of 6 parameters.
-						Only the first 3 are required and the last 3 are optional.
-						Here are 3 main ones to know:
-					</p>
-					<ul class="">
-						<li><b class="font-italic">Lookup Value: </b>
-							<span> The value you want to search for, similar to VLOOKUPs 'lookup value'.
-							</span>
-						</li>
-						<li><b class="font-italic">Lookup Array: </b>
-							<span>
-								This is the range in which you search for the Lookup Value.
-								I.E. The lookup value should be in this range.
-								<blockquote class="m-1 border-danger">
-									This range does <u>not</u> have to be the first column!
-								</blockquote>
-								<blockquote class="m-1">
-									This range can be any single column or row,
-									thereby making up for the HLOOKUP function as well!
-								</blockquote>
-							</span>
-						</li>
-						<li><b class="font-italic">Return Array: </b>
-							<span>
-								This is the range where the result should be found.
-								XLOOKUP maps the Lookup & Return arrays.
-							</span>
-							<blockquote>
-								The ranges <u>size</u> should be the same as the lookup array.
-							</blockquote>
-						</li>
-					</ul>
-				</div>
-				<hr />
-			</section>
-
-			<!-- CONCAT -->
-			<h3 id="topicC" class="m-0 d-inline">???) CONCAT | </h3>
+			<!-- IF Function -->
+			<h3 id="topicE" class="m-0 d-inline">E) IF Function | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
-				href="https://support.microsoft.com/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
+				href="https://support.microsoft.com/en-us/office/if-function-69aed7c9-4e8a-4755-a9bc-aa8bbff73be2">
 				Reference guide
 			</a>
 
 			<section>
-				<h5>Let's now open up the Example #2 Spreadsheet.</h5>
-
-				<p>
-					A function that returns the average (arithmetic mean) of each of the arguments.
-				</p>
+				<h5>
+					The Excel IF function returns one of two values:
+					one value if the condition is TRUE and another value if the condition is FALSE.
+				</h5>
 
 				<span>
-					<strong><u>Note:</u></strong> A VLOOKUP simply looks up related values in a row.
-					In this example,
-					</br>
-					<ul>
-						<li>
-							<span class="font-weight-bold">Cell B1</span>
-							<span>has the fruit item we’re looking up (i.e. our lookup value)</span>
-						</li>
-						<li>
-							<span class="font-weight-bold">Cells B2 and B3</span>
-							<span>contain the VLOOKUP function that displays the price and stock based on B1 and
-								updates automatically as we change B1.</span>
-						</li>
-					</ul>
-					<br />
+					Function Syntax:
 				</span>
-				<p>In short, if we know a fruit, we can use VLOOKUP to find both its price and stock status.
-					<br />E.G, To find the price of Oranges,
-					type 'Orange' in cell B1 (the lookup value)
-					to find its price and availability (B2 & B3).
-				</p>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="alert alert-success" role="alert">
-							We use AUTOSUM command to calculate the SUM function.
-						</div>
-						<div class="alert alert-secondary" role="alert">
 
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="alert alert-warning" role="alert">
-							Remember: You don't need a VLOOKUP to find the price of Ginger;
-							you can see the price of a produce item directly from the produce table.
-							<br /> <br />The lookup function is Excels way of telling you the answer
-							and updates as B1 changes.
-						</div>
-					</div>
-				</div>
-
-				<p>
-					Let's look at another example using a payroll sheet with
-					names, roles, join dates, and total income.
-					<br />Seen below is an example of the payroll data set and the lookup table:
-				</p>
-				<div class="row">
-					<div class="col-md-6">
-						<table class="table">
-							<caption>Data Source Table</caption>
-							<thead>
-								<tr>
-									<th scope="col">Name</th>
-									<th scope="col">Position?</th>
-									<th scope="col">Salary</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th scope="row">Raza</th>
-									<td>Trainer</td>
-									<td>$1M</td>
-								</tr>
-								<tr>
-									<th scope="row">Zehra</th>
-									<td>English Teacher</td>
-									<td>$2M</td>
-								</tr>
-								<tr>
-									<th scope="row">Sarah</th>
-									<td>Director of Training</td>
-									<td>$4M</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="col-md-6">
-						<table class="table">
-							<caption>Lookup Table</caption>
-							<tbody>
-								<tr class="dropdown">
-									<td class="bg-success">Produce</td>
-									<td class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-										Insert Persons Name
-										<span class="caret"></span>
-										<ul class="dropdown-menu">
-											<li><a href="#">Raza</a></li>
-											<li><a href="#">Zehra</a></li>
-											<li><a href="#">Sarah</a></li>
-										</ul>
-									</td>
-								</tr>
-								<tr>
-									<th scope="row">
-										Position
-									</th>
-									<td colspan="2" class="text-center"><i>(VLOOKUP goes here)</i></td>
-								</tr>
-								<tr>
-									<th scope="row">Salary</th>
-									<td colspan="2" class="text-center"><i>(VLOOKUP goes here)</i></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-
-				<p>
-					In the lookup table, when we enter a person's name in cell F1,
-					cells F2 and F3, which contain the VLOOKUPs, will retrieve their role and salary.
-				</p>
-				<div class="alert border border-warning border-3" role="alert">
-					With VLOOKUPs, <strong>spell the names/lookup value correctly</strong>
-					or else if a match isn't found it'll output a <strong><u>#N/A</u></strong> error.
-					<br />
-					For example, if I typed in "Razaaa" in the lookup table,
-					I will get a <strong><u>#N/A</u></strong> error since there is no person named "Razaaaa"
-					<br /> <br />Avoid adding extra characters too like blank spaces, '-' or underscores
-				</div>
-				<p>
-					<u class="text-danger font-weight-bold">Question:</u>
-					In the <i>data source table</i>,
-					imagine if there is a wrong name recorded like "Raza Tahir" or
-					"Razaaa" in cell A2.
-					<br /> If I now type "Raza" correctly in the lookup table in cell F1,
-					will the functions still work?
-				</p>
-				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ2"
-					aria-expanded="false" aria-controls="collapseQ2">
-					Show Answer
-				</button>
-				</p>
-				<div class="collapse" id="collapseQ2">
-					<blockquote class="border-danger">
-						No. Although now we are changing the record entry value,
-						there are no people whose name is exactly "Raza" to find so the NA error will be given.
-					</blockquote>
-				</div>
-				<p> The answers below will show what each VLOOKUP should look like: </p>
-				<div class="accordion">
-					<div class="card">
-						<div class="card-header" id="headingOne">
-							<h5 class="mb-0 mt-0">
-								<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-									aria-expanded="true" aria-controls="collapseOne">
-									Vlookup for Price (F2)
-								</button>
-							</h5>
-						</div>
-						<!-- Add class 'show' to line below to show value. -->
-						<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent=".accordion">
-							<div class="card-body">
-								<p class="text-dark m-0"> = VLOOKUP (F1, A2:C4, 2, FALSE) </p>
-							</div>
-						</div>
-					</div> <!-- End of class card-->
-					<div class="card">
-						<div class="card-header" id="headingTwo">
-							<h5 class="mb-0 mt-0">
-								<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-									aria-expanded="false" aria-controls="collapseTwo">
-									Vlookup for Salary (F3)
-								</button>
-							</h5>
-						</div>
-						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent=".accordion">
-							<div class="card-body">
-								<p class="text-dark m-0">= VLOOKUP (F1, A2:C4, 3, FALSE)</p>
-							</div>
-						</div>
-					</div> <!-- End of class card-->
-				</div> <!-- End of accordion -->
-				<br />
-				<p>
-					The only difference between the 2 vlookups functions is the output;
-					one outputs price and the other output salary.
-					</br> Therefore, the difference between each functions syntax is the parameter
-					<i>column index number.</i>
-				</p>
-				<p>
-					Please note that the <i>lookup value</i> for both functions is the same, cell F1.
-					The value of F1 depends on the user so if the user selects "Sarah" for F1,
-					the VLOOKUPs in F2 and F3 will show Sarah's position and department.
-					<br /> <br />So the question that must be asked is this:
-					<br /> <br />
-					<u class="text-danger font-weight-bold">Question:</u>
-					If I have two cells with the same name (e.g. "Raza" in both A2 and F1),
-					does it make a difference if the lookup value in the VLOOKUP is F1, A2, or even the text "Raza"?
-				</p>
-				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ3"
-					aria-expanded="false" aria-controls="collapseQ3">
-					Show Answer
-				</button>
-				</p>
-				<div class="collapse" id="collapseQ3">
-					<div class="alert alert-danger" role="alert">
-						Answer: In the long run, yes!
-						Using A2 as a lookup value in the function will get me Razas' correct position & position,
-						but that function will <i><u>only</u></i> show me Razas' info.
-						In other words, this will cause issues if you're trying to look up a different name, e.g. Zehra,
-						since then the answer will still output Razas' info.
-
-					</div>
-					<div class="alert border border-info border-3" role="alert">
-						To restate: We want lookup tables to be sustainable in the long run.
-					</div>
-				</div>
-				<p>
-					<u class="text-danger font-weight-bold">Question:</u>
-					In the data source table, if I added another name,
-					how will our functions change?
-				</p>
-				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseQ4"
-					aria-expanded="false" aria-controls="collapseQ4">
-					Show Answer
-				</button>
-				</p>
-				<div class="collapse" id="collapseQ4">
-					<blockquote class="border-danger">
-						By adding an extra name, our data set becomes bigger.
-						So our <u><strong>table array</strong></u> is what changes.
-						<br /> <br /> In the VLOOKUP function,
-						for the <i>Table Array</i> parameter if we use a table name,
-						then our function will stay the same since the table size will be the only thing that changes.
-					</blockquote>
-				</div>
-				<blockquote class="border-success">
-					<strong class="text-success"><u>Optional Task:</u></strong>
-					Add an "Email" column to our data table and assign fictional emails to everyone.
-
-					Then, add a vlookup on the lookup table to find a persons email.
+				<blockquote class="mt-1 border-success">
+					<strong class="text-success"><u>=IF(logical_test, [value_if_true], [value_if_false])</u></strong>
 				</blockquote>
-				<br />
+
+				<span>
+					It is typed =IF and takes in 3 arguments: <br />
+					<ul>
+						<li> <u>Logical test</u> is the condition/criteria to look for,
+							with the result always evaluating to either TRUE or FALSE</li>
+						<li> [value_if_true] is the value to return when logical_test returns <u> TRUE. </u> </li>
+						<li> [value_if_false] The value to return when logical_test returns <u> FALSE. </u> </li>
+					</ul>
+				</span>
+
+				<p>
+					Let's take a look at a few examples:
+				</p>
+
+				<section class="panel-group accordion">
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFEx1"
+								class="panel-title">
+								IF Example #1
+							</h4>
+						</div>
+						<div id="IFEx1" class="collapse">
+							<div class="panel-body">
+								<table border="1"
+									style="border-collapse: collapse; margin: 20px auto; text-align: center;">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Score</th>
+											<th>Result</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Anderson</td>
+											<td>92</td>
+											<td>??? <span class="text-muted">// Output: Pass</td>
+										</tr>
+										<tr>
+											<td>Bautista</td>
+											<td>85</td>
+											<td>??? <span class="text-muted">// Output: Pass</td>
+										</tr>
+										<tr>
+											<td>Block</td>
+											<td>65</td>
+											<td>??? <span class="text-muted">// Output: Fail</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<p>
+									What functions would we write in cells C2:C6?
+								</p>
+
+								<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ifQ1"
+									aria-expanded="false" aria-controls="collapseQ2">
+									Show Answer
+								</button>
+								</p>
+								<div class="collapse" id="ifQ1">
+									<table border="1"
+										style="border-collapse: collapse; margin: 20px auto; text-align: center;">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Score</th>
+												<th>Result</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Anderson</td>
+												<td>92</td>
+												<td>=IF(B2>=70,"Pass","Fail")</IFr> <span class="text-muted">// Output:
+														Pass</td>
+											</tr>
+											<tr>
+												<td>Bautista</td>
+												<td>85</td>
+												<td>=IF(B3>=70,"Pass","Fail") <span class="text-muted">// Output: Pass
+												</td>
+											</tr>
+											<tr>
+												<td>Block</td>
+												<td>65</td>
+												<td>=IF(B4>=70,"Pass","Fail") <span class="text-muted">// Output: Fail
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div> <!-- End of Panel-Body -->
+						</div>
+					</div>
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFEx2"
+								class="panel-title">
+								IF Example #2
+							</h4>
+						</div>
+						<div id="IFEx2" class="collapse">
+							<div class="panel-body">
+								<p>
+									Let's take a look at another example:
+								</p>
+								<div class="row">
+									<div class="col-md-4">
+										<table class="">
+											<caption>Data Source Table</caption>
+											<thead>
+												<tr>
+													<th scope="col">Person</th>
+													<th scope="col">Event RSVP?</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">Christine</th>
+													<td>Accepted</td>
+												</tr>
+												<tr>
+													<th scope="row">Brandon</th>
+													<td>Declined</td>
+												</tr>
+												<tr>
+													<th scope="row">Yolanda</th>
+													<td>Declined</td>
+												</tr>
+												<tr>
+													<th scope="row">Raquel</th>
+													<td>Accepted</td>
+												</tr>
+												<tr>
+													<th scope="row">Camille</th>
+													<td>Accepted</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="col-md-8">
+										<table class="">
+											<caption>Did more than 2 people RSVP?</caption>
+											<thead>
+												<tr class="">
+													<th colspan="2" scope="col">Did more than 2 people RSVP?</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="d-row">
+
+													<td class=""><i>???</i></td>
+												</tr>
+											</tbody>
+										</table>
+										<u> Solution: </u>
+										<div class="col-md alert alert-danger" role="alert">
+											=IF(COUNTIF(B2:B6, "Accepted") > 2, "Yes, More than 2 RSVP'd", "No, Less
+											than 2 RSVP'd")
+											<br> <span class="text-muted">// Output: Yes, More than 2 RSVP'd</span>
+										</div>
+									</div>
+								</div>
+							</div> <!-- End of Panel-Body -->
+						</div>
+					</div>
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFEx3"
+								class="panel-title">
+								IF Example #3
+							</h4>
+						</div>
+						<div id="IFEx3" class="collapse">
+							<div class="panel-body">
+								<table>
+									<thead>
+										<tr>
+											<th>Bonus Rate:</th>
+											<th>1%</th>
+
+										</tr>
+									</thead>
+								</table>
+								<table>
+									<thead>
+										<tr>
+											<th>Name // A2</th>
+											<th>Total // B2</th>
+											<th>Goal</th>
+											<th>Goal Bonus?</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Mullins</td>
+											<td>$368,575</td>
+											<td>$325,000</td>
+											<td>??? <span class="text-muted">// Output: Pass</td>
+										</tr>
+										<tr>
+											<td>Little</td>
+											<td>$281,001</td>
+											<td>$275,000</td>
+											<td>??? <span class="text-muted">// Output: Pass</td>
+										</tr>
+										<tr>
+											<td>Brooke</td>
+											<td>$371,193</td>
+											<td>$400,000</td>
+											<td>??? <span class="text-muted">// Output: Fail</td>
+										</tr>
+										<tr>
+											<td>Brooke</td>
+											<td>$271,091</td>
+											<td>$250,000</td>
+											<td>??? <span class="text-muted">// Output: Fail</td>
+										</tr>
+									</tbody>
+								</table>
+								<p>
+									What functions would we write in cells D3:D5?
+								</p>
+								<!-- 
+								<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ifQ3"
+									aria-expanded="false" aria-controls="collapseQ3">
+									Show Answer
+								</button>
+								<div class="collapse" id="ifQ3">
+									<table>
+										<thead>
+											<tr>
+												<th>Bonus Rate:</th>
+												<th>1%</th>
+	
+											</tr>
+										</thead>
+									</table>
+									<table>
+										<thead>
+											<tr>
+												<th>Name // A2</th>
+												<th>Total // B2</th>
+												<th>Goal</th>
+												<th>Goal Bonus?</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Mullins</td>
+												<td>$368,575</td>
+												<td>$325,000</td>
+												<td>??? <span class="text-muted">// Output: Pass</td>
+											</tr>
+											<tr>
+												<td>Little</td>
+												<td>$281,001</td>
+												<td>$275,000</td>
+												<td>??? <span class="text-muted">// Output: Pass</td>
+											</tr>
+											<tr>
+												<td>Brooke</td>
+												<td>$371,193</td>
+												<td>$400,000</td>
+												<td>??? <span class="text-muted">// Output: Fail</td>
+											</tr>
+											<tr>
+												<td>Brooke</td>
+												<td>$271,091</td>
+												<td>$250,000</td>
+												<td>??? <span class="text-muted">// Output: Fail</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								-->
+							</div> <!-- End of Show Answer Panel-Body -->
+						</div>
+					</div> <!-- End of Q3 -->
+				</section>
+				<!-- End of SUMIF Accordion -->
+
 				<hr />
 			</section>
+
+			<!-- CONCAT goes here -->
 
 			<h3 id="credits">G) Sources and Credits</h3>
 			<h4>Reference Links</h4>
@@ -1431,18 +1328,15 @@
 						href="https://support.microsoft.com/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">Microsoft</a>
 				</li>
 				<li>
-					<a target="_blank"
-					href="https://support.google.com/docs/table/25273?hl=en">Google</a>
+					<a target="_blank" href="https://support.google.com/docs/table/25273?hl=en">Google</a>
 				</li>
 				<li>
-					<a target="_blank"
-					href="https://exceljet.net/functions">ExcelJet</a>
+					<a target="_blank" href="https://exceljet.net/functions">ExcelJet</a>
 				</li>
 				<li>
-					<a target="_blank"
-					href="https://www.w3schools.com/excel/">w3schools</a>
+					<a target="_blank" href="https://www.w3schools.com/excel/">w3schools</a>
 				</li>
-				
+
 			</ul>
 			<hr />
 			<p class="append-bottom">
