@@ -85,10 +85,11 @@
 					<!-- <li><a href="#topicA"> Getting Started</a></li> -->
 					<li><a href="#topicA"> A) SUM Function</a></li>
 					<li><a href="#topicB"> B) AVERAGE Function</a></li>
-					<li><a href="#topicC"> C) COUNTIF</a></li>
-					<li><a href="#topicD"> D) SUMIF</a></li>
-					<li><a href="#topicE"> E) IF</a></li>
-					<li><a href="#credits"> F) Credits</a></li>
+					<li><a href="#topicC"> C) CONCAT Function</a></li>
+					<li><a href="#topicD"> D) COUNTIF Function</a></li>
+					<li><a href="#topicE"> E) SUMIF Function</a></li>
+					<li><a href="#topicF"> F) IF Function</a></li>
+					<li><a href="#credits"> G) Credits</a></li>
 				</ul>
 			</div>
 		</div>
@@ -525,8 +526,112 @@
 				<hr />
 			</section>
 
+			<!-- CONCAT goes here -->
+			<h3 id="topicC" class="m-0 d-inline">C) CONCAT Function | </h3>
+			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
+				href="https://support.microsoft.com/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2">
+				Reference guide
+			</a>
+
+			<section>
+				<h5> A text function that concatenates (joins) values. 
+				The values are not limited to text as it can join numbers too. 
+				</h5>
+
+				<blockquote class="border-warning">
+					<strong class="text-warning"><u>NOTE:</u></strong> 
+					There are no delimiters added between the combined cell values.
+					<br> A delimiter is a character/symbol used to seperate values apart from each other 
+					e.g. / \ , | -   
+				</blockquote>
+
+				<p> It is typed as '=CONCAT' and it is a new version of the old CONCATENATE() function.
+				It is formatted as: </p>
+
+				<blockquote class="border-success">
+					<strong class="text-success"><u>=CONCAT(value1, value2, [value3, ...])</u></strong>
+				</blockquote>
+
+				<p>
+					This operator is equivalent to using the concatenation operator (&) as shown below:
+				</p>
+
+				<div class = "row">
+					<table class="table col-md-6">
+						<caption class="text-center">
+							Use the CONCAT() function to join text
+						</caption>
+						<tbody>
+							<tr>
+								<td>north <span class="text-muted"> // A1 </span></td>
+							</tr>
+							<tr>
+								<td>west <span class="text-muted"> // A2 </span></td>
+							</tr>
+							<tr>
+								<td> = CONCAT(A1,A2) <span class="text-muted">// Output: northwest</span> </td>
+							</tr>
+					</table>
+	
+					<table class="table col-md-6">
+						<caption class="text-center">
+							Use the "concatentor" to also join text.
+						</caption>
+						<tbody>
+							<tr>
+								<td>north <span class="text-muted"> // A1 </span></td>
+							</tr>
+							<tr>
+								<td>west <span class="text-muted"> // A2 </span></td>
+							</tr>
+							<tr>
+								<td> = A1 & A2 <span class="text-muted">// Output: northwest</span> </td>
+							</tr>
+					</table>
+				</div>
+
+				<p>
+					You can use the CONCAT function to join text and numbers. For example,
+					a <a target = "_blank" href = "https://support.google.com/manufacturers/answer/7421352?sjid=5194055017493135249-NC#zippy=%2Cfood-and-beverages%2Cvariants%2Celectronics">manufacturer part number (MPN)</a> 
+					is a unique alphanumeric code that manufacturers assign to their products for easy identification.
+				</p>
+
+				<table class="table">
+					<caption class="text-center">
+			
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Unique Code</th>
+							<th scope="col">Unique Letters</th>
+							<th scope="col">Combination?</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>00638</td>
+							<td>NIC</td>
+							<td> =CONCAT(A2,B2) <span class="text-muted">// Output: 00638NIC</span></td>
+						</tr>
+				</table>
+
+				<p>
+					Note: The <u class="font-italic">CONCAT()</u> function 
+					improves on older <u class="font-italic">CONCATENATE()</u> function by supporting ranges. 
+					For example, to combine values from A1, A2, and A3, you can reference the range as =CONCAT(A1:A3)
+				</p>
+
+				<p>
+					Use the TEXTJOIN function to join multiple values with a delimiter. 
+					It does everything CONCAT does but also lets you add a delimiter and skip empty values.
+				</p>
+
+				<br />
+				<hr />
+			</section>
+
 			<!-- COUNTIF Function -->
-			<h3 id="topicC" class="m-0 d-inline">C) COUNTIF Function | </h3>
+			<h3 id="topicD" class="m-0 d-inline">D) COUNTIF Function | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
 				href="https://support.microsoft.com/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
 				Reference guide
@@ -836,7 +941,7 @@
 			</section>
 
 			<!-- SUMIF Function -->
-			<h3 id="topicD" class="m-0 d-inline">D) SUMIF Function | </h3>
+			<h3 id="topicE" class="m-0 d-inline">E) SUMIF Function | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
 				href="https://support.microsoft.com/en-us/office/sumif-function-169b8c99-c05c-4483-a712-1697a653039b">
 				Reference guide
@@ -1005,7 +1110,7 @@
 			</section>
 
 			<!-- IF Function -->
-			<h3 id="topicE" class="m-0 d-inline">E) IF Function | </h3>
+			<h3 id="topicF" class="m-0 d-inline">F) IF Function | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
 				href="https://support.microsoft.com/en-us/office/if-function-69aed7c9-4e8a-4755-a9bc-aa8bbff73be2">
 				Reference guide
@@ -1312,8 +1417,6 @@
 
 				<hr />
 			</section>
-
-			<!-- CONCAT goes here -->
 
 			<h3 id="credits">G) Sources and Credits</h3>
 			<h4>Reference Links</h4>
