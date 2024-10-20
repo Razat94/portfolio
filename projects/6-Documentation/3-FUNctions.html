@@ -330,8 +330,8 @@
 												Show Answer
 											</button>
 
-											<div class="collapse" id="sumQ1">
-												<div class="mt-3 col-md-8 offset-md-2 alert alert-danger" role="alert">
+											<div class="mt-3 collapse" id="sumQ1">
+												<div class="col-md-8 offset-md-2 alert alert-danger" role="alert">
 													=SUM(B2:B5) <span class="text-muted">// Output: 17</span>
 												</div>
 											</div>
@@ -453,14 +453,162 @@
 									</blockquote>
 								</div>
 							</div> <!-- End of panel-body -->
+
 						</div>
 					</div> <!-- End of Q2 -->
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMEx3"
+								class="panel-title">
+								SUM() Example #3: Calculating Monthly Budget
+							</h4>
+						</div>
+						<div id="SUMEx3" class="collapse">
+							<div class="panel-body row">
+								<!-- Monthly Income Table -->
+								<div class="col-md-6">
+									<h3 class="text-center">MONTHLY INCOME</h3>
+									<table class="d-block m-auto table table-bordered">
+										<thead>
+											<tr>
+												<th>Item <span class="text-muted">// A1</span></th>
+												<th>Amount <span class="text-muted">// B1</span> </th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Income 1 (Ret/VA pay)</td>
+												<td>$1,840.00</td>
+											</tr>
+											<tr>
+												<td>Income 2</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Other</td>
+												<td>$0.00</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="mt-3">
+										<button class="d-block m-auto btn btn-primary" type="button"
+											data-toggle="collapse" data-target="#collapse-SUMQ3A" aria-expanded="false"
+											aria-controls="">
+											Show Answer
+										</button>
+										<div class="collapse mt-3 text-center" id="collapse-SUMQ3A">
+											<div class="col-md-8 offset-md-2 alert alert-danger" role="alert">
+												=SUM(B2:B4) <span class="text-muted">// Output: $1,840.00 </span>
+											</div>
+										</div>
+									</div>
+								</div> <!-- End of Column -->
+
+								<!-- Monthly Expenses Table -->
+								<div class="col-md-6">
+									<h3 class="text-center">MONTHLY EXPENSES</h3>
+									<table class="d-block m-auto table-bordered">
+										<thead>
+											<tr>
+												<th>Item <span class="text-muted">// D1</span> </th>
+												<th>Amount <span class="text-muted">// E1</span> </th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Rent/mortgage</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Electric</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Gas</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Cell phone</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Groceries</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Car payment</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Auto expenses</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Student loans</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Credit cards</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Auto Insurance</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Personal care</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Entertainment</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Miscellaneous</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>Credit cards</td>
+												<td>$0.00</td>
+											</tr>
+											<tr>
+												<td>SBP</td>
+												<td>$0.00</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="mt-3">
+										<button class="d-block m-auto btn btn-primary" type="button"
+											data-toggle="collapse" data-target="#collapse-SUMQ3B" aria-expanded="false"
+											aria-controls="">
+											Show Answer
+										</button>
+										<div class="collapse mt-3 text-center" id="collapse-SUMQ3B">
+											<div class="col-md-8 offset-md-2 alert alert-danger" role="alert">
+												=SUM(E2:E16) <span class="text-muted">// Output: 0</span>
+											</div>
+											<div class="col-sm-6 offset-sm-3">
+												<blockquote class="mt-3 border-danger">
+													=SUM(E:E) <br /> also can work.
+												</blockquote>
+											</div>
+										</div>
+									</div>
+
+								</div> <!-- End of col -->
+							</div> <!-- End of panel-body -->
+						</div>
+					</div> <!-- End of Q3-->
 				</section>
 				<!-- End of SUM Accordion -->
 
 				<br />
 				<hr />
 			</section>
+
+
 
 			<!-- AVERAGE Function -->
 			<h3 id="topicB" class="m-0 d-inline">B) AVERAGE Function | </h3>
@@ -606,8 +754,8 @@
 										function.
 									</blockquote>
 								</div>
-							</div>
-						</div> <!-- End of panel-body -->
+							</div> <!-- End of panel-body -->
+						</div>
 					</div>
 
 					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
@@ -638,6 +786,117 @@
 							</div> <!-- End of panel-body -->
 						</div>
 					</div> <!-- End of AVERAGE Q2 -->
+
+					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+						<div class="panel-heading">
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#AVERAGEEx3"
+								class="panel-title">
+								AVERAGE() Example #3: Fictional Savings Table
+							</h4>
+						</div>
+						<div id="AVERAGEEx3" class="collapse">
+							<div class="panel-body">
+								<p>
+									Below is a fictional Excel savings table showing monthly savings:
+								</p>
+
+								<div class="row">
+									<div class="col-md-6">
+										<table class="mt-1 table table-bordered table-hover">
+											<caption class = "text-center">
+												Fictional Monthly Savings Plan
+											</caption>
+											<thead class="thead-dark">
+												<tr>
+													<th>Month <span class="text-muted">// A1</span> </th>
+													<th>Amount Saved <span class="text-muted">// B1</span> </th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>January</td>
+													<td>$1,200</td>
+												</tr>
+												<tr>
+													<td>February</td>
+													<td>$1,300</td>
+												</tr>
+												<tr>
+													<td>March</td>
+													<td>$1,000</td>
+												</tr>
+												<tr>
+													<td>April</td>
+													<td>$1,400</td>
+												</tr>
+												<tr>
+													<td>May</td>
+													<td>$1,300</td>
+												</tr>
+												<tr>
+													<td>June</td>
+													<td>$1,100</td>
+												</tr>
+												<tr>
+													<td>July</td>
+													<td>$1,000</td>
+												</tr>
+												<tr>
+													<td>August</td>
+													<td>$1,200</td>
+												</tr>
+												<tr>
+													<td>September</td>
+													<td>$1,500</td>
+												</tr>
+												<tr>
+													<td>October</td>
+													<td>$1,300</td>
+												</tr>
+												<tr>
+													<td>November</td>
+													<td>$800</td>
+												</tr>
+												<tr>
+													<td>December</td>
+													<td>$500</td>
+												</tr>
+												<tr>
+													<td class="font-weight-bold">Total</td>
+													<td> <span class="font-weight-bold"> 
+														$14,600
+													</span> 
+													<span class="text-muted font-italic">// =SUM(B2:B13)</span></td>
+												</tr>
+												<tr class="font-weight-bold">
+													<td>Average:</td>
+													<td><i class = "bg-dark text-light">???</i></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<p>
+									Q: What is the average amount saved per month?
+								</p>
+
+								<button class="btn btn-primary" type="button" data-toggle="collapse"
+									data-target="#AVERAGEEx3-Solution" aria-expanded="false" aria-controls="">
+									Show Answer
+								</button>
+
+								<div class="collapse" id="AVERAGEEx3-Solution">
+									<div class="mt-3 alert alert-danger" role="alert">
+										=AVERAGE(B2:B13) <span class="text-muted">// Output: $1,133.33</span>
+									</div>
+									<blockquote class="border-danger">
+										Note: Make sure to exclude the total cell from the range used in the AVERAGE() function.
+									</blockquote>
+								</div>
+							</div> <!-- End of panel-body -->
+						</div>
+					</div>
 				</section>
 				<!-- End of SUM Accordion -->
 
@@ -803,7 +1062,7 @@
 					We can use the COUNTIF function
 				</p>
 				<p>
-					<i class = "text-danger"> = COUNTIF(B1:G1, "Apples")</i> 
+					<i class="text-danger"> = COUNTIF(B1:G1, "Apples")</i>
 					<span class="text-muted">// Output: 2</span>
 				</p>
 
