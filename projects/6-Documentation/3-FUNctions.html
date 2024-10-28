@@ -2039,10 +2039,15 @@
 						<div id="IFEx1" class="collapse">
 							<div class="panel-body text-center">
 								<p>
-									What functions would we write in cells C2:C4?
+									If the passing score of an exam is 70, what result should be filled in the 'Result'
+									column for cells C2:C4?
+
 								</p>
 
 								<table class="text-center m-auto" border="1" style="border-collapse: collapse;">
+									<caption class="text-center">
+										Final Exam Scores.
+									</caption>
 									<thead>
 										<tr>
 											<th>Name <span class="text-muted">// A1</span></th>
@@ -2305,8 +2310,8 @@
 							</h4>
 						</div>
 						<div id="IFEx4" class="collapse">
-							<div class="panel-body text-center">
-								<p>
+							<div class="panel-body">
+								<p class="text-center">
 									Suppose we have the following table of employees:
 								</p>
 
@@ -2413,64 +2418,71 @@
 									</tbody>
 								</table>
 
-								<p class = "mt-3">
-									For the last column, 
-									what would you write in for the range in column F to output answers
-									dependent on the Department? 
+								<p class="mt-3 text-center">
+									For the last column,
+									an employees 'Office Location' is dependent on their 'Department'. <br>
+									What formula would you write in column F?
 								</p>
 
-								<button class="mt-0 btn btn-primary" type="button" data-toggle="collapse"
+								<button class="btn btn-primary d-block m-auto mt-0" type="button" data-toggle="collapse"
 									data-target="#ifQ4" aria-expanded="false" aria-controls="ifQ4">
 									Show Answer
 								</button>
 
 								<div class="collapse mt-3" id="ifQ4">
-									???
+									<div class="mt-3 alert alert-danger" role="alert">
+										= IF(E2 = "Accounting", "PB4", IF(E2 = "Customer Service", "CC1", IF(E2 = "Human Resources", "TS1", IF(E2 = "IT", "TS3", "Not Found"))))
+									</div>
+									<blockquote class="border-danger">
+										Note: It's recommended to use the IFS function or SWITCH Function instead. 
+									</blockquote>
 								</div>
-							</div> <!-- End of Panel-Body -->
-						</div>
-					</div> <!-- End of Q4 -->
-				</section>
-				<!-- End of IF Accordion -->
 
-				<hr />
-			</section>
+							</div>
+						</div> <!-- End of Panel-Body -->
+					</div>
+		</div> <!-- End of Q4 -->
+		</section>
+		<!-- End of IF Accordion -->
+
+		<hr />
+		</section>
 
 
-			<h3 id="credits">G) Sources and Credits</h3>
-			<blockquote class="border-success">
-				<p>
-					To learn more, use the following reference links to these reference articles:
-				</p>
-			</blockquote>
-			<h4>Reference Links</h4>
-			<ul>
-				<li>
-					<a target="_blank"
-						href="https://support.microsoft.com/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">Microsoft</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://support.google.com/docs/table/25273?hl=en">Google</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://exceljet.net/functions">ExcelJet</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://www.w3schools.com/excel/">w3schools</a>
-				</li>
-
-			</ul>
-			<hr />
-			<p class="append-bottom">
-				<a href="../../index.html">
-					<span>Back to www.its.raza.com</span>
-				</a>
+		<h3 id="credits">G) Sources and Credits</h3>
+		<blockquote class="border-success">
+			<p>
+				To learn more, use the following reference links to these reference articles:
 			</p>
-			<a href="#">
-				<i class="fa fa-arrow-circle-o-up"></i>
-				Back to Top
+		</blockquote>
+		<h4>Reference Links</h4>
+		<ul>
+			<li>
+				<a target="_blank"
+					href="https://support.microsoft.com/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">Microsoft</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://support.google.com/docs/table/25273?hl=en">Google</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://exceljet.net/functions">ExcelJet</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://www.w3schools.com/excel/">w3schools</a>
+			</li>
+
+		</ul>
+		<hr />
+		<p class="append-bottom">
+			<a href="../../index.html">
+				<span>Back to www.its.raza.com</span>
 			</a>
-			<!-- <hr class="space" /> -->
+		</p>
+		<a href="#">
+			<i class="fa fa-arrow-circle-o-up"></i>
+			Back to Top
+		</a>
+		<!-- <hr class="space" /> -->
 		</div>
 	</main>
 	<!-- CONTENT -->
