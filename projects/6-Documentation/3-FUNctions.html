@@ -89,7 +89,9 @@
 					<li><a href="#topicD"> D) COUNTIF Function</a></li>
 					<li><a href="#topicE"> E) SUMIF Function</a></li>
 					<li><a href="#topicF"> F) IF Function</a></li>
-					<li><a href="#credits"> G) Credits</a></li>
+					<li><a href="#topicG"> G) IFS Function</a></li>
+					<li><a href="#topicH"> H) SWITCH Function</a></li>
+					<li><a href="#credits"> I) Credits</a></li>
 				</ul>
 			</div>
 		</div>
@@ -1924,8 +1926,8 @@
 					<ul>
 						<li> <u>Logical test</u> is the condition/criteria to look for,
 							with the result always evaluating to either TRUE or FALSE</li>
-						<li> [value_if_true] is the value to return when logical_test returns <u> TRUE. </u> </li>
-						<li> [value_if_false] The value to return when logical_test returns <u> FALSE. </u> </li>
+						<li> [value_if_true] is the resulting value to return when logical_test returns <u> TRUE. </u> </li>
+						<li> [value_if_false] The resulting value to return when logical_test returns <u> FALSE. </u> </li>
 					</ul>
 				</span>
 
@@ -2431,10 +2433,11 @@
 
 								<div class="collapse mt-3" id="ifQ4">
 									<div class="mt-3 alert alert-danger" role="alert">
-										= IF(E2 = "Accounting", "PB4", IF(E2 = "Customer Service", "CC1", IF(E2 = "Human Resources", "TS1", IF(E2 = "IT", "TS3", "Not Found"))))
+										= IF(E2 = "Accounting", "PB4", IF(E2 = "Customer Service", "CC1", IF(E2 = "Human
+										Resources", "TS1", IF(E2 = "IT", "TS3", "Not Found"))))
 									</div>
 									<blockquote class="border-danger">
-										Note: It's recommended to use the IFS function or SWITCH Function instead. 
+										Note: It's recommended to use the IFS function or SWITCH Function instead.
 									</blockquote>
 								</div>
 
@@ -2448,6 +2451,384 @@
 		<hr />
 		</section>
 
+
+
+		<!-- IFS Function -->
+		<h3 id="topicG" class="m-0 d-inline">G) IFS Function | </h3>
+		<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
+			href="https://support.microsoft.com/en-us/office/ifs-function-36329a26-37b2-467c-972b-4a39bd951d45">
+			Reference guide
+		</a>
+
+		<section>
+			<h4>
+				Unlike the IF function (which evaluates a single condition), <br>
+				the IFS function checks multiple conditions and returns the first condition that is TRUE. <br>
+				<br> The IFS function is a simpler and easier way to handle multiple conditions without using nested IF
+				statements
+				thereby avoiding "if-else hell".
+			</h4>
+
+			<p>
+				The IFS function checks test/value pairs and returns a value when the respective condition is true.
+			</p>
+			<span>
+				Function Syntax:
+			</span>
+
+			<blockquote class="mt-1 border-success">
+				<strong class="text-success"><u>
+						IFS( <br>
+						<span class="ml-5">test1,</span> <br>
+						<span class="ml-5">value-if-true1,</span> 
+						<br>
+						<span class="ml-5">[test2, value-if-true2],</span> <span class="ml-3 text-muted"> // pair 2
+						</span> <br>
+						<span class="ml-5">[test3, value-if-true3],</span> <span class="ml-3 text-muted"> // pair 3
+						</span> <br>
+						<span class="ml-5">...</span> <br>
+						)
+					</u></strong>
+			</blockquote>
+
+			<span>
+				It is typed =IFS and can potentially take up to 127 conditions! <br />
+				<ul>
+					<li> <u>test1</u> is the first condition/test to look for,
+						with the result always evaluating to either TRUE or FALSE</li>
+					<li> <u>[value_if_true1]</u> is the returned result when test1 returns <u> TRUE. </u> </li>
+					<li> <u>[test2, value-if-true2]</u> - [Optional] Second test/value pair. </li>
+				</ul>
+			</span>
+
+			<blockquote class="border-danger">
+				<strong><u>NOTE:</u></strong>
+				If no TRUE conditions are found, this function returns #N/A error.
+			</blockquote>
+
+
+			<p>
+				Please look at the following example from Microsofts site:
+			</p>
+
+			<div class="text-center mb-3">
+				<img class="text-align: center;" src="./functions-img/1.jpg" />
+			</div>
+
+			<hr style="border-top: dotted 1px;" />
+
+			<p>Let's take a look at another example: </p>
+			<div class="row">
+				<table class="table col-md-6">
+
+					<caption class="">
+						Type in todays weather
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Enter today's weather in cell A2 in Celsius:</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="bg-dark text-light">-</span></td>
+						</tr>
+
+					</tbody>
+				</table>
+
+				<table class="table col-md-6">
+					<caption style="width: 200%">
+						Potential Outputs: <br>"Hot", "Warm", "Cool", "Cold" or "Freezing"
+					</caption>
+					<tbody>
+						<tr>
+							<td>Output: </td>
+						</tr>
+						<tr>
+							<td> ??? <span class="text-muted"></span> </td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<p> Goal: Categorize temperature from cell A2: </p>
+			<div class="col-md-10 offset-md-1 alert alert-secondary" role="alert">
+				<!-- =IFS( A2>30, "Hot", A2>=25, "Warm", A2>=15, "Cool", A2>=0, "Cold", A2 < 0, "Freezing" )   -->
+				=IFS( <br>
+				<span class="ml-5">A2>30, "Hot",</span> <span class="ml-5 text-muted"> // pair 1
+				</span><br>
+				<span class="ml-5">A2>=25, "Warm",</span> <span class="ml-4 text-muted"> // pair 2
+				</span><br>
+				<span class="ml-5">A2>=15, "Cool",</span> <span class="ml-4 text-muted"> // pair 3
+				</span><br>
+				<span class="ml-5">A2>=0, "Cold",</span> <span class="ml-5 text-muted"> // pair 4
+				</span><br>
+				<span class="ml-5">A2 < 0, "Freezing" </span> <span class="ml-4 text-muted"> // pair 5
+						</span><br>
+						)
+			</div>
+
+			<p class="mb-0">
+				Note that although there are 5 pairs, there are 10 arguments.
+			</p>
+
+
+
+			<p>
+				Let's take a look at a few examples:
+			</p>
+
+			<!-- IFS Accodion -->
+			<section class="panel-group accordion">
+				<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+					<div class="panel-heading">
+						<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFSEx1" class="panel-title">
+							IFS() Example #1: Age Group
+						</h4>
+					</div>
+					<div id="IFSEx1" class="collapse">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-6 text-center">
+									<table class="w-50" style="border-collapse: collapse; margin: auto; display: block">
+										<thead>
+											<tr>
+												<th>Type in your age:</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>- [INPUT] </td>
+
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="col-md-6">
+									<p class="text-center">
+										Label age in cell A2 into a life stage:
+									<ul>
+										<li> Below 13 -> "Child" </li>
+										<li> 13–19 -> "Teen" </li>
+										<li> 20–64 -> "Adult" </li>
+										<li> 65+ -> "Senior" </li>
+									</ul>
+
+									</p>
+
+									<div class="text-center">
+										<button class="btn btn-primary" type="button" data-toggle="collapse"
+											data-target="#ifsQ1" aria-expanded="false" aria-controls="">
+											Show Answer
+										</button>
+
+										<div class="mt-3 collapse" id="ifsQ1">
+											<div class="col-md-12 offset-md-0 alert alert-danger" role="alert">
+												=IFS(A2 < 13, "Child" , A2 < 20, "Teen" , A2 < 65, "Adult" , A2>=65,
+													"Senior")
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> <!-- End of panel-body -->
+					</div>
+				</div>
+				<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+					<div class="panel-heading">
+						<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFSEx2" class="panel-title">
+							IFS Example #2: Battery Level Indicator
+						</h4>
+					</div>
+					<div id="IFSEx2" class="collapse">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-6 text-center">
+									<table class="w-75" style="border-collapse: collapse; margin: auto; display: block">
+										<thead>
+											<tr>
+												<th>Type in your phones battery level:</th>
+
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>- [INPUT] </td>
+
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="col-md-6">
+									<p class="text-center">
+										Label age in cell A2 into a battery stage:
+									<ul>
+										<li> 70% + -> High </li>
+										<li> 21 – 69% -> Medium </li>
+										<li> 1–20% -> Low </li>
+										<li> 0% -> Empty </li>
+									</ul>
+
+									</p>
+
+									<div class="text-center">
+										<button class="btn btn-primary" type="button" data-toggle="collapse"
+											data-target="#ifsQ2" aria-expanded="false" aria-controls="">
+											Show Answer
+										</button>
+
+										<div class="mt-3 collapse" id="ifsQ2">
+											<div class="col-md-12 offset-md-0 alert alert-danger" role="alert">
+												=IFS(A2>70, "High", A2>20, "Medium", A2>1, "Low", A2=0, "Empty")
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> <!-- End of panel-body -->
+
+					</div>
+				</div> <!-- End of Q2 -->
+				<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
+					<div class="panel-heading">
+						<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFSEx3" class="panel-title">
+							IFS Example #3: Customer Satisfaction Rating
+						</h4>
+					</div>
+					<div id="IFSEx3" class="collapse">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-6 text-center">
+									<table class="w-75" style="border-collapse: collapse; margin: auto; display: block">
+										<thead>
+											<tr>
+												<th>Type in the survey score from a range of 1-3:</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>- [INPUT] </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="col-md-6">
+									<p class="text-center">
+										Evaluate the survey score as:
+									<ul>
+										<li> 3 -> Great </li>
+										<li> 2 -> Neutral </li>
+										<li> 1 -> Poor </li>
+									</ul>
+									</p>
+
+									<div class="text-center">
+										<button class="btn btn-primary" type="button" data-toggle="collapse"
+											data-target="#ifsQ3" aria-expanded="false" aria-controls="">
+											Show Answer
+										</button>
+
+										<div class="mt-3 collapse" id="ifsQ3">
+											<div class="col-md-12 offset-md-0 alert alert-danger" role="alert">
+												=IFS(A2=3, "Excellent", A2=2, "Neutral", A2=1, "Poor")
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> <!-- End of panel-body -->
+					</div>
+				</div> <!-- End of Q3-->
+			</section>
+			<!-- End of SUM Accordion -->
+
+			<br />
+			<hr />
+		</section>
+
+
+
+		<!-- SWITCH Function -->
+		<h3 id="topicH" class="m-0 d-inline">H) SWITCH Function | </h3>
+		<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
+			href="https://support.microsoft.com/en-us/office/switch-function-47ab33c0-28ce-4530-8a45-d532ec4aa25e">
+			Reference guide
+		</a>
+
+		<section>
+			<h4>
+				Like IFS, the SWITCH function checks multiple conditions without needing several nested IF statements.
+			</h4>
+
+			<span>
+				Function Syntax:
+			</span>
+
+			<blockquote class="mt-1 border-success">
+				<strong class="text-success"><u>
+						SWITCH <br>
+						<span class="ml-5">Value_to_switch</span> <br>
+						<span class="ml-5">case1,</span> <br>
+						<span class="ml-5">value1,</span> <br>
+						<span class="ml-5">[case2, value2],</span> <span class="ml-3 text-muted"> // pair 2 </span> <br>
+						<span class="ml-5">[case3, value3],</span> <span class="ml-3 text-muted"> // pair 3 </span> <br>
+						<span class="ml-5">...</span> <br>
+						<span class="ml-5">[default]</span> <span class="ml-3 text-muted"> // Optional </span> <br> 
+						)
+					</u></strong>
+			</blockquote>
+
+			<span>
+				It is typed =SWITCH and can handle up to 126 case/value pairs  <br />
+				<ul>
+					<li> <u>Value_to_switch</u> 
+						is the expression to match against. 
+						It takes in any valid input values.
+					<li> <u>case1</u> is the first case to be checked against <u>value_to_switch.</u> </li>
+					<li> <u>value1</u> is the returned result when case1 returns <u> TRUE. </u> </li>
+					<li> <u>[case2, value2]</u> - [Optional] Additional case/value pair if the first one doesn’t match the value_to_switch.
+					</li>
+					<li> <u>[default]</u> - [optional] The default value to use when no match is found (specified as the last parameter). </li>
+				</ul>
+			</span>
+
+
+
+			<p>
+				Please look at the following example from Microsofts site:
+			</p>
+
+			<div class="text-center mb-3">
+				<img class="text-align: center;" src="https://support.microsoft.com/images/en-us/4b6126f8-3a63-4a14-8699-6cf57712511e" />
+			</div>
+
+			<hr style="border-top: dotted 1px;" />
+
+			<blockquote class="border-danger">
+				<strong><u>NOTE:</u></strong>
+				SWITCH is limited to exact matching. 
+				It is not possible to use operators like greater than (>) or less than (<) with the standard syntax.
+				<br> <br>
+				While IFS is the better solution, you can still work around this limitation by creating a formula that checks against TRUE, like this:
+			</blockquote>
+
+			<p>
+				=SWITCH(TRUE,A1>=1000,"Gold",A1>=500,"Silver","Bronze") 
+				<span class="ml-3 text-muted"> // Courtesy of Exceljet. </span> <br> 
+			</p>
+
+			</section>
+			<!-- End of SUM Accordion -->
+
+			<br />
+			<hr />
+		</section>
 
 		<h3 id="credits">G) Sources and Credits</h3>
 		<blockquote class="border-success">
