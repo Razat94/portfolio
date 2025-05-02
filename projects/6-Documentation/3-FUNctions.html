@@ -129,12 +129,13 @@
 					</a>
 					</br>
 					For each of the functions discussed below, read the reference guides from
-					<a class="font-italic"
+					<a class="font-italic" target="_blank"
 						href="https://support.microsoft.com/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">
 						Microsoft
 					</a>
 					and
-					<a class="font-italic" href="https://support.google.com/docs/table/25273?hl=en">Google</a>
+					<a class="font-italic" target="_blank"
+						href="https://support.google.com/docs/table/25273?hl=en">Google</a>
 					.
 				</p>
 			</blockquote>
@@ -1895,7 +1896,6 @@
 					</div>
 				</section>
 				<!-- End of SUMIF Accordion -->
-
 				<hr />
 			</section>
 
@@ -1926,8 +1926,10 @@
 					<ul>
 						<li> <u>Logical test</u> is the condition/criteria to look for,
 							with the result always evaluating to either TRUE or FALSE</li>
-						<li> [value_if_true] is the resulting value to return when logical_test returns <u> TRUE. </u> </li>
-						<li> [value_if_false] The resulting value to return when logical_test returns <u> FALSE. </u> </li>
+						<li> [value_if_true] is the resulting value to return when logical_test returns <u> TRUE. </u>
+						</li>
+						<li> [value_if_false] The resulting value to return when logical_test returns <u> FALSE. </u>
+						</li>
 					</ul>
 				</span>
 
@@ -2022,8 +2024,6 @@
 					</li>
 				</ul>
 				</p>
-
-
 
 				<p>
 					Let's take a look at a few examples:
@@ -2249,58 +2249,58 @@
 									What functions would we write in cells D4:D7?
 								</p>
 								<!-- 
-								<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ifQ3"
-									aria-expanded="false" aria-controls="collapseQ3">
-									Show Answer
-								</button>
-								<div class="collapse" id="ifQ3">
-									<table>
-										<thead>
-											<tr>
-												<th>Bonus Rate:</th>
-												<th>1%</th>
-	
-											</tr>
-										</thead>
-									</table>
-									<table>
-										<thead>
-											<tr>
-												<th>Name // A2</th>
-												<th>Total // B2</th>
-												<th>Goal</th>
-												<th>Goal Bonus?</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Mullins</td>
-												<td>$368,575</td>
-												<td>$325,000</td>
-												<td>??? <span class="text-muted">// Output: Pass</td>
-											</tr>
-											<tr>
-												<td>Little</td>
-												<td>$281,001</td>
-												<td>$275,000</td>
-												<td>??? <span class="text-muted">// Output: Pass</td>
-											</tr>
-											<tr>
-												<td>Brooke</td>
-												<td>$371,193</td>
-												<td>$400,000</td>
-												<td>??? <span class="text-muted">// Output: Fail</td>
-											</tr>
-											<tr>
-												<td>Brooke</td>
-												<td>$271,091</td>
-												<td>$250,000</td>
-												<td>??? <span class="text-muted">// Output: Fail</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								-->
+												<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ifQ3"
+													aria-expanded="false" aria-controls="collapseQ3">
+													Show Answer
+												</button>
+												<div class="collapse" id="ifQ3">
+													<table>
+														<thead>
+															<tr>
+																<th>Bonus Rate:</th>
+																<th>1%</th>
+					
+															</tr>
+														</thead>
+													</table>
+													<table>
+														<thead>
+															<tr>
+																<th>Name // A2</th>
+																<th>Total // B2</th>
+																<th>Goal</th>
+																<th>Goal Bonus?</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>Mullins</td>
+																<td>$368,575</td>
+																<td>$325,000</td>
+																<td>??? <span class="text-muted">// Output: Pass</td>
+															</tr>
+															<tr>
+																<td>Little</td>
+																<td>$281,001</td>
+																<td>$275,000</td>
+																<td>??? <span class="text-muted">// Output: Pass</td>
+															</tr>
+															<tr>
+																<td>Brooke</td>
+																<td>$371,193</td>
+																<td>$400,000</td>
+																<td>??? <span class="text-muted">// Output: Fail</td>
+															</tr>
+															<tr>
+																<td>Brooke</td>
+																<td>$271,091</td>
+																<td>$250,000</td>
+																<td>??? <span class="text-muted">// Output: Fail</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												-->
 							</div> <!-- End of Show Answer Panel-Body -->
 						</div>
 					</div> <!-- End of Q3 -->
@@ -2443,8 +2443,7 @@
 
 							</div>
 						</div> <!-- End of Panel-Body -->
-					</div>
-		</div> <!-- End of Q4 -->
+					</div> <!-- End of Q4 -->
 		</section>
 		<!-- End of IF Accordion -->
 
@@ -2464,7 +2463,8 @@
 			<h4>
 				Unlike the IF function (which evaluates a single condition), <br>
 				the IFS function checks multiple conditions and returns the first condition that is TRUE. <br>
-				<br> The IFS function is a simpler and easier way to handle multiple conditions without using nested IF
+				<br> The IFS function is a simpler and easier way to handle multiple conditions without using nested
+				IF
 				statements
 				thereby avoiding "if-else hell".
 			</h4>
@@ -2480,7 +2480,7 @@
 				<strong class="text-success"><u>
 						IFS( <br>
 						<span class="ml-5">test1,</span> <br>
-						<span class="ml-5">value-if-true1,</span> 
+						<span class="ml-5">value-if-true1,</span>
 						<br>
 						<span class="ml-5">[test2, value-if-true2],</span> <span class="ml-3 text-muted"> // pair 2
 						</span> <br>
@@ -2763,7 +2763,8 @@
 
 		<section>
 			<h4>
-				Like IFS, the SWITCH function checks multiple conditions without needing several nested IF statements.
+				Like IFS, the SWITCH function checks multiple conditions without needing several nested IF
+				statements.
 			</h4>
 
 			<span>
@@ -2776,25 +2777,31 @@
 						<span class="ml-5">Value_to_switch</span> <br>
 						<span class="ml-5">case1,</span> <br>
 						<span class="ml-5">value1,</span> <br>
-						<span class="ml-5">[case2, value2],</span> <span class="ml-3 text-muted"> // pair 2 </span> <br>
-						<span class="ml-5">[case3, value3],</span> <span class="ml-3 text-muted"> // pair 3 </span> <br>
+						<span class="ml-5">[case2, value2],</span> <span class="ml-3 text-muted"> // pair 2 </span>
+						<br>
+						<span class="ml-5">[case3, value3],</span> <span class="ml-3 text-muted"> // pair 3 </span>
+						<br>
 						<span class="ml-5">...</span> <br>
-						<span class="ml-5">[default]</span> <span class="ml-3 text-muted"> // Optional </span> <br> 
+						<span class="ml-5">[default]</span> <span class="ml-3 text-muted"> // Optional </span> <br>
 						)
 					</u></strong>
 			</blockquote>
 
 			<span>
-				It is typed =SWITCH and can handle up to 126 case/value pairs  <br />
+				It is typed =SWITCH and can handle up to 126 case/value pairs <br />
 				<ul>
-					<li> <u>Value_to_switch</u> 
-						is the expression to match against. 
+					<li> <u>Value_to_switch</u>
+						is the expression to match against.
 						It takes in any valid input values.
 					<li> <u>case1</u> is the first case to be checked against <u>value_to_switch.</u> </li>
 					<li> <u>value1</u> is the returned result when case1 returns <u> TRUE. </u> </li>
-					<li> <u>[case2, value2]</u> - [Optional] Additional case/value pair if the first one doesn’t match the value_to_switch.
+					<li> <u>[case2, value2]</u> - [Optional] Additional case/value pair if the first one doesn’t
+						match
+						the value_to_switch.
 					</li>
-					<li> <u>[default]</u> - [optional] The default value to use when no match is found (specified as the last parameter). </li>
+					<li> <u>[default]</u> - [optional] The default value to use when no match is found (specified as
+						the
+						last parameter). </li>
 				</ul>
 			</span>
 
@@ -2805,29 +2812,32 @@
 			</p>
 
 			<div class="text-center mb-3">
-				<img class="text-align: center;" src="https://support.microsoft.com/images/en-us/4b6126f8-3a63-4a14-8699-6cf57712511e" />
+				<img class="text-align: center;"
+					src="https://support.microsoft.com/images/en-us/4b6126f8-3a63-4a14-8699-6cf57712511e" />
 			</div>
 
 			<hr style="border-top: dotted 1px;" />
 
 			<blockquote class="border-danger">
 				<strong><u>NOTE:</u></strong>
-				SWITCH is limited to exact matching. 
+				SWITCH is limited to exact matching.
 				It is not possible to use operators like greater than (>) or less than (<) with the standard syntax.
-				<br> <br>
-				While IFS is the better solution, you can still work around this limitation by creating a formula that checks against TRUE, like this:
+					<br> <br>
+					While IFS is the better solution, you can still work around this limitation by creating a
+					formula
+					that checks against TRUE, like this:
 			</blockquote>
 
 			<p>
-				=SWITCH(TRUE,A1>=1000,"Gold",A1>=500,"Silver","Bronze") 
-				<span class="ml-3 text-muted"> // Courtesy of Exceljet. </span> <br> 
+				=SWITCH(TRUE,A1>=1000,"Gold",A1>=500,"Silver","Bronze")
+				<span class="ml-3 text-muted"> // Courtesy of Exceljet. </span> <br>
 			</p>
 
-			</section>
-			<!-- End of SUM Accordion -->
+		</section>
+		<!-- End of SUM Accordion -->
 
-			<br />
-			<hr />
+		<br />
+		<hr />
 		</section>
 
 		<h3 id="credits">G) Sources and Credits</h3>
