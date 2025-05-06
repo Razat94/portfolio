@@ -83,15 +83,13 @@
 						</span>
 					</li>
 					<!-- <li><a href="#topicA"> Getting Started</a></li> -->
-					<li><a href="#topicA"> A) SUM Function</a></li>
-					<li><a href="#topicB"> B) AVERAGE Function</a></li>
-					<li><a href="#topicC"> C) CONCAT Function</a></li>
-					<li><a href="#topicD"> D) COUNTIF Function</a></li>
-					<li><a href="#topicE"> E) SUMIF Function</a></li>
-					<li><a href="#topicF"> F) IF Function</a></li>
-					<li><a href="#topicG"> G) IFS Function</a></li>
-					<li><a href="#topicH"> H) SWITCH Function</a></li>
-					<li><a href="#credits"> I) Credits</a></li>
+					<li><a href="#topicA"> A) TODAY Function</a></li>
+					<li><a href="#topicB"> B) WEEKNUM & <br> WEEKDAY Function</a></li>
+					<li><a href="#topicC"> C) WORKDAY Function</a></li>
+					<li><a href="#topicD"> D) Project Anniversary</a></li>
+					<li><a href="#topicE"> E) DATEDIF Function</a></li>
+					<li><a href="#topicF"> F) NETWORKDAYS Function</a></li>
+					<li><a href="#credits"> G) Credits</a></li>
 				</ul>
 			</div>
 		</div>
@@ -197,831 +195,209 @@
 				</a>
 			</div> -->
 
-			<!-- SUM Function -->
-			<h3 id="topicA" class="m-0 d-inline">A) SUM Function | </h3>
+			<!-- TODAY() Function -->
+			<h3 id="topicA" class="m-0 d-inline">A) TODAY() Function | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
-				href="https://support.microsoft.com/en-us/office/use-the-sum-function-to-sum-numbers-in-a-range-323569b2-0d2b-4e7b-b2f8-b433f9f0ac96">
+				href="https://support.microsoft.com/en-us/office/today-function-5eb3078d-a82c-4736-8930-2f51a028fdd9">
 				Reference guide
 			</a>
 
 			<section>
-				<h4>Among the most widely used functions is the <i>SUM()</i> function.</h4>
-				<p>To add the constant numbers 1, 3, and 5, we can simply write
-					<i class="bg-dark text-light">=SUM(1,3,5)</i>
-				</p>
-
-				<p>Suppose we have to find the sum of the following data: </p>
-				<table class="table">
-					<caption class="text-center">
-						In our <i>dataset</i> i.e. "Table Array", each record/entry is a person.
-						<br />
-						Cell A1 holds the value "Salesperson".
-					</caption>
-					<thead>
-						<tr>
-							<th scope="col">Salesperson <span class="text-muted">// A1</span> </th>
-							<th scope="col">Quarter 1</th>
-							<th scope="col">Quarter 2</th>
-							<th scope="col">Quarter 3</th>
-							<th scope="col">Quarter 4</th>
-							<th scope="col">Total</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Brian</td>
-							<td>$52,000</td>
-							<td>$73,000</td>
-							<td>$72,000</td>
-							<td>$18,000</td>
-							<td><span class="bg-dark text-light">???</span></td>
-						</tr>
-				</table>
-
-				<p class="mb-0">
-					There are a few ways we can add these numbers to get the total.
-					We can:
-				<ul>
-					<li>
-						Using a Manual Addition Formula:
-						<i class=" text-danger">=B2 + C2 + D2 + E2</i>
-						<br> Each quarters sales figure is added individually <u>via a formula</u>
-					</li>
-					<li>
-						Use the SUM() function on each individual number:
-						<i class="text-danger">=SUM(B2,C2,D2,E2)</i>
-						<br> Each quarters sales figure is added individually <u>via the SUM() function</u>
-					</li>
-					<li>
-						Use the SUM() function with a range:
-						<u class="bg-warning text-dark font-italic">=SUM(B2:E2)</u>
-						<br />The <u>best</u> way to calculate the total is by summing the values in cells B2 to E2,
-						which contain the sales figures for Quarters 1 to 4.
-					</li>
-				</ul>
-				</p>
-
-				<p class="mb-0"> Few things to note:
-				<ul>
-					<li>
-						The word "SUM" doesn’t need to be in all caps, but it's common to write it that way.
-					</li>
-					<li>
-						The SUM function ignores cells with text.
-					</li>
-				</ul>
+				<h4>The purpose of the <i>TODAY()</i> function is to return todays current date.</h4>
+				<p>This function takes in no arguments (inputs) and it's syntax is as follows:
+					<i class="bg-dark text-light">=DATE()</i>
 				</p>
 
 				<p>
-					Let's take a look at a few examples:
+					This function will update automatically when the worksheet changes or opens.
+
+					Typically by default Excel workbooks are set to update Automatically.
+					This can be confimred by going to:
+					<br> <span class="ml-5">Formulas (tab) -> Calculation (group) -> Caluclation Options </span>
 				</p>
 
-				<!-- SUM Accodion -->
-				<section class="panel-group accordion">
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMEx1"
-								class="panel-title">
-								SUM() Example #1: Grocery Cart
-							</h4>
-						</div>
-						<div id="SUMEx1" class="collapse">
-							<div class="panel-body">
-								<div class="row">
-									<div class="col-md-6 text-center">
-										<p class="mb-3">
-											Suppose we have the following grocery cart:
-										</p>
+				<p>
+					The 'F9' key is a shortcut key used to manually recalculate the worksheet and update the value if it
+					doesn't update.
+					The user can also go to:
+					<br> <span class="ml-5">Formulas (tab) -> Calculation (group) -> Calculate Now (F9)</span> to force
+					a manual update.
+				</p>
 
-										<table class="w-50"
-											style="border-collapse: collapse; margin: auto; display: block">
-											<thead>
-												<tr>
-													<th>Grocery Cart</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Bread</td>
-													<td>$3</td>
-												</tr>
-												<tr>
-													<td>Milk</td>
-													<td>$4</td>
-												</tr>
-												<tr>
-													<td>Eggs</td>
-													<td>$6</td>
-												</tr>
-												<tr>
-													<td>Water</td>
-													<td>$4</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+				<p>
+					Since the output is a date, you can format the result in a different date number format if needed
+					(e.g.
+					YY-MM-DD, MM-YYYY, etc).
+				</p>
 
-									<div class="col-md-6">
-										<p class="text-center">
-											What function would output our total?
-										</p>
+				<p>
+					NOTE: To insert a fixed date and time that won't update, use these keyboard shortcuts: <br>
 
-										<div class="text-center">
-											<button class="btn btn-primary" type="button" data-toggle="collapse"
-												data-target="#sumQ1" aria-expanded="false" aria-controls="">
-												Show Answer
-											</button>
+					<span class="ml-5">Current date: Press Ctrl + ;</span> <br>
 
-											<div class="mt-3 collapse" id="sumQ1">
-												<div class="col-md-8 offset-md-2 alert alert-danger" role="alert">
-													=SUM(B2:B5) <span class="text-muted">// Output: 17</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> <!-- End of panel-body -->
-						</div>
-					</div>
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMEx2"
-								class="panel-title">
-								SUM() Example #2: Movie Theaters
-							</h4>
-						</div>
-						<div id="SUMEx2" class="collapse">
-							<div class="panel-body">
-								<p class="mt-0"> Let's take a look at another example for a table of movies: </p>
+					<span class="ml-5">Current time: Press Ctrl + Shift + :</span>
+				</p>
 
-								<table class="table">
-									<caption class="text-center">
-										In our <i>dataset</i> i.e. "Table Array",
-										each record/entry is a movie. "Year" is cell A1.
-										Data courtesy of <u class="font-italic"><a target="_blank"
-												href="https://www.coursera.org/articles/tutorial-how-to-add-in-google-sheets">Coursera</a>
-										</u>
-									</caption>
-									<thead>
-										<tr>
-											<th scope="col">Year <span class="text-muted">// A1</span></th>
-											<th scope="col">Movie</th>
-											<th scope="col">Director</th>
-											<th scope="col">Box Office Earnings</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1999</td>
-											<td>Star Wars: Episode I - The Phantom Menace</td>
-											<td>George Lucas</td>
-											<td>$7,340,743,186</td>
-										</tr>
-										<tr>
-											<td>1998</td>
-											<td>Titanic</td>
-											<td>James Cameron</td>
-											<td>$6,696,383,983</td>
-										</tr>
-										<tr>
-											<td>1997</td>
-											<td>Men in Black</td>
-											<td>Barry Sonnenfeld</td>
-											<td>$6,077,250,085</td>
-										</tr>
-										<tr>
-											<td>1996</td>
-											<td>Independence Day</td>
-											<td>Roland Emmerich</td>
-											<td>$5,600,750,973</td>
-										</tr>
-										<tr>
-											<td>1995</td>
-											<td>Batman Forever</td>
-											<td>Joel Schumacher</td>
-											<td>$5,106,129,264</td>
-										</tr>
-										<tr>
-											<td>1994</td>
-											<td>The Lion King</td>
-											<td>Roger Allers, Rob Minkoff</td>
-											<td>$5,061,909,583</td>
-										</tr>
-										<tr>
-											<td>1993</td>
-											<td>Jurassic Park</td>
-											<td>Steven Spielberg</td>
-											<td>$4,823,116,106</td>
-										</tr>
-										<tr>
-											<td>1992</td>
-											<td>Batman Returns</td>
-											<td>Tim Burton</td>
-											<td>$4,519,644,026</td>
-										</tr>
-										<tr>
-											<td>1991</td>
-											<td>Terminator 2: Judgment Day</td>
-											<td>James Cameron</td>
-											<td>$4,336,073,530</td>
-										</tr>
-										<tr>
-											<td>1990</td>
-											<td>Ghost</td>
-											<td>Jerry Zucker</td>
-											<td>$4,326,824,577</td>
-										</tr>
-										<tr>
-											<td>1989</td>
-											<td>Batman</td>
-											<td>Tim Burton</td>
-											<td>$4,084,060,815</td>
-										</tr>
-									</tbody>
-								</table>
-								<p>
-									In the above example,
-									try to find the sum of all movie sales.
-									<br />
-								</p>
+				<p>
+					To see the date one week from today, use this formula:
+					<br> = TODAY() + 7 // one week in the future
+				</p>
 
-								<button class="btn btn-primary" type="button" data-toggle="collapse"
-									data-target="#collapse-SUMQ2" aria-expanded="false" aria-controls="">
-									Show Answer
-								</button>
-								<div class="collapse" id="collapse-SUMQ2">
-									<blockquote class="mt-3 border-danger">
-										=SUM(D2:D12)
-									</blockquote>
-								</div>
-							</div> <!-- End of panel-body -->
-
-						</div>
-					</div> <!-- End of Q2 -->
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMEx3"
-								class="panel-title">
-								SUM() Example #3: Calculating Monthly Budget
-							</h4>
-						</div>
-						<div id="SUMEx3" class="collapse">
-							<div class="panel-body row">
-								<!-- Monthly Income Table -->
-								<div class="col-md-6">
-									<h3 class="text-center">MONTHLY INCOME</h3>
-									<table class="d-block m-auto table table-bordered">
-										<thead>
-											<tr>
-												<th>Item <span class="text-muted">// A1</span></th>
-												<th>Amount <span class="text-muted">// B1</span> </th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Income 1 (Ret/VA pay)</td>
-												<td>$1,840.00</td>
-											</tr>
-											<tr>
-												<td>Income 2</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Other</td>
-												<td>$0.00</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<div class="mt-3">
-										<button class="d-block m-auto btn btn-primary" type="button"
-											data-toggle="collapse" data-target="#collapse-SUMQ3A" aria-expanded="false"
-											aria-controls="">
-											Show Answer
-										</button>
-										<div class="collapse mt-3 text-center" id="collapse-SUMQ3A">
-											<div class="col-md-8 offset-md-2 alert alert-danger" role="alert">
-												=SUM(B2:B4) <span class="text-muted">// Output: $1,840.00 </span>
-											</div>
-										</div>
-									</div>
-								</div> <!-- End of Column -->
-
-								<!-- Monthly Expenses Table -->
-								<div class="col-md-6">
-									<h3 class="text-center">MONTHLY EXPENSES</h3>
-									<table class="d-block m-auto table-bordered">
-										<thead>
-											<tr>
-												<th>Item <span class="text-muted">// D1</span> </th>
-												<th>Amount <span class="text-muted">// E1</span> </th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Rent/mortgage</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Electric</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Gas</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Cell phone</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Groceries</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Car payment</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Auto expenses</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Student loans</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Credit cards</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Auto Insurance</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Personal care</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Entertainment</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Miscellaneous</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>Credit cards</td>
-												<td>$0.00</td>
-											</tr>
-											<tr>
-												<td>SBP</td>
-												<td>$0.00</td>
-											</tr>
-										</tbody>
-									</table>
-
-									<div class="mt-3">
-										<button class="d-block m-auto btn btn-primary" type="button"
-											data-toggle="collapse" data-target="#collapse-SUMQ3B" aria-expanded="false"
-											aria-controls="">
-											Show Answer
-										</button>
-										<div class="collapse mt-3 text-center" id="collapse-SUMQ3B">
-											<div class="col-md-8 offset-md-2 alert alert-danger" role="alert">
-												=SUM(E2:E16) <span class="text-muted">// Output: 0</span>
-											</div>
-											<div class="col-sm-6 offset-sm-3">
-												<blockquote class="mt-3 border-danger">
-													=SUM(E:E) <br /> also can work.
-												</blockquote>
-											</div>
-										</div>
-									</div>
-
-								</div> <!-- End of col -->
-							</div> <!-- End of panel-body -->
-						</div>
-					</div> <!-- End of Q3-->
-				</section>
-				<!-- End of SUM Accordion -->
-
-				<br />
 				<hr />
 			</section>
 
-			<!-- AVERAGE Function -->
-			<h3 id="topicB" class="m-0 d-inline">B) AVERAGE Function | </h3>
-			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
-				href="https://support.microsoft.com/en-us/office/average-function-047bac88-d466-426c-a32b-8f33eb960cf6">
-				Reference guide
-			</a>
+			<!-- WEEKNUM & WEEKDAY Functions -->
+			<h3 id="topicB" class="m-0 d-inline">B) Weeknum & Weekday Functions </h3>
 
 			<section>
-				<h5> The AVERAGE() function returns the average (arithmetic mean) of each of the arguments. </h5>
-
-				<p> It is typed as '=AVERAGE' and is formatted as: </p>
+				<h4> The WEEKNUM() function takes in the week number for a given date argument.
+					This argument must have a valid Excel date. </h4>
 
 				<blockquote class="border-success">
-					<strong class="text-success"><u>=AVERAGE(value1, value2, [value3, ...])</u></strong>
+					<strong class="text-success"><u> = WEEKNUM(09-21-1994)</u></strong>
 				</blockquote>
 
-				<p>
-					Looking back at our earlier SUM example, let's now find the AVERAGE of the following data:
-				</p>
+				<h4> The Excel WEEKDAY function returns a number from 1 to 7 for a given date,
+					showing which day of the week it is. <h4>
 
-				<table class="table">
-					<caption class="text-center">
-						Find the AVERAGE of each quarter.
-					</caption>
-					<thead>
-						<tr>
-							<th scope="col">Salesperson <span class="text-muted">// A1</span> </th>
-							<th scope="col">Quarter 1</th>
-							<th scope="col">Quarter 2</th>
-							<th scope="col">Quarter 3</th>
-							<th scope="col">Quarter 4</th>
-							<th scope="col">Total</th>
-							<th scope="col">Average</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Brian</td>
-							<td>$52,000</td>
-							<td>$73,000</td>
-							<td>$72,000</td>
-							<td>$18,000</td>
-							<td>=SUM(B2:E2)</td>
-							<td><span class="bg-dark text-light">???</span></td>
-						</tr>
-				</table>
+						<p>
+							By default, Sunday is 1 and Saturday is 7, but that can always be changed.
+							It’s useful in formulas when you need to check or work with days of the week.
+						</p>
 
-				<span>
-					To average the numbers in cells B2 through E2,
-					like the SUM function
-					we can use the AVERAGE Function in 2 ways: <br />
-					<ul>
-						<li> <u class=" text-danger font-italic">=AVERAGE(B2,C2, D2, E2)</u> </li>
-						<li>
-							<u class="bg-warning text-dark font-italic">
-								=AVERAGE(B2:E2)
-							</u>
-						</li>
-					</ul>
-				</span>
-				<br />
+						<blockquote class="border-success">
+							<strong class="text-success"><u> =WEEKDAY("05/05/2025")</u></strong>
+							<span class="text-secondary">// => Output: 2</span>
+						</blockquote>
 
-				<p>
-					Let's take a look at a few examples:
-				</p>
+						<p>
+							If you want Monday to be 1 and Sunday to be 7 instead, you can add a second argument:
+						</p>
 
-				<!-- AVERAGE Accodion -->
-				<section class="panel-group accordion">
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#AVERAGEEx1"
-								class="panel-title">
-								AVERAGE() Example #1: Averaging Salaries
-							</h4>
-						</div>
-						<div id="AVERAGEEx1" class="collapse">
-							<div class="panel-body">
-								<p>
-									Calculate the average salary of the three employees.
-								</p>
+						<blockquote class="border-success">
+							<strong class="text-success"><u> =WEEKDAY("05/05/2025", 2)</u></strong>
+							<span class="text-secondary">// => Output: 1</span>
+						</blockquote>
 
-								<div class="row">
-									<div class="col-md-6">
-										<table class="table">
-											<caption>Data Source Table</caption>
-											<thead>
-												<tr>
-													<th scope="col">Name <span class="text-muted">// A1</span></th>
-													<th scope="col">Position?</th>
-													<th scope="col">Salary</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<th scope="row">Raza</th>
-													<td>Trainer</td>
-													<td>$1M</td>
-												</tr>
-												<tr>
-													<th scope="row">Zehra</th>
-													<td>English Teacher</td>
-													<td>$2M</td>
-												</tr>
-												<tr>
-													<th scope="row">Sarah</th>
-													<td>Director of Training</td>
-													<td>$4M</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<div class="col-md-6">
-										<table class="table">
-											<caption>Lookup Table</caption>
-											<tbody>
-												<tr class="">
-													<th class="bg-light text-dark">SUM? <span class="text-muted">//
-															E1</span></th>
-													<td>=SUM(C2:C4)</td>
-												</tr>
-												<tr>
-													<th scope="row" class="bg-success">AVERAGE</th>
-													<td colspan="2" class="text-center"><i>(AVERAGE function goes
-															here)</i></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
+						<p>
+							This will return 1, since now Monday is treated as the first day of the week.
+						</p>
 
-								<button class="btn btn-primary" type="button" data-toggle="collapse"
-									data-target="#AVERAGEEx1-Solution" aria-expanded="false" aria-controls="">
-									Show Answer
-								</button>
-
-								<div class="collapse" id="AVERAGEEx1-Solution">
-									<div class="mt-3 col-md-8 offset-md-2 alert alert-danger" role="alert">
-										=AVERAGE(C2:C4) <span class="text-muted">// Output: 17</span>
-									</div>
-									<blockquote class="border-danger">
-										Notice that the average function uses the same range as that of the SUM
-										function.
-									</blockquote>
-								</div>
-							</div> <!-- End of panel-body -->
-						</div>
-					</div>
-
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#AVERAGEEx2"
-								class="panel-title">
-								AVERAGE() Example #2: Average of Box Office Earnings.
-							</h4>
-						</div>
-						<div id="AVERAGEEx2" class="collapse">
-							<div class="panel-body">
-								<p>
-									Looking at the table of movies used in SUM() Example #2, calculate the AVERAGE Box
-									Office
-									Earnings.
-								</p>
-
-								<button class="btn btn-primary" type="button" data-toggle="collapse"
-									data-target="#AVERAGEEx2-Solution" aria-expanded="false" aria-controls="">
-									Show Answer
-								</button>
-
-								<div class="collapse" id="AVERAGEEx2-Solution">
-									<div class="mt-3 col-md-3 alert alert-danger" role="alert">
-										=AVERAGE(D2:D12)
-									</div>
-								</div>
-							</div> <!-- End of panel-body -->
-						</div>
-					</div>
-
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#AVERAGEEx3"
-								class="panel-title">
-								AVERAGE() Example #3: Fictional Savings Table
-							</h4>
-						</div>
-						<div id="AVERAGEEx3" class="collapse">
-							<div class="panel-body">
-								<p>
-									Below is a fictional savings table showing monthly savings:
-								</p>
-
-								<div class="row">
-									<div class="col-md-6">
-										<table class="mt-1 table table-bordered table-hover">
-											<caption class="text-center">
-												Fictional Monthly Savings Plan
-											</caption>
-											<thead class="thead-dark">
-												<tr>
-													<th>Month <span class="text-muted">// A1</span> </th>
-													<th>Amount Saved <span class="text-muted">// B1</span> </th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>January</td>
-													<td>$1,200</td>
-												</tr>
-												<tr>
-													<td>February</td>
-													<td>$1,300</td>
-												</tr>
-												<tr>
-													<td>March</td>
-													<td>$1,000</td>
-												</tr>
-												<tr>
-													<td>April</td>
-													<td>$1,400</td>
-												</tr>
-												<tr>
-													<td>May</td>
-													<td>$1,300</td>
-												</tr>
-												<tr>
-													<td>June</td>
-													<td>$1,100</td>
-												</tr>
-												<tr>
-													<td>July</td>
-													<td>$1,000</td>
-												</tr>
-												<tr>
-													<td>August</td>
-													<td>$1,200</td>
-												</tr>
-												<tr>
-													<td>September</td>
-													<td>$1,500</td>
-												</tr>
-												<tr>
-													<td>October</td>
-													<td>$1,300</td>
-												</tr>
-												<tr>
-													<td>November</td>
-													<td>$800</td>
-												</tr>
-												<tr>
-													<td>December</td>
-													<td>$500</td>
-												</tr>
-												<tr>
-													<td class="font-weight-bold">Total</td>
-													<td> <span class="font-weight-bold">
-															$14,600
-														</span>
-														<span class="text-muted font-italic">// =SUM(B2:B13)</span>
-													</td>
-												</tr>
-												<tr class="font-weight-bold">
-													<td>Average:</td>
-													<td><i class="bg-dark text-light">???</i></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-
-								<p>
-									Q: What is the average amount saved per month?
-								</p>
-
-								<button class="btn btn-primary" type="button" data-toggle="collapse"
-									data-target="#AVERAGEEx3-Solution" aria-expanded="false" aria-controls="">
-									Show Answer
-								</button>
-
-								<div class="collapse" id="AVERAGEEx3-Solution">
-									<div class="mt-3 alert alert-danger" role="alert">
-										=AVERAGE(B2:B13) <span class="text-muted">// Output: $1,133.33</span>
-									</div>
-									<blockquote class="border-danger">
-										Note: Make sure to exclude the total cell from the range used in the AVERAGE()
-										function.
-									</blockquote>
-								</div>
-							</div> <!-- End of panel-body -->
-						</div>
-					</div> <!-- End of AVERAGE Q3 -->
-				</section>
-				<!-- End of SUM Accordion -->
-
-				<br />
-				<hr />
+						<hr />
 			</section>
 
-			<!-- CONCAT Function -->
-			<h3 id="topicC" class="m-0 d-inline">C) CONCAT Function | </h3>
+			<!-- WORKDAY Function -->
+			<h3 id="topicC" class="m-0 d-inline">C) WORKDAY Function | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
-				href="https://support.microsoft.com/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2">
+				href="https://support.microsoft.com/en-us/office/workday-function-f764a5b7-05fc-4494-9486-60d494efbf33">
 				Reference guide
 			</a>
 
 			<section>
-				<h5> A text function that concatenates (joins) values.
-					The values are not limited to text as it can join numbers too.
+				<h5>
+					The WORKDAY function returns a date that is a certain number of working days before or after a
+					starting date.
 				</h5>
 
-				<blockquote class="border-warning">
-					<strong class="text-warning"><u>NOTE:</u></strong>
-					There are no delimiters added between the combined cell values.
-					<br> A delimiter is a character/symbol used to seperate values apart from each other
-					e.g. / \ , | -
-				</blockquote>
-
-				<p> It is typed as '=CONCAT' and it is a new version of the old CONCATENATE() function.
-					It is formatted as: </p>
+				<p> It is typed as '=WORKDAY' and it is formatted as: </p>
 
 				<blockquote class="border-success">
-					<strong class="text-success"><u>=CONCAT(value1, value2, [value3, ...])</u></strong>
+					<strong class="text-success"><u>=WORKDAY(start_date, days, [holidays])</u></strong>
 				</blockquote>
 
 				<p>
-					This operator is equivalent to using the concatenation operator (&) as shown below:
+					The WORKDAY function helps calculate dates by skipping weekends and, if provided, holidays.
+					It’s most often used for scheduling project due dates/deadlines and planning deliveries.
 				</p>
-
-				<div class="row">
-					<table class="table col-md-6">
-						<caption class="text-center">
-							Use the CONCAT() function to join text
-						</caption>
-						<tbody>
-							<tr>
-								<td>north <span class="text-muted"> // A1 </span></td>
-							</tr>
-							<tr>
-								<td>west <span class="text-muted"> // A2 </span></td>
-							</tr>
-							<tr>
-								<td> = CONCAT(A1,A2) <span class="text-muted">// Output: northwest</span> </td>
-							</tr>
-					</table>
-
-					<table class="table col-md-6">
-						<caption class="text-center">
-							Use the "concatentor" to also join text.
-						</caption>
-						<tbody>
-							<tr>
-								<td>north <span class="text-muted"> // A1 </span></td>
-							</tr>
-							<tr>
-								<td>west <span class="text-muted"> // A2 </span></td>
-							</tr>
-							<tr>
-								<td> = A1 & A2 <span class="text-muted">// Output: northwest</span> </td>
-							</tr>
-					</table>
-				</div>
 
 				<p>
-					You can use the CONCAT function to join text and numbers. For example,
-					a <a target="_blank"
-						href="https://support.google.com/manufacturers/answer/7421352?sjid=5194055017493135249-NC#zippy=%2Cfood-and-beverages%2Cvariants%2Celectronics">manufacturer
-						part number (MPN)</a>
-					is a unique alphanumeric code that manufacturers assign to their products for easy identification.
+					Suppose a task takes 5 working days and starts on Monday, May 5, 2025.
+
+					Using the formula
+					<br> ="5-May-2024"+5
+					<span class="ml-5 text-secondary"> // returns "10-May-2024"</span>
+					<br> outputs a day on a Saturday.
+					Since this result is a weekend and we want to count only weekdays, instead we'll use:
+					<br> =WORKDAY(TODAY(), 5)
+					<span class="ml-5 text-secondary"> // returns "12-May-2024"</span>
+					<br> which gives the date five working days from today, excluding weekends,
+					which will land on the 12th.
 				</p>
 
+				<p>
+					NOTE: The WORKDAY.INTL function lets you set which days are weekends and how many there are.
+				</p>
+
+				<p> The most common example of WORKDAY is looking at a WBS project schedule:</p>
 				<table class="table">
 					<caption class="text-center">
 
 					</caption>
 					<thead>
 						<tr>
-							<th scope="col">Unique Code</th>
-							<th scope="col">Unique Letters</th>
-							<th scope="col">Combination?</th>
+							<th>Task Name</th>
+							<th>Start Date</th>
+							<th>Duration <br>(business days)</th>
+							<th>Result</th>
+							<th>Function</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>00638</td>
-							<td>NIC</td>
-							<td> =CONCAT(A2,B2) <span class="text-muted">// Output: 00638NIC</span></td>
-						</tr>
+							<td>Paint Living Room</td>
+							<td>5-May-2024</td>
+							<td>3</td>
+							<td> 8-May-2024 </td>
+							<td> =WORKDAY("5-May-2024", 3) </td>
+						  </tr>
+						  <tr>
+							<td>Install New Flooring</td>
+							<td>9-May-2024</td>
+							<td>4</td>
+							<td>15-May-2024</td>
+							<td>=WORKDAY("9-May-2024", 4)</td>
+						  </tr>
+						  <tr>
+							<td>Assemble Furniture</td>
+							<td>16-May-2024</td>
+							<td>2</td>
+							<td>19-May-2024</td>
+							<td>=WORKDAY("16-May-2024", 2)</td>
+						  </tr>
+						  <tr>
+							<td>Install Lighting</td>
+							<td>20-May-2024</td>
+							<td>1</td>
+							<td>21-May-2024</td>
+							<td>=WORKDAY("20-May-2024", 1)</td>
+						  </tr>
+						  <tr>
+							<td>Clean & Organize</td>
+							<td>22-May-2024</td>
+							<td>2</td>
+							<td>24-May-2024</td>
+							<td>=WORKDAY("22-May-2024", 2)</td>
+						  </tr>
 				</table>
 
 				<p>
-					Note: The <u class="font-italic">CONCAT()</u> function
-					improves on older <u class="font-italic">CONCATENATE()</u> function by supporting ranges.
-					For example, to combine values from A1, A2, and A3, you can reference the range as =CONCAT(A1:A3)
+					As shown, we'll use the WORKDAY function to look at the dates the project tasks are due.
 				</p>
 
-				<p>
-					Use the TEXTJOIN function to join multiple values with a delimiter.
-					It does everything CONCAT does but also lets you add a delimiter and skip empty values.
-				</p>
-
-				<!-- CONCAT Accordion -->
+				<!-- WORKDAY Accordion -->
 				<section class="panel-group accordion">
 					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
 						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#CONCATEx1"
+							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#WORKDAYEx1"
 								class="panel-title">
-								CONCAT Example #1: Full Name
+								WORKDAY Example #1: PTO LEAVE
 							</h4>
 						</div>
-						<div id="CONCATEx1" class="collapse">
+						<div id="WORKDAYEx1" class="collapse">
 							<div class="panel-body">
 								<p>
-									Find the full name:
+									Suppose you need to find out when an employee will return to work
+									7 business days after today.
 									<br>
 								</p>
 
@@ -1031,22 +407,21 @@
 									</caption>
 									<thead>
 										<tr>
-											<th scope="col">First Name <span class="text-muted">// A1</span></th>
-											<th scope="col">Last Name</th>
-											<th scope="col">Full Name</th>
+											<th scope="col">Today <span class="text-muted">// A1</span></th>
+											<th scope="col">Return Date</th>
+
 										</tr>
 									</thead>
 									<tbody>
 										<tr>
-											<td>Jane</td>
-											<td>Doe</td>
+											<td>TODAY()</td>
 											<td> ??? <span class="text-muted">// Output: Last, First</span></td>
 										</tr>
 								</table>
 
 								<u>Solution:</u>
 								<div class="col-md-6 alert alert-danger" role="alert">
-									= CONCAT(B2, ", ", A2) <span class="text-muted">// Output: </span>
+									=WORKDAY(TODAY(), 7) <span class="text-muted">// Output: </span>
 								</div>
 
 							</div> <!-- End of Panel-Body -->
@@ -2444,436 +1819,49 @@
 							</div>
 						</div> <!-- End of Panel-Body -->
 					</div> <!-- End of Q4 -->
-		</section>
-		<!-- End of IF Accordion -->
+				</section>
+				<!-- End of IF Accordion -->
 
-		<hr />
-		</section>
-
-
-
-		<!-- IFS Function -->
-		<h3 id="topicG" class="m-0 d-inline">G) IFS Function | </h3>
-		<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
-			href="https://support.microsoft.com/en-us/office/ifs-function-36329a26-37b2-467c-972b-4a39bd951d45">
-			Reference guide
-		</a>
-
-		<section>
-			<h4>
-				Unlike the IF function (which evaluates a single condition), <br>
-				the IFS function checks multiple conditions and returns the first condition that is TRUE. <br>
-				<br> The IFS function is a simpler and easier way to handle multiple conditions without using nested
-				IF
-				statements
-				thereby avoiding "if-else hell".
-			</h4>
-
-			<p>
-				The IFS function checks test/value pairs and returns a value when the respective condition is true.
-			</p>
-			<span>
-				Function Syntax:
-			</span>
-
-			<blockquote class="mt-1 border-success">
-				<strong class="text-success"><u>
-						IFS( <br>
-						<span class="ml-5">test1,</span> <br>
-						<span class="ml-5">value-if-true1,</span>
-						<br>
-						<span class="ml-5">[test2, value-if-true2],</span> <span class="ml-3 text-muted"> // pair 2
-						</span> <br>
-						<span class="ml-5">[test3, value-if-true3],</span> <span class="ml-3 text-muted"> // pair 3
-						</span> <br>
-						<span class="ml-5">...</span> <br>
-						)
-					</u></strong>
-			</blockquote>
-
-			<span>
-				It is typed =IFS and can potentially take up to 127 conditions! <br />
-				<ul>
-					<li> <u>test1</u> is the first condition/test to look for,
-						with the result always evaluating to either TRUE or FALSE</li>
-					<li> <u>[value_if_true1]</u> is the returned result when test1 returns <u> TRUE. </u> </li>
-					<li> <u>[test2, value-if-true2]</u> - [Optional] Second test/value pair. </li>
-				</ul>
-			</span>
-
-			<blockquote class="border-danger">
-				<strong><u>NOTE:</u></strong>
-				If no TRUE conditions are found, this function returns #N/A error.
-			</blockquote>
-
-
-			<p>
-				Please look at the following example from Microsofts site:
-			</p>
-
-			<div class="text-center mb-3">
-				<img class="text-align: center;" src="./functions-img/1.jpg" />
-			</div>
-
-			<hr style="border-top: dotted 1px;" />
-
-			<p>Let's take a look at another example: </p>
-			<div class="row">
-				<table class="table col-md-6">
-
-					<caption class="">
-						Type in todays weather
-					</caption>
-					<thead>
-						<tr>
-							<th scope="col">Enter today's weather in cell A2 in Celsius:</th>
-
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><span class="bg-dark text-light">-</span></td>
-						</tr>
-
-					</tbody>
-				</table>
-
-				<table class="table col-md-6">
-					<caption style="width: 200%">
-						Potential Outputs: <br>"Hot", "Warm", "Cool", "Cold" or "Freezing"
-					</caption>
-					<tbody>
-						<tr>
-							<td>Output: </td>
-						</tr>
-						<tr>
-							<td> ??? <span class="text-muted"></span> </td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
-			<p> Goal: Categorize temperature from cell A2: </p>
-			<div class="col-md-10 offset-md-1 alert alert-secondary" role="alert">
-				<!-- =IFS( A2>30, "Hot", A2>=25, "Warm", A2>=15, "Cool", A2>=0, "Cold", A2 < 0, "Freezing" )   -->
-				=IFS( <br>
-				<span class="ml-5">A2>30, "Hot",</span> <span class="ml-5 text-muted"> // pair 1
-				</span><br>
-				<span class="ml-5">A2>=25, "Warm",</span> <span class="ml-4 text-muted"> // pair 2
-				</span><br>
-				<span class="ml-5">A2>=15, "Cool",</span> <span class="ml-4 text-muted"> // pair 3
-				</span><br>
-				<span class="ml-5">A2>=0, "Cold",</span> <span class="ml-5 text-muted"> // pair 4
-				</span><br>
-				<span class="ml-5">A2 < 0, "Freezing" </span> <span class="ml-4 text-muted"> // pair 5
-						</span><br>
-						)
-			</div>
-
-			<p class="mb-0">
-				Note that although there are 5 pairs, there are 10 arguments.
-			</p>
-
-
-
-			<p>
-				Let's take a look at a few examples:
-			</p>
-
-			<!-- IFS Accodion -->
-			<section class="panel-group accordion">
-				<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-					<div class="panel-heading">
-						<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFSEx1" class="panel-title">
-							IFS() Example #1: Age Group
-						</h4>
-					</div>
-					<div id="IFSEx1" class="collapse">
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-md-6 text-center">
-									<table class="w-50" style="border-collapse: collapse; margin: auto; display: block">
-										<thead>
-											<tr>
-												<th>Type in your age:</th>
-
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>- [INPUT] </td>
-
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-								<div class="col-md-6">
-									<p class="text-center">
-										Label age in cell A2 into a life stage:
-									<ul>
-										<li> Below 13 -> "Child" </li>
-										<li> 13–19 -> "Teen" </li>
-										<li> 20–64 -> "Adult" </li>
-										<li> 65+ -> "Senior" </li>
-									</ul>
-
-									</p>
-
-									<div class="text-center">
-										<button class="btn btn-primary" type="button" data-toggle="collapse"
-											data-target="#ifsQ1" aria-expanded="false" aria-controls="">
-											Show Answer
-										</button>
-
-										<div class="mt-3 collapse" id="ifsQ1">
-											<div class="col-md-12 offset-md-0 alert alert-danger" role="alert">
-												=IFS(A2 < 13, "Child" , A2 < 20, "Teen" , A2 < 65, "Adult" , A2>=65,
-													"Senior")
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> <!-- End of panel-body -->
-					</div>
-				</div>
-				<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-					<div class="panel-heading">
-						<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFSEx2" class="panel-title">
-							IFS Example #2: Battery Level Indicator
-						</h4>
-					</div>
-					<div id="IFSEx2" class="collapse">
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-md-6 text-center">
-									<table class="w-75" style="border-collapse: collapse; margin: auto; display: block">
-										<thead>
-											<tr>
-												<th>Type in your phones battery level:</th>
-
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>- [INPUT] </td>
-
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-								<div class="col-md-6">
-									<p class="text-center">
-										Label age in cell A2 into a battery stage:
-									<ul>
-										<li> 70% + -> High </li>
-										<li> 21 – 69% -> Medium </li>
-										<li> 1–20% -> Low </li>
-										<li> 0% -> Empty </li>
-									</ul>
-
-									</p>
-
-									<div class="text-center">
-										<button class="btn btn-primary" type="button" data-toggle="collapse"
-											data-target="#ifsQ2" aria-expanded="false" aria-controls="">
-											Show Answer
-										</button>
-
-										<div class="mt-3 collapse" id="ifsQ2">
-											<div class="col-md-12 offset-md-0 alert alert-danger" role="alert">
-												=IFS(A2>70, "High", A2>20, "Medium", A2>1, "Low", A2=0, "Empty")
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> <!-- End of panel-body -->
-
-					</div>
-				</div> <!-- End of Q2 -->
-				<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-					<div class="panel-heading">
-						<h4 data-toggle="collapse" data-parent="#accordion" data-target="#IFSEx3" class="panel-title">
-							IFS Example #3: Customer Satisfaction Rating
-						</h4>
-					</div>
-					<div id="IFSEx3" class="collapse">
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-md-6 text-center">
-									<table class="w-75" style="border-collapse: collapse; margin: auto; display: block">
-										<thead>
-											<tr>
-												<th>Type in the survey score from a range of 1-3:</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>- [INPUT] </td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-
-								<div class="col-md-6">
-									<p class="text-center">
-										Evaluate the survey score as:
-									<ul>
-										<li> 3 -> Great </li>
-										<li> 2 -> Neutral </li>
-										<li> 1 -> Poor </li>
-									</ul>
-									</p>
-
-									<div class="text-center">
-										<button class="btn btn-primary" type="button" data-toggle="collapse"
-											data-target="#ifsQ3" aria-expanded="false" aria-controls="">
-											Show Answer
-										</button>
-
-										<div class="mt-3 collapse" id="ifsQ3">
-											<div class="col-md-12 offset-md-0 alert alert-danger" role="alert">
-												=IFS(A2=3, "Excellent", A2=2, "Neutral", A2=1, "Poor")
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div> <!-- End of panel-body -->
-					</div>
-				</div> <!-- End of Q3-->
+				<hr />
 			</section>
-			<!-- End of SUM Accordion -->
 
-			<br />
+
+
+
+			<h3 id="credits">G) Sources and Credits</h3>
+			<blockquote class="border-success">
+				<p>
+					To learn more, use the following reference links to these reference articles:
+				</p>
+			</blockquote>
+			<h4>Reference Links</h4>
+			<ul>
+				<li>
+					<a target="_blank"
+						href="https://support.microsoft.com/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">Microsoft</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://support.google.com/docs/table/25273?hl=en">Google</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://exceljet.net/functions">ExcelJet</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://www.w3schools.com/excel/">w3schools</a>
+				</li>
+
+			</ul>
 			<hr />
-		</section>
-
-
-
-		<!-- SWITCH Function -->
-		<h3 id="topicH" class="m-0 d-inline">H) SWITCH Function | </h3>
-		<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
-			href="https://support.microsoft.com/en-us/office/switch-function-47ab33c0-28ce-4530-8a45-d532ec4aa25e">
-			Reference guide
-		</a>
-
-		<section>
-			<h4>
-				Like IFS, the SWITCH function checks multiple conditions without needing several nested IF
-				statements.
-			</h4>
-
-			<span>
-				Function Syntax:
-			</span>
-
-			<blockquote class="mt-1 border-success">
-				<strong class="text-success"><u>
-						SWITCH <br>
-						<span class="ml-5">Value_to_switch</span> <br>
-						<span class="ml-5">case1,</span> <br>
-						<span class="ml-5">value1,</span> <br>
-						<span class="ml-5">[case2, value2],</span> <span class="ml-3 text-muted"> // pair 2 </span>
-						<br>
-						<span class="ml-5">[case3, value3],</span> <span class="ml-3 text-muted"> // pair 3 </span>
-						<br>
-						<span class="ml-5">...</span> <br>
-						<span class="ml-5">[default]</span> <span class="ml-3 text-muted"> // Optional </span> <br>
-						)
-					</u></strong>
-			</blockquote>
-
-			<span>
-				It is typed =SWITCH and can handle up to 126 case/value pairs <br />
-				<ul>
-					<li> <u>Value_to_switch</u>
-						is the expression to match against.
-						It takes in any valid input values.
-					<li> <u>case1</u> is the first case to be checked against <u>value_to_switch.</u> </li>
-					<li> <u>value1</u> is the returned result when case1 returns <u> TRUE. </u> </li>
-					<li> <u>[case2, value2]</u> - [Optional] Additional case/value pair if the first one doesn’t
-						match
-						the value_to_switch.
-					</li>
-					<li> <u>[default]</u> - [optional] The default value to use when no match is found (specified as
-						the
-						last parameter). </li>
-				</ul>
-			</span>
-
-
-
-			<p>
-				Please look at the following example from Microsofts site:
+			<p class="append-bottom">
+				<a href="../../index.html">
+					<span>Back to www.its.raza.com</span>
+				</a>
 			</p>
-
-			<div class="text-center mb-3">
-				<img class="text-align: center;"
-					src="https://support.microsoft.com/images/en-us/4b6126f8-3a63-4a14-8699-6cf57712511e" />
-			</div>
-
-			<hr style="border-top: dotted 1px;" />
-
-			<blockquote class="border-danger">
-				<strong><u>NOTE:</u></strong>
-				SWITCH is limited to exact matching.
-				It is not possible to use operators like greater than (>) or less than (<) with the standard syntax.
-					<br> <br>
-					While IFS is the better solution, you can still work around this limitation by creating a
-					formula
-					that checks against TRUE, like this:
-			</blockquote>
-
-			<p>
-				=SWITCH(TRUE,A1>=1000,"Gold",A1>=500,"Silver","Bronze")
-				<span class="ml-3 text-muted"> // Courtesy of Exceljet. </span> <br>
-			</p>
-
-		</section>
-		<!-- End of SUM Accordion -->
-
-		<br />
-		<hr />
-		</section>
-
-		<h3 id="credits">G) Sources and Credits</h3>
-		<blockquote class="border-success">
-			<p>
-				To learn more, use the following reference links to these reference articles:
-			</p>
-		</blockquote>
-		<h4>Reference Links</h4>
-		<ul>
-			<li>
-				<a target="_blank"
-					href="https://support.microsoft.com/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188">Microsoft</a>
-			</li>
-			<li>
-				<a target="_blank" href="https://support.google.com/docs/table/25273?hl=en">Google</a>
-			</li>
-			<li>
-				<a target="_blank" href="https://exceljet.net/functions">ExcelJet</a>
-			</li>
-			<li>
-				<a target="_blank" href="https://www.w3schools.com/excel/">w3schools</a>
-			</li>
-
-		</ul>
-		<hr />
-		<p class="append-bottom">
-			<a href="../../index.html">
-				<span>Back to www.its.raza.com</span>
+			<a href="#">
+				<i class="fa fa-arrow-circle-o-up"></i>
+				Back to Top
 			</a>
-		</p>
-		<a href="#">
-			<i class="fa fa-arrow-circle-o-up"></i>
-			Back to Top
-		</a>
-		<!-- <hr class="space" /> -->
+			<!-- <hr class="space" /> -->
 		</div>
 	</main>
 	<!-- CONTENT -->
