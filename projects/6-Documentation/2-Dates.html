@@ -434,317 +434,27 @@
 				<hr />
 			</section>
 
-			<!-- COUNTIF Function -->
-			<h3 id="topicD" class="m-0 d-inline">D) COUNTIF Function | </h3>
+			<!-- Finding the Project Anniversary -->
+			<h3 id="topicD" class="m-0 d-inline">D) Finding the Project Anniversary | </h3>
 			<a class="ml-1 d-inline" style="vertical-align: baseline;" target="_blank"
-				href="https://support.microsoft.com/en-us/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34">
+				href="https://exceljet.net/functions/date-function">
 				Reference guide
 			</a>
 
 			<section>
 				<h5>
-					The COUNTIF function is a built-in "statistical" function
-					that counts the number of cells meeting a given criterion/condition.
-					The function returns a number representing cells counted
+					[TBD]	
 				</h5>
 
 				<span>
-					Function Syntax:
+					Function Syntax: [TBD]
 				</span>
 
 				<blockquote class="mt-1 border-success">
-					<strong class="text-success"><u>=COUNTIF(range, criterion)</u></strong>
+					<strong class="text-success"><u>[TBD]</u></strong>
 				</blockquote>
 
-				<span>
-					It is typed =COUNTIF which has two parts: <br />
-					<ul>
-						<li> the <u>range</u> of cells to count (i.e. where do you want to look) </li>
-						<li> the <u>criteria/condition</u> for what do you want to look for </li>
-					</ul>
-				</span>
-
-				<p>As an example, let's take a look at a grocery list of items</p>
-				<table class="table">
-					<caption class="text-center">
-
-					</caption>
-					<thead>
-						<tr>
-							<th scope="col">Grocery List</th>
-							<td scope="col">Apples</td>
-							<td scope="col">Oranges</td>
-							<td scope="col">Cookies</td>
-							<td scope="col">Apples</td>
-							<td scope="col">Bananas</td>
-							<td scope="col">Milk</td>
-						</tr>
-					</thead>
-				</table>
-
-				<p> Suppose we want to find the number of times the word "Apples" show up.
-					We can use the COUNTIF function
-				</p>
-				<p>
-					<i class="text-danger"> = COUNTIF(B1:G1, "Apples")</i>
-					<span class="text-muted">// Output: 2</span>
-				</p>
-
-				<blockquote class="border-danger">
-					<strong><u>NOTE:</u></strong>
-					Since the function criteria requires an exact match, we cannot use the singular form "Apple"
-					as there are no exact matches available.
-				</blockquote>
-
-				<blockquote class="border-success">
-					<strong class="text-secondary"><i>Spelling Case doesn't matter but actual characters used
-							does.</i></strong>
-				</blockquote>
-
-				<!-- CountIF Accordion -->
-				<section class="panel-group accordion">
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#countIfEx1"
-								class="panel-title">
-								COUNTIF Example #1: Movies made by James Camerons
-							</h4>
-						</div>
-						<div id="countIfEx1" class="collapse">
-							<div class="panel-body">
-								<p>
-									Using our earlier example with the table of movies,
-									find out how many films were made by James Cameron
-
-								</p>
-								<u>Solution:</u>
-								<div class="col-md-6 alert alert-danger" role="alert">
-									=COUNTIF(C2:C12, "James Cameron") <span class="text-muted">// Output: 2</span>
-								</div>
-							</div> <!-- End of Panel-Body -->
-						</div>
-					</div>
-					<div class="panel panel-default active" data-vp-animate="fadeIn">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#countIfExample2"
-								class="panel-title">
-								COUNTIF Example #2: Count of Assigned Tasks
-							</h4>
-						</div>
-						<div id="countIfExample2" class="collapse in">
-							<div class="panel-body">
-								<p>
-									Given a list of tasks assigned to various individuals,
-									find out how many tasks are assigned to Danny Brown:
-								</p>
-
-								<div class="row">
-									<div class="col-md-4">
-										<table class="table table-responsive" border="1">
-											<caption class="text-center">
-												<a
-													href="https://www.ablebits.com/office-addins-blog/excel-countif-function-examples/#countif-text-partial">
-													Ablebits Example
-												</a>
-
-											</caption>
-											<thead>
-												<tr>
-													<th>Task</th>
-													<th>Assigned To</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Task 1:</td>
-													<td>Peter Smith</td>
-												</tr>
-												<tr>
-													<td>Task 2:</td>
-													<td class="bg-success">Danny Brown</td>
-												</tr>
-												<tr>
-													<td>Task 3:</td>
-													<td>Alex Day</td>
-												</tr>
-												<tr>
-													<td>Task 4:</td>
-													<td>Sam Ramirez</td>
-												</tr>
-												<tr>
-													<td>Task 5:</td>
-													<td class="bg-success">D. Brown</td>
-												</tr>
-												<tr>
-													<td>Task 6:</td>
-													<td>Alexander Day</td>
-												</tr>
-												<tr>
-													<td>Task 7:</td>
-													<td class="bg-success">Daniel Brown</td>
-												</tr>
-												<tr>
-													<td>Task 8:</td>
-													<td>P. Smith</td>
-												</tr>
-												<tr>
-													<td>Task 9:</td>
-													<td class="bg-success">Mr. Brown</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<div class="col-md-8">
-										<p>
-											<u>Solution:</u> <br />
-											The asterisk (*) is used to find cells with any characters before or after,
-											as shown in the example.
-										</p>
-										<p>
-											Since Danny's name is written in various ways,
-											we can use "Brown" as the search criteria:
-										</p>
-
-										<p>
-										<div class="alert alert-success">
-											=COUNTIF(D2:D10, "*Brown*")
-											<span class="text-muted">// Output: 4</span>
-										</div>
-										</p>
-									</div>
-								</div>
-							</div> <!-- End of Panel-Body-->
-						</div>
-					</div>
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="100">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#countIfEx3"
-								class="panel-title">
-								COUNTIF Example #3: Years of Service
-							</h4>
-						</div>
-						<div id="countIfEx3" class="collapse">
-							<div class="panel-body">
-								<p>
-									Use the COUNTIF function in Excel to count the number of
-									employees with Years
-									of Service over 20.
-									<br>
-								</p>
-								<table border="1" style=" margin: auto;">
-									<thead>
-										<tr>
-											<th>Employee</th>
-											<th>Hire Date</th>
-											<th>Years of Service</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Claire Watson</td>
-											<td>2/21/2010</td>
-											<td>14.7</td>
-										</tr>
-										<tr>
-											<td>Paulette Diaz</td>
-											<td>9/16/2011</td>
-											<td>13.1</td>
-										</tr>
-										<tr>
-											<td>Gwen Patrick</td>
-											<td>7/8/2000</td>
-											<td>24.3</td>
-										</tr>
-										<tr>
-											<td>Cecelia Nash</td>
-											<td>4/28/2001</td>
-											<td>23.5</td>
-										</tr>
-										<tr>
-											<td>Terrance Reyes</td>
-											<td>3/21/2004</td>
-											<td>20.6</td>
-										</tr>
-									</tbody>
-								</table>
-
-								<div class="col-md-6 offset-md-3 alert alert-danger" role="alert">
-									Solution: =COUNTIF(C2:C6, ">20")
-									<span class="text-muted">// Output: 3</span>
-								</div>
-							</div> <!-- End of Panel-Body-->
-						</div>
-					</div>
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#countIfEx4"
-								class="panel-title">
-								COUNTIF Example #4: Checking customers' dues.
-							</h4>
-						</div>
-						<div id="countIfEx4" class="collapse">
-							<div class="panel-body">
-								<p>
-									As part of the hotel staff, you are responsible for checking customers' dues.
-									<br>
-									How many guests have a balance exceeding $1,300 based on the records?
-
-								<table border="1" style="border-collapse: collapse; margin: auto; text-align: left;">
-									<thead>
-										<tr>
-											<th>Name </th>
-											<th>Arrival Date</th>
-											<th>Balance</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Austin</td>
-											<td>06-16</td>
-											<td>$640</td>
-										</tr>
-										<tr>
-											<td>Denton</td>
-											<td>06-14</td>
-											<td>$480</td>
-										</tr>
-										<tr>
-											<td>Hickman</td>
-											<td>06-12</td>
-											<td>$760</td>
-										</tr>
-										<tr>
-											<td>Littleton</td>
-											<td>06-15</td>
-											<td>$1,340</td>
-										</tr>
-										<tr>
-											<td>Shah</td>
-											<td>06-12</td>
-											<td>$1,200</td>
-										</tr>
-										<tr>
-											<td>Swatz</td>
-											<td>06-18</td>
-											<td>$1,100</td>
-										</tr>
-										<tr>
-											<td>Whitson</td>
-											<td>06-14</td>
-											<td>$960</td>
-										</tr>
-									</tbody>
-								</table>
-
-								<u class="text-center d-block m-auto">Solution: </u>
-								<div class="col-md-6 offset-md-3 alert alert-danger" role="alert">
-									=COUNTIF(C2:C7, ">1300") <span class="text-muted">// Output: 1</span>
-								</div>
-								</p>
-							</div> <!-- End of Panel-Body -->
-						</div>
-					</div>
-
+				
 				</section>
 				<!-- End of CountIF Accordion -->
 
@@ -760,8 +470,7 @@
 
 			<section>
 				<h5>
-					The SUMIF function returns the sum of values in a range
-					that fit in a group/condition a.k.a. a conditional sum.
+					The DATEDIF function returns the number of days, months, <strong><u>OR</u></strong> years between two dates.
 				</h5>
 
 				<span>
@@ -769,34 +478,37 @@
 				</span>
 
 				<blockquote class="mt-1 border-success">
-					<strong class="text-success"><u>=SUMIF(range, criteria, [sum_range])</u></strong>
+					<strong class="text-success"><u>=DATEDIF(start_date,end_date,unit)</u></strong>
 				</blockquote>
 
 				<span>
-					It is typed =SUMIF and takes in 3 arguments: <br />
+					It is typed =DATEDIF and takes in 3 arguments: <br />
 					<ul>
-						<li> the <u>range</u> of cells that the criteria is applied to. </li>
-						<li> the specific <u>criteria</u> that we want to look for
-							<u>in the previously defined range.</u>
+						<li> the <u>start_date</u> represents the first, or starting date of a given period. </li>
+						<li> the <u>end_date</u> represents the last, or ending, date of the period.
 						</li>
-						<li> the actual <u>range</u> of cells to add </li>
+						<li> the <u>unit</u> indicates the time unit: years, months, or days. </li>
 					</ul>
 				</span>
 
 				<p>
-					The sum range should be the same size and shape as range.
-					<br /> NOTE: Sorting the data by any column will not make a difference to the final output.
+					
+					<br /> NOTE:  
+					"If you want to find the number of days between two dates, simply subtract the later date from the earlier date. 
+					This works because dates are stored as numbers in Excel." 
+					- <a href = "https://support.microsoft.com/en-us/office/datedif-function-25dba1a4-2812-480b-84dd-8b32a451b35c">Source from Microsoft</a>
 				</p>
-
+				<!-- 
+				
 				<p>
 					Let's take a look at an example:
 				</p>
 				<table border="1" style="border-collapse: collapse; margin: auto; text-align: center;">
 					<thead>
 						<tr>
-							<th>Quarter <span class="text-muted"> // A1 </span></th>
-							<th>Product</th>
-							<th>Total Sales</th>
+							<th>Start Date <span class="text-muted"> // A1 </span></th>
+							<th>End Date</th>
+							<th>Duration</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -892,385 +604,7 @@
 					=SUMIF(A2:A13, "Q2", C2:C13) <span class="text-muted">// Output: </span>
 				</div>
 
-				<!-- SUMIF Accordion -->
-				<section class="panel-group accordion">
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMIFEx1"
-								class="panel-title">
-								SUMIF Example #1: Find Laptop Sales
-							</h4>
-						</div>
-						<div id="SUMIFEx1" class="collapse">
-							<div class="panel-body">
-								<p>
-									Using our earlier example,
-									find the sum of total Laptop sales.
-									<br>
-								</p>
-								<u>Solution:</u>
-								<div class="col-md-6 alert alert-danger" role="alert">
-									=SUMIF(B2:B13, "Laptops", C2:C13) <span class="text-muted">// Output: </span>
-								</div>
-
-							</div> <!-- End of Panel-Body -->
-						</div>
-					</div>
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMIFEx2"
-								class="panel-title">
-								SUMIF Example #2: Conditional Sum of Box Office Earnings for James Cameron.
-							</h4>
-						</div>
-						<div id="SUMIFEx2" class="collapse">
-							<div class="panel-body">
-								<p>
-									Using the table of movies in SUM() Example #2,
-									find the conditional sum of box office earnings for James Cameron.
-									<br>
-								</p>
-								<u>Solution:</u>
-								<div class="col-md-6 alert alert-danger" role="alert">
-									=SUMIF(C2:C12, "James Cameron", D2:C12) <span class="text-muted">// Output: </span>
-								</div>
-
-							</div> <!-- End of Panel-Body -->
-						</div>
-					</div>
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMIFEx3"
-								class="panel-title">
-								SUMIF Example #3: Sports Registration Summary
-							</h4>
-						</div>
-						<div id="SUMIFEx3" class="collapse">
-							<div class="panel-body">
-								<p>
-									Suppose we have a list of people with their registration fees:
-									<br>
-								</p>
-
-								<table border="1">
-									<thead>
-										<tr>
-											<th>Receipt # <span class="text-muted">// A1</span></th>
-											<th>Member</th>
-											<th>Sport</th>
-											<th>Registrations</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Cook, Kevin</td>
-											<td>Football</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Flint, Brian</td>
-											<td>Baseball</td>
-											<td>$40.00</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Miller, Susan</td>
-											<td>Volleyball</td>
-											<td>$25.00</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>Miller, Susan</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>Wakefield, Randy</td>
-											<td>Basketball</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>6</td>
-											<td>Cook, Kevin</td>
-											<td>Volleyball</td>
-											<td>$25.00</td>
-										</tr>
-										<tr>
-											<td>7</td>
-											<td>Cook, Kevin</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-										<tr>
-											<td>8</td>
-											<td>Shea, Mark</td>
-											<td>Football</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>9</td>
-											<td>Christianson, Thor</td>
-											<td>Basketball</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>10</td>
-											<td>Bellows, Sam</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-										<tr>
-											<td>11</td>
-											<td>Bellows, Sam</td>
-											<td>Volleyball</td>
-											<td>$25.00</td>
-										</tr>
-										<tr>
-											<td>12</td>
-											<td>Flint, Brian</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-										<tr>
-											<td>13</td>
-											<td>Shea, Mark</td>
-											<td>Volleyball</td>
-											<td>$25.00</td>
-										</tr>
-										<tr>
-											<td>14</td>
-											<td>Sloat, Randy</td>
-											<td>Basketball</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>15</td>
-											<td>Christensen, Thor</td>
-											<td>Baseball</td>
-											<td>$40.00</td>
-										</tr>
-										<tr>
-											<td>16</td>
-											<td>Smith, Sheila</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-										<tr>
-											<td>17</td>
-											<td>Smith, Sheila</td>
-											<td>Volleyball</td>
-											<td>$25.00</td>
-										</tr>
-										<tr>
-											<td>18</td>
-											<td>Gates, Greg</td>
-											<td>Football</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>19</td>
-											<td>Gates, Greg</td>
-											<td>Volleyball</td>
-											<td>$25.00</td>
-										</tr>
-										<tr>
-											<td>20</td>
-											<td>Moorefield, John</td>
-											<td>Baseball</td>
-											<td>$40.00</td>
-										</tr>
-										<tr>
-											<td>21</td>
-											<td>Lopez, Cindy</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-										<tr>
-											<td>22</td>
-											<td>Guerrero, Maria</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-										<tr>
-											<td>23</td>
-											<td>Sloat, Randy</td>
-											<td>Football</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>24</td>
-											<td>Worldly, Diane</td>
-											<td>Volleyball</td>
-											<td>$25.00</td>
-										</tr>
-										<tr>
-											<td>25</td>
-											<td>Grey, John</td>
-											<td>Football</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>26</td>
-											<td>Grey, John</td>
-											<td>Baseball</td>
-											<td>$40.00</td>
-										</tr>
-										<tr>
-											<td>27</td>
-											<td>Flint, Brian</td>
-											<td>Basketball</td>
-											<td>$50.00</td>
-										</tr>
-										<tr>
-											<td>28</td>
-											<td>Bower, Doug</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-										<tr>
-											<td>29</td>
-											<td>Long, Rhonda</td>
-											<td>Volleyball</td>
-											<td>$25.00</td>
-										</tr>
-										<tr>
-											<td>30</td>
-											<td>Christensen, Thor</td>
-											<td>Tennis</td>
-											<td>$30.00</td>
-										</tr>
-									</tbody>
-								</table>
-
-								<p>
-									How much money was generated for the Tennis sport?
-									<br>
-								</p>
-
-								<u>Solution:</u>
-								<div class="col-md-6 alert alert-danger" role="alert">
-									=SUMIF(C2:C31, "Tennis", D2:D31) <span class="text-muted">// Output: </span>
-								</div>
-
-							</div> <!-- End of Panel-Body -->
-						</div>
-					</div>
-					<div class="panel panel-default" data-vp-animate="fadeIn" data-vp-delay="200">
-						<div class="panel-heading">
-							<h4 data-toggle="collapse" data-parent="#accordion" data-target="#SUMIFEx4"
-								class="panel-title">
-								SUMIF Example #4: Employee Table
-							</h4>
-						</div>
-						<div id="SUMIFEx4" class="collapse">
-							<div class="panel-body">
-								<p>
-									Below we have a list of employees:
-									<br>
-								</p>
-								<table>
-									<thead>
-										<tr>
-											<th>Employee Name <span class="text-muted">// A1</span></th>
-											<th>Status</th>
-											<th>Department</th>
-											<th>Hire Date</th>
-											<th>Salary</th>
-											<th>Job Rating</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Abbott, James</td>
-											<td>Contract</td>
-											<td>Quality Control</td>
-											<td>24-Jul-01</td>
-											<td>77,700</td>
-											<td>5</td>
-										</tr>
-										<tr>
-											<td>Adams, David</td>
-											<td>Full Time</td>
-											<td>Quality Control</td>
-											<td>1-Oct-13</td>
-											<td>109,640</td>
-											<td>5</td>
-										</tr>
-										<tr>
-											<td>Adkins, Michael</td>
-											<td>Full Time</td>
-											<td>Manufacturing</td>
-											<td>16-Apr-04</td>
-											<td>81,640</td>
-											<td>4</td>
-										</tr>
-										<tr>
-											<td>Aguilar, Kevin</td>
-											<td>Part Time</td>
-											<td>Operations</td>
-											<td>12-Feb-06</td>
-											<td>65,210</td>
-											<td>5</td>
-										</tr>
-										<tr>
-											<td>Alexander, Charles</td>
-											<td>Full Time</td>
-											<td>Project & Contract Services</td>
-											<td>14-Feb-14</td>
-											<td>85,620</td>
-											<td>5</td>
-										</tr>
-										<tr>
-											<td>Alvarado, Sonia</td>
-											<td>Contract</td>
-											<td>Operations</td>
-											<td>2-Jul-01</td>
-											<td>64,960</td>
-											<td>4</td>
-										</tr>
-										<tr>
-											<td>Anderson, Teason</td>
-											<td>Contract</td>
-											<td>Quality Assurance</td>
-											<td>16-Mar-97</td>
-											<td>87,290</td>
-											<td>3</td>
-										</tr>
-										<tr>
-											<td>Anthony, Robert</td>
-											<td>Contract</td>
-											<td>Quality Control</td>
-											<td>13-Aug-13</td>
-											<td>42,490</td>
-											<td>5</td>
-										</tr>
-										<tr>
-											<td>Atkinson, Danielle</td>
-											<td>Full Time</td>
-											<td>Process Development</td>
-											<td>22-Aug-09</td>
-											<td>114,750</td>
-											<td>3</td>
-										</tr>
-									</tbody>
-								</table>
-
-								<p>
-									What is the sum of salary if Status is Contract?
-								</p>
-								<u>Solution:</u>
-								<div class="col-md-6 alert alert-danger" role="alert">
-									=SUMIF(B2:B10, "Contract", E2:E10) <span class="text-muted">// Output: </span>
-								</div>
-
-							</div> <!-- End of Panel-Body -->
-						</div>
-					</div>
-				</section>
-				<!-- End of SUMIF Accordion -->
+				-->
 				<hr />
 			</section>
 
