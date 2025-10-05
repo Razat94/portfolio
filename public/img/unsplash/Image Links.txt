@@ -25,3 +25,6 @@ Wireframing:
 
 Statement:
 Pictures provided by unsplash.com, "The internet’s source of freely-usable images."
+
+Book Image:
+https://unsplash.com/photos/view-of-floating-open-book-from-stacked-books-in-library-HH4WBGNyltc
