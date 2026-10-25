@@ -1,5 +1,6 @@
-Welcome! 
-Below is a list of common acronyms designed to test your memory and reinforce your understanding of key terms. To help you see how related concepts connect and compare, some terms have been grouped into categories.
+Know Your Acronyms!
+ 
+Below is a list of common acronyms designed to test your memory and reinforce your knowledge. To help you see how related concepts connect and compare, some terms have been grouped into categories.
 
 Read through each acronym and try to recall what it stands for before checking the notes or looking up the answer. 
 
@@ -20,6 +21,8 @@ ALE | Annual Loss Expectancy
 API | Application Programming Interface
 
 APT | Advanced Persistent Threat
+
+ARO | Annualized Rate of Occurrence
 
 ARP | Address Resolution Protocol
 
@@ -119,6 +122,8 @@ PKI | Public Key Infrastructure
 RADIUS | Remote Authentication Dial-in User Service
 
 RFID | Radio-frequency Identification
+
+RPO  | Recovery Point Objective
 
 SAE | Simultaneous Authentication of Equals
 
