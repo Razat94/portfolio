@@ -1,0 +1,166 @@
+Welcome! 
+Below is a list of common acronyms designed to test your memory and reinforce your understanding of key terms. To help you see how related concepts connect and compare, some terms have been grouped into categories.
+
+Read through each acronym and try to recall what it stands for before checking the notes or looking up the answer. 
+
+
+
+=== === Never give up. Trust your instincts! === ==
+
+AAA | Authentication, Authorization, Accounting
+
+ACL | Access Control List
+
+AES | Advanced Encryption Standard
+
+AIS | Automated Indicator Sharing
+
+ALE | Annual Loss Expectancy
+
+API | Application Programming Interface
+
+APT | Advanced Persistent Threat
+
+ARP | Address Resolution Protocol
+
+BIA | Business Impact Analysis
+
+## Category
+BYOD | Bring Your Own Device 
+CYOD | Choose Your Own Device
+COPE | Corporate-Owned, Personally Enabled
+
+CA | Certificate Authority
+
+## Category
+CASB | Cloud Access Security Broker
+CSP | Cloud Service Provider
+
+CIA Triad | Confidentiality, Integrity, Availability
+
+CVE | Common Vulnerabilities and Exposures
+
+DHCP | Dynamic Host Configuration Protocol
+
+## Category
+DKIM | DomainKeys Identified Mail
+SPF | Sender Policy Framework
+DMARC | Domain-based Message Authentication, Reporting, and Conformance
+
+DLL | Dynamic Link Library
+
+DLP | Data Loss Prevention
+
+DNS | Domain Name System
+
+## Category
+DoS | Denial of Service
+DoS | Distributed Denial-of-Service
+
+DPO | Data Protection Officer
+
+## Category
+DRP | Disaster Recovery Plan
+IRP | Incident Response Plan
+
+EAP | Extensible Authentication Protocol
+
+FDE | Full Disk Encryption
+
+## Category
+HIDS | Host-based Intrusion Detection System
+HIPS | Host-based Intrusion Prevention System
+IDS | Intrusion Detection System
+IPS | Intrusion Prevention System
+NIDS | Network-based Intrusion Detection System
+NIPS | Network-based Intrusion Prevention System
+WIDS | Wireless Intrusion Detection System
+WIPS | Wireless Intrusion Prevention System
+
+HSM | Hardware Security Module
+
+ICMP | Internet Control Message Protocol
+
+IoC | Indicator of Compromise
+
+IoT | Internet of Things
+
+ISP | Internet Service Provider
+
+MAC | Mandatory Access Control
+
+MAC | Media Access Control
+
+MAC | Message Authentication Code
+
+MDM | Mobile Device Management
+
+MFA | Multi-factor Authentication
+
+MSP | Managed Service Provider
+
+MTBF | Mean Time Between Failure
+
+NAC | Network Access Control
+
+NFC | Near-field Communication
+
+NTLM | New Technology LAN Manager
+
+OCSP | Online Certificate Status Protocol
+
+PHI | Protected Health Information
+
+PKI | Public Key Infrastructure
+
+RADIUS | Remote Authentication Dial-in User Service
+
+RFID | Radio-frequency Identification
+
+SAE | Simultaneous Authentication of Equals
+
+SAML | Security Assertion Markup Language
+
+SDN | Software-Defined Networking
+
+SED | Self-Encrypting Drive
+
+SHA | Secure Hash Algorithm
+
+SLA | Service Level Agreement
+
+SOAR | Security Orchestration, Automation, and Response
+
+SQL | Structured Query Language
+
+SSL | Secure Sockets Layer
+
+SSO | Single Sign-On
+
+STIX | Structured Threat Information Expression
+
+## Category
+TCP | Transmission Control Protocol
+UDP | User Datagram Protocol
+
+TLS | Transport Layer Security
+
+TPM | Trusted Platform Module
+
+TTP | Tactics, Techniques, and Procedures
+
+UPS | Uninterruptible Power Supply
+
+UTM | Unified Threat Management
+
+VLAN | Virtual Local Area Network
+
+VPN | Virtual Private Network
+
+WAF | Web Application Firewall
+
+WPA | Wi-Fi Protected Access
+
+XDR | Extended Detection and Response
+
+XSRF | Cross-Site Request Forgery
