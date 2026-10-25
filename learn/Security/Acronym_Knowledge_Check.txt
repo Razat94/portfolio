@@ -85,6 +85,9 @@ IoC | Indicator of Compromise
 
 IoT | Internet of Things
 
+IR  | Incident Response
+	- What are the general response steps?
+
 ISP | Internet Service Provider
 
 MAC | Mandatory Access Control
